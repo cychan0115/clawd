@@ -1,0 +1,25 @@
+# OpenClaw
+.openclaw/
+
+# Logs
+*.log
+auto_save.log
+
+# Secrets
+*.key
+*.pem
+.env
+.env.*
+**/.env
+**/.env.*
+
+# OS
+.DS_Store
+
+# Node/Python artifacts
+node_modules/
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+venv/

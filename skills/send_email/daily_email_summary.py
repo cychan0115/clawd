@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""
+Daily Email Summary Script
+
+Fetches unread emails from the last 24 hours and generates a summary.
+Supports IMAP (Gmail, Outlook, etc.)
+
+Configuration (environment variables or .env file):
+- EMAIL_HOST: IMAP server (e.g., imap.gmail.com)
+- EMAIL_USER: Email address
+- EMAIL_PASS: App password / token
+- EMAIL_PORT: IMAP port (default: 993)
+- SUMMARY_RECIPIENT: Where to send the summary (optional)
+- SMTP_HOST: SMTP server for sending summary (optional)
+- SMTP_USER/SMTP_PASS: SMTP credentials (optional)
+"""
+
+import os
+import sys
+import imaplib
+import email
+from email.header import decode_header
+from datetime import datetime, timedelta
+from dotenv import load_dotenv
+from typing import List, Dict, Optional
+
+# Load environment variables from .env file if present
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
+
+
+class EmailSummary:
+    def __init__(self):
+        self.host = os.getenv('EMAIL_HOST', 'imap.gmail.com')
+        self.port = int(os.getenv('EMAIL_PORT', '993'))
+        self.user = os.getenv('EMAIL_USER')
+        self.password = os.getenv('EMAIL_PASS')
+        self.smtp_host = os.getenv('SMTP_HOST')
+        self.smtp_user = os.getenv('SMTP_USER')
+        self.smtp_pass = os.getenv('SMTP_PASS')
+        self.recipient = os.getenv('SUMMARY_RECIPIENT')
+        
+    def connect(self) -> imaplib.IMAP4_SSL:
+        """Connect to IMAP server"""
+        print(f"📧 Connecting to {self.host}:{self.port}...")
+        mail = imaplib.IMAP4_SSL(self.host, self.port)
+        mail.login(self.user, self.password)
+        print(f"✅ Logged in as {self.user}")
+        return mail
+    
+    def fetch_today_emails(self, mail: imaplib.IMAP4_SSL) -> List[Dict]:
+        """Fetch emails from last 24 hours"""
+        mail.select('inbox')
+        
+        # Calculate date 24 hours ago
+        yesterday = (datetime.now() - timedelta(days=1)).strftime("%d-%b-%Y")
+        
+        # Search for emails since yesterday
+        _, messages = mail.search(None, f'(SINCE {yesterday})')
+        
+        emails = []
+        if messages[0]:
+            msg_ids = messages[0].split()
+            print(f"📬 Found {len(msg_ids)} emails in last 24 hours")
+            
+            for msg_id in msg_ids[-50:]:  # Limit to last 50 for performance
+                _, msg_data = mail.fetch(msg_id, '(RFC822)')
+                msg = email.message_from_bytes(msg_data[0][1])
+                
+                # Extract info
+                subject = self._decode_header(msg['Subject'])
+                from_addr = self._decode_header(msg['From'])
+                date_str = msg['Date']
+                
+                # Check if unread (Optional - depends on IMAP flags)
+                _, flags = mail.fetch(msg_id, '(FLAGS)')
+                is_unread = b'\\Seen' not in flags[0]
+                
+                emails.append({
+                    'subject': subject,
+                    'from': from_addr,
+                    'date': date_str,
+                    'unread': is_unread,
+                    'id': msg_id.decode()
+                })
+        
+        return emails
+    
+    def _decode_header(self, header) -> str:
+        """Decode email header"""
+        if not header:
+            return "(No Subject)"
+        decoded = decode_header(header)
+        result = []
+        for part, charset in decoded:
+            if isinstance(part, bytes):
+                result.append(part.decode(charset or 'utf-8', errors='replace'))
+            else:
+                result.append(part)
+        return ''.join(result)
+    
+    def generate_summary(self, emails: List[Dict]) -> str:
+        """Generate markdown summary"""
+        now = datetime.now().strftime("%Y-%m-%d %H:%M")
+        
+        unread = [e for e in emails if e.get('unread')]
+        read = [e for e in emails if not e.get('unread')]
+        
+        lines = [
+            f"# 📧 Daily Email Summary",
+            f"**Generated:** {now} (Asia/Shanghai)",
+            f"**Period:** Last 24 hours",
+            "",
+            f"## 📊 Statistics",
+            f"- **Total emails:** {len(emails)}",
+            f"- **Unread:** {len(unread)}",
+            f"- **Read:** {len(read)}",
+            "",
+            "## 🔴 Unread Emails",
+        ]
+        
+        if unread:
+            for e in unread:
+                lines.append(f"- **{e['subject']}** — {e['from']}")
+        else:
+            lines.append("_No unread emails! 🎉_")
+        
+        lines.extend([
+            "",
+            "## 📖 Read Emails",
+        ])
+        
+        if read:
+            for e in read[:20]:  # Limit to 20 read emails
+                lines.append(f"- {e['subject']} — {e['from']}")
+            if len(read) > 20:
+                lines.append(f"- _... and {len(read) - 20} more_")
+        else:
+            lines.append("_No read emails in this period_")
+        
+        lines.extend([
+            "",
+            "---",
+            "_Generated by OpenClaw Daily Email Summary_",
+        ])
+        
+        return '\n'.join(lines)
+    
+    def save_summary(self, content: str) -> str:
+        """Save summary to file"""
+        # Save to workspace memory
+        today = datetime.now().strftime("%Y-%m-%d")
+        output_dir = os.path.expanduser("~/clawd/memory")
+        os.makedirs(output_dir, exist_ok=True)
+        
+        filename = f"{output_dir}/email_summary_{today}.md"
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"💾 Summary saved to: {filename}")
+        return filename
+    
+    def run(self):
+        """Main execution"""
+        print("="*60)
+        print("🤖 Daily Email Summary")
+        print("="*60)
+        
+        # Check configuration
+        if not all([self.user, self.password]):
+            print("❌ Missing configuration!")
+            print("Please set EMAIL_USER and EMAIL_PASS environment variables.")
+            print("Or create a .env file in the script directory.")
+            sys.exit(1)
+        
+        try:
+            # Connect and fetch
+            mail = self.connect()
+            emails = self.fetch_today_emails(mail)
+            mail.logout()
+            
+            # Generate and save
+            summary = self.generate_summary(emails)
+            filepath = self.save_summary(summary)
+            
+            # Print summary
+            print("\n" + "="*60)
+            print(summary)
+            print("="*60)
+            
+            print(f"\n✅ Summary complete: {filepath}")
+            
+        except Exception as e:
+            print(f"❌ Error: {e}")
+            sys.exit(1)
+
+
+if __name__ == '__main__':
+    summary = EmailSummary()
+    summary.run()

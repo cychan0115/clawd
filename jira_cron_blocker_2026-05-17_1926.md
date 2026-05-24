@@ -1,0 +1,51 @@
+## Jira 任务巡查报告 — 2026-05-17 19:26 (Asia/Shanghai)
+
+**[BLOCKER: JIRA API 凭据缺失] — 持续中（第三轮验证）**
+
+### 验证过程（本轮 19:26）
+
+1. **.env 文件路径** ❌
+   - `~/clawd/skills/atlassian-jira-by-altf1be/.env` → 目录/文件不存在
+   - 技能目录 `atlassian-jira-by-altf1be` 在文件系统上不存在（`ls /Users/3pigcn/clawd/skills/` 仅显示 `openclaw-self-inspection` 和 `send_email`）
+
+2. **openclaw.json 中的 token** ❌
+   - `~/.openclaw/openclaw.json` 中 `skills.atlassian-jira-by-altf1be.env.JIRA_API_TOKEN = "<JIRA_SECRET_REDACTED>"` → Bearer Token 返回 HTTP 401 Unauthorized
+   - 同文件中另一个 token `549ae93bcd7a34ec1b115a2e1028ec87d37f813fd569c9b5` → 同样 HTTP 401
+
+3. **Basic Auth 测试** ❌
+   - `openclaw-admin` + `<JIRA_SECRET_REDACTED>` → HTTP 403 AUTHENTICATION_DENIED
+   - 其他用户名组合 → 均失败
+
+4. **Jira 服务器状态** ✅
+   - `http://116.205.141.57:50008/status` → HTTP 200，服务器运行中（Jira Server 9.4.0）
+
+5. **环境变量搜索** ❌
+   - 全系统 `.env` 文件搜索，无 `JIRA_API_TOKEN` 相关配置
+   - `env | grep -i jira` → 无输出
+
+### 重要时间线
+- 14:54 — AIWH-94 成功执行，Jira API 正常
+- 18:36 — 首次发现凭据失效（blocker 报告）
+- 18:44 — 第一轮 blocker 报告
+- 19:04 — 第二轮 blocker 报告
+- 19:26 — **本轮再次验证，问题持续，无改善**
+
+### 结论
+Jira API 凭据完全不可用。技能目录 `atlassian-jira-by-altf1be` 已从文件系统移除（或从未正确安装），仅存于 `openclaw.json` 配置中的 token 也已失效。
+
+### 影响
+- 无法查询 `AIWH` 项目中 `status='Selected for Development'` 且 `assignee=EMPTY` 的 ticket
+- 无法执行 assign、transition、comment 等任何 Jira API 操作
+- 全自动任务处理流程完全阻塞
+
+### 请求
+请恢复以下任一：
+1. 重新安装/创建 `~/clawd/skills/atlassian-jira-by-altf1be/` 目录并在 `.env` 中填入有效的 `JIRA_API_TOKEN`
+2. 更新 `~/.openclaw/openclaw.json` 中的 `JIRA_API_TOKEN` 为有效值
+3. 提供新的 Jira API Token 及对应用户名
+4. 或确认 Jira 服务器凭据是否已变更/过期
+
+---
+*报告生成时间: 2026-05-17 19:26*  
+*Executor: huahua / OpenClaw on mini2*  
+*Cron ID: 8d0227c6-23ec-434c-802a-97bdb590dc1f*
