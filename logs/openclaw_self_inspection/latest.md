@@ -1,218 +1,141 @@
-# MINI2 + OpenClaw 自巡检报告
 
-**时间**: 2026-05-25 06:30:10 (Asia/Shanghai)
-
-**主机**: mini2 (Mac mini)
-
-**触发**: cron job `73bbdaca-9c48-41d7-a333-1c3e2d112c95`
-
-
-## macOS 主机资源
-
-**负载**: `6:30  up 7 days,  9:22, 6 users, load averages: 2.33 2.95 3.06`
-**内存 (vm_stat)**:
-```
-Mach Virtual Memory Statistics: (page size of 16384 bytes)
-Pages free:                                4237.
-Pages active:                            917009.
-Pages inactive:                          915467.
-Pages speculative:                          714.
-Pages throttled:                              0.
-Pages wired down:                        122843.
-Pages purgeable:                          25873.
-"Translation faults":                5488508184.
-Pages copy-on-write:                  158461859.
-Pages zero filled:                   3653384477.
-Pages reactivated:                     16156609.
-Pages purged:                           2032405.
-File-backed pages:                       481807.
-Anonymous pages:                        1351383.
-Pages stored in compressor:              270077.
-Pages occupied by compressor:            102144.
-Decompressions:                         5461138.
-Compressions:                          12632526.
-Pageins:                               38884890.
-Pageouts:                                915132.
-Swapins:                                      0.
-Swapouts:                                     0.
-
-```
-**内存压力**:
-```
-The system has 34359738368 (2097152 pages with a page size of 16384).
-
-Stats: 
-Pages free: 3957 
-Pages purgeable: 25873 
-Pages purged: 2032405 
-
-Swap I/O:
-Swapins: 0 
-Swapouts: 0 
-
-Page Q counts:
-Pages active: 917020 
-Pages inactive: 915466 
-Pages speculative: 717 
-Pages throttled: 0 
-Pages wired down: 122845 
-
-Compressor Stats:
-Pages used by compressor: 102144 
-Pages decompressed: 5461138 
-Pages compressed: 12632526 
-
-File I/O:
-Pageins: 38884892 
-Pageouts: 915132 
-
-System-wide memory free percentage: 88%
-
-```
-
-## 磁盘空间
-
-```
-Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk3s1s1   460Gi    14Gi    27Gi    34%    426k  285M    0%   /
-devfs            200Ki   200Ki     0Bi   100%     692     0  100%   /dev
-/dev/disk3s6     460Gi    24Ki    27Gi     1%       0  285M    0%   /System/Volumes/VM
-/dev/disk3s2     460Gi    13Gi    27Gi    33%    1.8k  285M    0%   /System/Volumes/Preboot
-/dev/disk3s4     460Gi   691Mi    27Gi     3%     301  285M    0%   /System/Volumes/Update
-/dev/disk1s2     500Mi   6.0Mi   483Mi     2%       1  4.9M    0%   /System/Volumes/xarts
-/dev/disk1s1     500Mi   5.8Mi   483Mi     2%      37  4.9M    0%   /System/Volumes/iSCPreboot
-/dev/disk1s3     500Mi   716Ki   483Mi     1%      80  4.9M    0%   /System/Volumes/Hardware
-/dev/disk3s5     460Gi   404Gi    27Gi    94%    3.6M  285M    1%   /System/Volumes/Data
-map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
-/dev/disk2s1     5.0Gi   2.1Gi   2.9Gi    43%      60   30M    0%   /System/Volumes/Update/SFR/mnt1
-/dev/disk3s1     460Gi    14Gi    27Gi    34%    427k  285M    0%   /System/Volumes/Update/mnt1
-
-```
-**主磁盘 (/)**:
-```
-Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk3s1s1   460Gi    14Gi    27Gi    34%    426k  285M    0%   /
-
-```
-✅ 主磁盘使用率: 34%
-
-## OpenClaw 进程
-
-✅ gateway: 运行中 (PIDs: 67803, 67809, 67810, 67811, 67813, 67814, 67815, 91541, 91568, 92452)
-✅ agent: 运行中 (PIDs: 67803, 67809, 67810, 67811, 67813, 67814, 67815, 91541, 91568, 92452)
-✅ browser: 运行中 (通过 ps 确认)
-
-## 端口监听
-
-✅ 端口 18789: 监听中
-```
-COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
-node    71611 3pigcn   18u  IPv4 0x2e8f81c88d4b6859      0t0  TCP localhost:18789 (LISTEN)
-node    71611 3pigcn   19u  IPv6 0x9d7c5e5752f7fb62      0t0  TCP localhost:18789 (LISTEN)
-
-```
-✅ 端口 18800: 监听中
-```
-COMMAND     PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
-Google    67803 3pigcn   60u  IPv4 0xac55617238b236f9      0t0  TCP localhost:18800 (LISTEN)
-
-```
-
-## Gateway 健康检查
-
-✅ Gateway health: {"ok":true,"status":"live"}
-✅ Gateway status:
-```
-Service: LaunchAgent (loaded)
-File logs: /tmp/openclaw/openclaw-2026-05-25.log
-Command: /opt/homebrew/opt/node@22/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789
-Service file: ~/Library/LaunchAgents/ai.openclaw.gateway.plist
-Working dir: ~/.openclaw
-Service env: OPENCLAW_GATEWAY_PORT=18789
-
-Config (cli): ~/.openclaw/openclaw.json
-Config (service): ~/.openclaw/openclaw.json
-
-Gateway: bind=loopback (127.0.0.1), port=18789 (service args)
-Probe target: ws://127.0.0.1:18789
-Dashboard: http://127.0.0.1:18789/
-Probe note: Loopback-only gateway; only local clients can connect.
-
-CLI version: 2026.5.20 (/opt/homebrew/bin/openclaw)
-Gateway version: 2026.5.20
-
-Runtime: running (pid 71611)
-Connectivity probe: ok
-Capability: admin-capable
-
-Listening: 127.0.0.1:18789
-Troubles: run openclaw status
-Troubleshooting: https://docs.openclaw.ai/troubleshooting
-
-```
-
-## Cron Jobs
-
-✅ jobs.json: 存在 (16 个 job)
-活跃任务: 10 个
-- `每小时系统巡检`: {'kind': 'cron', 'expr': '0 * * * *', 'tz': 'Asia/Shanghai', 'staggerMs': 300000}
-- `每日股票推荐`: {'kind': 'cron', 'expr': '0 20 * * *', 'tz': 'Asia/Shanghai'}
-- `每日邮件摘要`: {'kind': 'cron', 'expr': '0 19 * * *', 'tz': 'Asia/Shanghai'}
-- `每周主动提议`: {'kind': 'cron', 'expr': '0 18 * * 5', 'tz': 'Asia/Shanghai'}
-- `Jira任务巡查`: {'kind': 'every', 'everyMs': 600000, 'anchorMs': 1776501898247}
-
-## 最近 Cron Runs
-
-最近 10 次运行记录:
-- `8d0227c6-23ec-434c-802a-97bdb590dc1f.jsonl` (更新时间: 2026-05-25 06:26:59)
-- `078443c8-c048-4e69-8dab-eb99c185567b.jsonl` (更新时间: 2026-05-25 06:08:10)
-- `73bbdaca-9c48-41d7-a333-1c3e2d112c95.jsonl` (更新时间: 2026-05-25 06:05:00)
-- `e3a596af-d4b9-40f1-ae36-d6208dc3e55b.jsonl` (更新时间: 2026-05-25 04:50:27)
-- `5bc40a82-ab3e-4082-ac5a-df1048f3860d.jsonl` (更新时间: 2026-05-24 20:10:47)
-- `f24e53d3-28d8-4c33-8e8f-bd36d6e244c0.jsonl` (更新时间: 2026-05-24 19:02:59)
-- `15a38810-d37b-4084-be84-df02e0e78cb4.jsonl` (更新时间: 2026-05-24 18:03:28)
-- `4ca01174-86be-4bfe-abba-f00e41eaf07d.jsonl` (更新时间: 2026-05-24 15:03:50)
-- `c25d0bde-a2bc-49c7-9037-729ddf8a1576.jsonl` (更新时间: 2026-05-24 08:05:30)
-- `e2514301-9dc3-4ba8-9a9d-8a8fc9cc7ca0.jsonl` (更新时间: 2026-05-22 18:03:13)
-
-## Gateway 日志异常
-
-⚠️ `gateway.err.log` 中发现异常:
-  - `Error: Failure while executing; `git clone https://github.com/pimalaya/homebrew-himalaya /opt/homebrew/Library/Taps/pima`
-  - `2026-01-27T13:31:17.432Z [tools] exec failed: curl: (56) The requested URL returned error: 404`
-  - `2026-01-27T13:31:22.005Z [tools] exec failed: curl: (56) The requested URL returned error: 404`
-  - `fatal: repository 'https://github.com/pimalaya/homebrew-himalaya/' not found`
-⚠️ `openclaw-2026-05-25.log` 中发现异常:
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-⚠️ `openclaw-2026-05-24.log` 中发现异常:
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-  - `{"0":"{\"subsystem\":\"bundle-mcp\"}","1":"failed to start server \"chrome-devtools\" (npx -y chrome-devtools-mcp@latest`
-
-## 系统整体状态
-
-**Top 进程**:
-```
-Processes: 584 total, 2 running, 582 sleeping, 2756 threads 
-2026/05/25 06:30:12
-Load Avg: 2.33, 2.95, 3.06 
-CPU usage: 15.44% user, 11.2% sys, 73.52% idle 
-SharedLibs: 857M resident, 128M data, 199M linkedit.
-MemRegions: 159463 total, 7358M resident, 450M private, 1412M shared.
-PhysMem: 31G used (1924M wired, 1596M compressor), 356M unused.
-VM: 237T vsize, 5703M framework vsize, 0(0) swapins, 0(0) swapouts.
-Networks: packets: 56869277/78G in, 45438080/54G out.
-Disks: 67074299/859G read, 44600846/1874G written.
-
-PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS COW  MSGSENT MSGRECV SYSBSD   SYSMACH CSW     PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
-99060  ContainerMetadat 0.0  00:00.30 2   1   60     4208K 0B   2096K 99060 1     sleeping *0[6]    0.00000 0.00000    501 3169   159  1073    568     6876     1337    1211    4       0     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
-98518  com.apple.Safari 0.0  00:04.16 2   1   58     6625K 0B   5184K 98518 1     sleeping *0[1010] 0.00000 0.00000    501 26561  185  13242   9267    356902   110115  80960   67      296   0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
-95991  sirittsd         0.0  00:00.48 2   1   71     34M   0B   33M   95991 1     sleeping *0[3]    0.00000 0.00000    501 8881   216  343     187     8811     975     2352    2880    0     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
-95945  com.apple.Mobile 0.0  06:34.87 4   1   115    56M   0B   48M   95945 1     sleeping *0[1]    0.00000 0.00000    0   201520 206  21917   10962   19977672 25994   4469856 73232   473   0.0   0      0      0      root            N/A    N/A   N/A   N/A   N/A   N/A  
-95939  softwareupdated  0.0  00:01.13 3   1   84     5152K 0B   2736K 95939 1     sleeping *0[25]   0.00000 0.00000    200 5823   17
-```
 
 ---
-*报告生成完成 @ 2026-05-25 06:30:10*
+
+## 异常深度分析
+
+### 🔴 1. chrome-devtools MCP 启动失败 (持续性)
+
+**状态**: 非致命但高频 — MCP最终能启动，但每次retry都失败
+
+**现象**:
+- 日志中频繁出现: `failed to start server "chrome-devtools" (npx -y chrome-devtools-mcp@latest --slim --headless): MCP error -32000: Connection closed`
+- 覆盖 `openclaw-2026-05-25.log`, `openclaw-2026-05-24.log`, `gateway.err.log`
+- gateway.err.log 共 98,147 行，末尾仍有此错误
+
+**当前状态**: 
+- ✅ chrome-devtools-mcp 实际在运行（2组进程，PID 91541/91542 和 94463/94473/94474）
+- 版本 1.0.1
+
+**根因推测**: MCP连接在初始化时超时/closed，OpenClaw自动retry后成功。可能与 `--slim --headless` 启动模式有关。
+
+**建议**: 
+- 若不影响使用，可忽略（最终能启动）
+- 或考虑更新 chrome-devtools-mcp 到最新版本
+- 或在 `openclaw.json` mcp.servers.chrome-devtools 中增加启动timeout
+
+---
+
+### 🔴 2. Gateway 内存压力告警 (需关注)
+
+**状态**: 频繁触发
+
+**现象**:
+```
+memory pressure: level=critical reason=heap_threshold 
+  rssBytes=~2.8-2.9GB 
+  heapUsedBytes=~2.1-2.4GB 
+  thresholdBytes=2147483648 (2GB)
+```
+
+**当前状态**:
+- Node进程总RSS: ~4.3GB
+- macOS物理内存: 32GB，系统空闲88%
+- 内存充足，但Node.js heap有默认限制
+
+**根因**: Node.js V8引擎默认heap限制约2GB（64位系统会根据可用内存动态调整，但OpenClaw可能设置了固定阈值）。实际heap使用在2.1-2.4GB之间波动，超过2GB阈值触发告警。
+
+**建议**: 
+- 内存压力不影响功能，物理内存充足
+- 可考虑增加 Node `--max-old-space-size` 参数（如4096）或调整 gateway 内存阈值配置
+- 若出现OOM才需紧急处理
+
+---
+
+### 🟡 3. "主动发现-每2小时" cron job 持续失败 (需处理)
+
+**状态**: 连续失败，已触发error backoff
+
+**jobId**: `e3a596af-d4b9-40f1-ae36-d6208dc3e55b`
+
+**现象**:
+- 执行各种命令均失败：`run python3 scripts/task_state_manager.py`, `check git status`, `run df /`, `list files`, `edit .gitignore` 等
+- 错误格式: `⚠️ 🛠️ \`command\` failed`
+- 连续错误触发backoff: `consecutiveErrors:1, backoffMs:30000`
+
+**根因分析**:
+- 脚本文件本身正常（`task_state_manager.py` 存在且可执行）
+- 在当前main session中exec工具正常工作
+- **问题出在 cron isolated session 的 exec 工具权限/沙箱限制**
+- 可能是isolated session缺少sandbox=inherit配置，或exec安全策略限制
+
+**建议**:
+- 检查该cron job的session配置，确认是否需要 `sandbox="inherit"`
+- 或修改job payload避免需要exec工具的命令
+- 这是一个已知模式问题，需要Anna review后决定修复方案
+
+---
+
+### 🟡 4. MiniMax MCP 未安装
+
+**现象**: `uvx minimax-coding-plan-mcp -y ENOENT`
+
+**根因**: `uvx` 未安装或 `minimax-coding-plan-mcp` 包不存在
+
+**建议**: 
+- 若不使用MiniMax模型，可忽略
+- 或安装uvx: `pip install uv` 然后 `uv tool install minimax-coding-plan-mcp`
+
+---
+
+### 🟡 5. Data分区使用率 95%
+
+**状态**: 需留意
+
+```
+/dev/disk3s5     460Gi   405Gi    26Gi    95%   /System/Volumes/Data
+```
+
+**说明**: 这是macOS的Data卷（用户数据分区）。当前使用率95%，剩余26GB。
+- 短期内不会满
+- 若持续增长，可能需要清理大文件
+
+**建议**: 
+- 可运行 `du -sh ~/* | sort -rh | head -20` 查找大文件夹
+- 关注 `/Users/3pigcn` 下是否有日志/cache膨胀
+
+---
+
+### 🟢 6. 历史异常 (可忽略)
+
+**gateway.err.log 中的旧记录**:
+- 2026-01-27: homebrew tap `pimalaya/himalaya` git clone 404 失败
+- curl 404 错误（同一时期）
+
+这些是4个月前的历史残留，不影响当前系统运行。
+
+---
+
+### 🟢 7. 其他轻微异常
+
+- **memos-cloud插件**: Auto-update failed (5月16日)，不影响功能
+- **memory embeddings rate limited**: 偶尔出现，已自动retry
+- **上次自巡检失败**: 因搜索日志命令失败，本次已成功
+
+---
+
+## 总结
+
+| 优先级 | 问题 | 建议 |
+|--------|------|------|
+| 🔴 P1 | chrome-devtools MCP启动失败 | 可忽略（最终成功），或更新MCP版本 |
+| 🔴 P1 | Gateway内存压力告警 | 可忽略（物理内存充足），关注是否OOM |
+| 🟡 P2 | "主动发现" cron持续失败 | 需检查isolated session exec权限 |
+| 🟡 P2 | Data分区95% | 定期关注，必要时清理 |
+| 🟢 P3 | MiniMax MCP未安装 | 按需安装或忽略 |
+| 🟢 P3 | 历史异常 | 已忽略 |
+
+**整体评估**: MINI2 + OpenClaw 核心系统运行稳定。主要异常为非致命的间歇性问题（MCP启动retry、内存压力告警），不影响实际功能。唯一需要处理的cron job问题需要进一步诊断isolated session配置。
+
+---
+*深度分析完成 @ 2026-05-25 07:05*
