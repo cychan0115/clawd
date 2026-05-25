@@ -134,6 +134,7 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 | `SOUL.md` | AI personality and tone |
 | `IDENTITY.md` | AI role and behavior guidelines |
 | `AGENTS.md` | Workspace conventions |
+| `FAMILY_CONTEXT.md` | CY's family context: members, health notes, diet, schedule, parenting |
 
 ---
 

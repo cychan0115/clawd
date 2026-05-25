@@ -2,11 +2,11 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** CY
+- **What to call them:** CY / 用户
+- **Pronouns:** _(optional)_ 
+- **Timezone:** Asia/Shanghai (GMT+8)
+- **Notes:** 约42岁，资深IT架构师，base中国。见 FAMILY_CONTEXT.md 了解家庭详情。
 
 ## Context
 
