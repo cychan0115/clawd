@@ -13,10 +13,7 @@ Things like:
 - Device nicknames
 - Anything environment-specific
 
-## Examples
-
-```markdown
-### System Hourly Inspection (cron 独立任务)
+## System Hourly Inspection (cron 独立任务)
 
 - **路径**: `/Users/3pigcn/clawd/skills/system-hourly-inspection/system_hourly_inspection.py`
 - **调度**: 每小时执行（cron ID: `078443c8-c048-4e69-8dab-eb99c185567b`）
@@ -24,22 +21,19 @@ Things like:
 - **异常通知**: 自动发邮件至 `13926262295@139.com`
 - **注意**: 此任务为独立 cron 脚本，**无需 agent 介入处理**。Heartbeat 中无需重复做系统资源/HTTP巡检。
 
----
-
-### Cameras
+## Cameras
 
 - living-room → Main area, 180° wide angle
 - front-door → Entrance, motion-triggered
 
-### SSH
+## SSH
 
 - home-server → 192.168.1.100, user: admin
 
-### TTS
+## TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
 - Default speaker: Kitchen HomePod
-```
 
 ## Why Separate?
 
