@@ -1243,3 +1243,6 @@
 [2026-05-26 12:00:00] === WING Watchdog v2 Start ===
 [2026-05-26 12:00:01] Found 0 ticket(s) in '处理中' status
 [2026-05-26 12:00:01] No stalled tickets. Exiting.
+[2026-05-26 12:30:00] === WING Watchdog v2 Start ===
+[2026-05-26 12:30:01] Found 0 ticket(s) in '处理中' status
+[2026-05-26 12:30:01] No stalled tickets. Exiting.
