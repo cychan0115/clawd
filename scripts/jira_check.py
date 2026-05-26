@@ -12,7 +12,7 @@ headers = {
 }
 
 # 1. Check in-progress tickets assigned to huahua
-jql1 = "project = AIWH AND status = '处理中' AND assignee = huahua"
+jql1 = "project = AIWH AND status = 'In Progress' AND assignee = huahua"
 params1 = {
     "jql": jql1,
     "fields": "key,summary,status,assignee,description"
