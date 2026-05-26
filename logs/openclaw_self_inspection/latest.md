@@ -1,6 +1,6 @@
 # MINI2 + OpenClaw 自巡检报告
 
-**时间**: 2026-05-27 06:32:31 (Asia/Shanghai)
+**时间**: 2026-05-27 07:03:57 (Asia/Shanghai)
 
 **主机**: mini2 (Mac mini)
 
@@ -9,30 +9,30 @@
 
 ## macOS 主机资源
 
-**负载**: `6:32  up 9 days,  9:24, 6 users, load averages: 3.40 3.56 3.45`
+**负载**: `7:03  up 9 days,  9:56, 6 users, load averages: 2.85 3.06 3.12`
 **内存 (vm_stat)**:
 ```
 Mach Virtual Memory Statistics: (page size of 16384 bytes)
-Pages free:                              253861.
-Pages active:                            781442.
-Pages inactive:                          753582.
-Pages speculative:                        27205.
+Pages free:                                6872.
+Pages active:                            906766.
+Pages inactive:                          903796.
+Pages speculative:                         2170.
 Pages throttled:                              0.
-Pages wired down:                        139647.
-Pages purgeable:                          27111.
-"Translation faults":                7199927220.
-Pages copy-on-write:                  195389977.
-Pages zero filled:                   4793396160.
-Pages reactivated:                     25239527.
-Pages purged:                           2452988.
-File-backed pages:                       390902.
-Anonymous pages:                        1171327.
-Pages stored in compressor:              287099.
-Pages occupied by compressor:            106457.
-Decompressions:                         7412639.
-Compressions:                          17390334.
-Pageins:                               62114232.
-Pageouts:                               1916151.
+Pages wired down:                        137019.
+Pages purgeable:                          27122.
+"Translation faults":                7213542104.
+Pages copy-on-write:                  195612829.
+Pages zero filled:                   4803756611.
+Pages reactivated:                     25244217.
+Pages purged:                           2458314.
+File-backed pages:                       379887.
+Anonymous pages:                        1432845.
+Pages stored in compressor:              284720.
+Pages occupied by compressor:            105831.
+Decompressions:                         7416670.
+Compressions:                          17390984.
+Pageins:                               62137189.
+Pageouts:                               1921147.
 Swapins:                                      0.
 Swapouts:                                     0.
 
@@ -42,31 +42,31 @@ Swapouts:                                     0.
 The system has 34359738368 (2097152 pages with a page size of 16384).
 
 Stats: 
-Pages free: 253826 
-Pages purgeable: 27111 
-Pages purged: 2452988 
+Pages free: 6834 
+Pages purgeable: 27122 
+Pages purged: 2458314 
 
 Swap I/O:
 Swapins: 0 
 Swapouts: 0 
 
 Page Q counts:
-Pages active: 781460 
-Pages inactive: 753582 
-Pages speculative: 27210 
+Pages active: 906765 
+Pages inactive: 903802 
+Pages speculative: 2173 
 Pages throttled: 0 
-Pages wired down: 139652 
+Pages wired down: 137020 
 
 Compressor Stats:
-Pages used by compressor: 106457 
-Pages decompressed: 7412639 
-Pages compressed: 17390334 
+Pages used by compressor: 105831 
+Pages decompressed: 7416670 
+Pages compressed: 17390984 
 
 File I/O:
-Pageins: 62114233 
-Pageouts: 1916151 
+Pageins: 62137191 
+Pageouts: 1921147 
 
-System-wide memory free percentage: 87%
+System-wide memory free percentage: 88%
 
 ```
 
@@ -74,32 +74,32 @@ System-wide memory free percentage: 87%
 
 ```
 Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk3s1s1   460Gi    14Gi    26Gi    35%    426k  270M    0%   /
+/dev/disk3s1s1   460Gi    14Gi    24Gi    36%    426k  255M    0%   /
 devfs            201Ki   201Ki     0Bi   100%     694     0  100%   /dev
-/dev/disk3s6     460Gi    24Ki    26Gi     1%       0  270M    0%   /System/Volumes/VM
-/dev/disk3s2     460Gi    13Gi    26Gi    34%    1.8k  270M    0%   /System/Volumes/Preboot
-/dev/disk3s4     460Gi   691Mi    26Gi     3%     301  270M    0%   /System/Volumes/Update
+/dev/disk3s6     460Gi    24Ki    24Gi     1%       0  255M    0%   /System/Volumes/VM
+/dev/disk3s2     460Gi    13Gi    24Gi    36%    1.8k  255M    0%   /System/Volumes/Preboot
+/dev/disk3s4     460Gi   691Mi    24Gi     3%     301  255M    0%   /System/Volumes/Update
 /dev/disk1s2     500Mi   6.0Mi   483Mi     2%       1  4.9M    0%   /System/Volumes/xarts
 /dev/disk1s1     500Mi   5.8Mi   483Mi     2%      37  4.9M    0%   /System/Volumes/iSCPreboot
 /dev/disk1s3     500Mi   716Ki   483Mi     1%      80  4.9M    0%   /System/Volumes/Hardware
-/dev/disk3s5     460Gi   405Gi    26Gi    95%    3.7M  270M    1%   /System/Volumes/Data
+/dev/disk3s5     460Gi   407Gi    24Gi    95%    3.7M  255M    1%   /System/Volumes/Data
 map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
 /dev/disk2s1     5.0Gi   2.1Gi   2.9Gi    43%      60   30M    0%   /System/Volumes/Update/SFR/mnt1
-/dev/disk3s1     460Gi    14Gi    26Gi    35%    427k  270M    0%   /System/Volumes/Update/mnt1
+/dev/disk3s1     460Gi    14Gi    24Gi    36%    427k  255M    0%   /System/Volumes/Update/mnt1
 
 ```
 **主磁盘 (/)**:
 ```
 Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
-/dev/disk3s1s1   460Gi    14Gi    26Gi    35%    426k  270M    0%   /
+/dev/disk3s1s1   460Gi    14Gi    24Gi    36%    426k  255M    0%   /
 
 ```
-✅ 主磁盘使用率: 35%
+✅ 主磁盘使用率: 36%
 
 ## OpenClaw 进程
 
-✅ gateway: 运行中 (PIDs: 9898, 9985, 54907, 54914, 54915, 54917, 54920, 54921, 54923, 56552, 64656, 71608, 71840, 73823, 88167)
-✅ agent: 运行中 (PIDs: 9898, 9985, 54907, 54914, 54915, 54917, 54920, 54921, 54923, 56552, 64656, 71608, 71840, 73823, 88167)
+✅ gateway: 运行中 (PIDs: 9898, 9985, 54907, 54914, 54915, 54917, 54920, 54921, 54923, 56552, 64656, 71608, 71840, 73823, 90170)
+✅ agent: 运行中 (PIDs: 9898, 9985, 54907, 54914, 54915, 54917, 54920, 54921, 54923, 56552, 64656, 71608, 71840, 73823, 90170)
 ✅ browser: 运行中 (PIDs: 71840)
 
 ## 端口监听
@@ -166,10 +166,10 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
 ## 最近 Cron Runs
 
 最近 10 次运行记录:
-- `8d0227c6-23ec-434c-802a-97bdb590dc1f.jsonl` (更新时间: 2026-05-27 06:32:22)
+- `8d0227c6-23ec-434c-802a-97bdb590dc1f.jsonl` (更新时间: 2026-05-27 07:03:42)
+- `e3a596af-d4b9-40f1-ae36-d6208dc3e55b.jsonl` (更新时间: 2026-05-27 06:54:28)
+- `73bbdaca-9c48-41d7-a333-1c3e2d112c95.jsonl` (更新时间: 2026-05-27 06:32:57)
 - `078443c8-c048-4e69-8dab-eb99c185567b.jsonl` (更新时间: 2026-05-27 06:01:20)
-- `73bbdaca-9c48-41d7-a333-1c3e2d112c95.jsonl` (更新时间: 2026-05-27 06:00:45)
-- `e3a596af-d4b9-40f1-ae36-d6208dc3e55b.jsonl` (更新时间: 2026-05-27 04:54:27)
 - `5bc40a82-ab3e-4082-ac5a-df1048f3860d.jsonl` (更新时间: 2026-05-26 20:04:05)
 - `f24e53d3-28d8-4c33-8e8f-bd36d6e244c0.jsonl` (更新时间: 2026-05-26 19:03:02)
 - `15a38810-d37b-4084-be84-df02e0e78cb4.jsonl` (更新时间: 2026-05-26 18:08:26)
@@ -192,24 +192,24 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
 
 **Top 进程**:
 ```
-Processes: 646 total, 3 running, 643 sleeping, 2835 threads 
-2026/05/27 06:32:34
-Load Avg: 3.40, 3.56, 3.45 
-CPU usage: 16.66% user, 11.80% sys, 71.52% idle 
+Processes: 651 total, 5 running, 646 sleeping, 2856 threads 
+2026/05/27 07:04:00
+Load Avg: 2.94, 3.07, 3.13 
+CPU usage: 26.57% user, 17.48% sys, 55.94% idle 
 SharedLibs: 889M resident, 133M data, 130M linkedit.
-MemRegions: 166650 total, 5546M resident, 452M private, 1458M shared.
-PhysMem: 27G used (2183M wired, 1663M compressor), 4368M unused.
-VM: 263T vsize, 5703M framework vsize, 0(0) swapins, 0(0) swapouts.
-Networks: packets: 77226096/89G in, 65651821/63G out.
-Disks: 91828853/1487G read, 55761417/2595G written.
+MemRegions: 167195 total, 5779M resident, 469M private, 1462M shared.
+PhysMem: 31G used (2147M wired, 1656M compressor), 365M unused.
+VM: 265T vsize, 5703M framework vsize, 0(0) swapins, 0(0) swapouts.
+Networks: packets: 77270922/89G in, 65703658/63G out.
+Disks: 92039818/1493G read, 55790775/2597G written.
 
 PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS   %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD   SYSMACH CSW     PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
 99060  ContainerMetadat 0.0  00:00.30 2   1   60     4208K 0B   3760K 99060 1    sleeping *0[6]    0.00000 0.00000    501 3233   159 1074    571     6878     1345    1223    4       0     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
-98518  com.apple.Safari 0.0  00:04.30 2   1   58     6609K 0B   5168K 98518 1    sleeping *0[1010] 0.00000 0.00000    501 29540  185 14809   10155   367251   114480  84359   93      296   0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
+98518  com.apple.Safari 0.0  00:04.30 2   1   58     6609K 0B   5168K 98518 1    sleeping *0[1010] 0.00000 0.00000    501 29547  185 14819   10161   367315   114508  84380   93      296   0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
 95991  sirittsd         0.0  00:00.58 2   1   73     34M   0B   33M   95991 1    sleeping *0[4]    0.00000 0.00000    501 10580  216 415     237     9737     1236    3034    3027    0     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
-95945  com.apple.Mobile 0.0  06:35.53 4   1   116    56M   0B   49M   95945 1    sleeping *0[1]    0.00000 0.00000    0   203759 206 23689   12022   20008977 29486   4487015 73303   507   0.0   0      0      0      root            N/A    N/A   N/A   N/A   N/A   N/A  
-95939  softwareupdated  0.0  00:01.86 3   1   96     5152K 0B   2784K 95939 1    sleeping *0[26]   0.00000 0.00000    200 8420   170 30676 
+95945  com.apple.Mobile 0.0  06:35.53 4   1   116    56M   0B   49M   95945 1    sleeping *0[1]    0.00000 0.00000    0   203759 206 23689   12022   20009267 29486   4487189 73303   508   0.0   0      0      0      root            N/A    N/A   N/A   N/A   N/A   N/A  
+95939  softwareupdated  0.0  00:01.87 3   1   96     5152K 0B   2784K 95939 1    sleeping *0[26]   0.00000 0.00000    200 8420   170 30676  
 ```
 
 ---
-*报告生成完成 @ 2026-05-27 06:32:31*
+*报告生成完成 @ 2026-05-27 07:03:57*
