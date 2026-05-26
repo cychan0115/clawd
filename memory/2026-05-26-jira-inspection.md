@@ -34,11 +34,20 @@
 4. ❌ 无法执行 state transition
 5. ❌ 无法添加 comment（Done Report / Preflight / BLOCKER）
 
-### 建议
-- 等待 5-10 分钟后自动重试
-- 如持续不可用，联系 Atlassian Support
-- 或检查 Jira 实例 URL 是否已变更
+### 巡查执行记录
+| 步骤 | 状态 | 详情 |
+|------|------|------|
+| 检查 `task_state_manager.py status` | ✅ 完成 | 无活跃任务 |
+| 检查本地 git 状态 | ✅ 完成 | 有 log 变更，已 commit |
+| 查询 Jira "处理中" ticket | ❌ 阻塞 | Jira 实例不可用 |
+| 查询 Jira "待领取" ticket | ❌ 阻塞 | Jira 实例不可用 |
+| commit + push 本地变更 | ⚠️ 部分完成 | commit 成功（`8ccce27`），push 失败（远程 404）|
 
 ### 当前任务状态
 - `task_state_manager.py status`: **No active task.**
-- 本地 git: 有未提交的 log 文件（非任务代码）
+- 本地 git: commit 成功（`8ccce27`），但 **push 失败** — 远程仓库 `https://github.com/3pigcn/clawd.git` 返回 404 Not Found
+
+### 建议
+1. **Jira 恢复后** 重新执行巡查任务
+2. 检查 GitHub 仓库 URL 是否正确，或确认仓库是否已迁移/改名
+3. 如 Jira 持续不可用，联系 Atlassian Support 并提供 Request ID: `c392b158-5720-4b8a-b907-13732f84cbc5`
