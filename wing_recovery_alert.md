@@ -1,5 +1,20 @@
 ---
 
+### 2026-05-26 16:09 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira Cloud** (`3pigc.atlassian.net`): ❌ 不可用，返回 "Site temporarily unavailable" (HTTP 503)
+- **Jira 代理** (`116.205.141.57:50008`): ⚠️ HTTP 200 连通，但 **Token 认证失败 (401 Unauthorized)**
+  - Token `NzcyNzUx...` (huahua@3pigc.com) → 401 Unauthorized
+- **处理中 tickets**: 无法查询 (Jira 认证失败)
+- **待领取 tickets**: 无法查询 (Jira 认证失败)
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: inspection log 已 commit ([main d2319af]) ✅
+- **Git remote**: GitHub 仓库 `3pigcn/clawd` 仍返回 404 (Repository not found) — push 失败 ❌
+- **结论**: Jira 服务不可用 + Token 失效，本次巡查无法执行 ticket 处理。
+- **BLOCKER**: [JIRA AUTH FAILURE] 需要 Anna 检查/刷新 Jira API Token
+- **备注**: 此前同一 Token 在代理上可正常认证（见 15:37 巡查记录），现已失效。Jira Cloud 持续 503 可能是 Atlassian 维护或故障。
+
+---
+
 ### 2026-05-26 15:17 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
 - **Jira Cloud** (`3pigc.atlassian.net`): ❌ 不可用，返回 "Page unavailable" (HTTP 503/404)
 - **Jira 代理** (`116.205.141.57:50008`): ✅ 正常，Bearer Token 认证通过
