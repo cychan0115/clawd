@@ -1,5 +1,19 @@
 ---
 
+### 2026-05-26 10:07 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira Cloud** (`3pigc.atlassian.net`): ❌ 不可用，返回 "Page unavailable" (HTTP 503)
+- **Jira 代理** (`116.205.141.57:50008`): ❌ 返回 302 重定向到登录页面，Token 认证失败
+  - Token NzcyNzUx... 和 OTIwMzYw... 均无效
+- **处理中 tickets**: 无法查询 (Jira 不可达)
+- **待领取 tickets**: 无法查询 (Jira 不可达)
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: `logs/openclaw_self_inspection/latest.md` 已 commit ([main 0e796d9]) ✅
+- **Git remote**: GitHub 仓库 `3pigcn/clawd` 仍返回 404 — push 失败 ❌
+- **结论**: Jira 不可用导致本次巡查无法执行 ticket 处理。所有历史任务已完成，无积压。
+- **备注**: Jira 服务可能处于维护或故障状态，建议等待恢复后重试。
+
+---
+
 ### 2026-05-26 09:57 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
 - **Jira 代理** (`116.205.141.57:50008`): ✅ 正常，Bearer Token 认证通过 (Token: NzcyNzUx...)
 - **当前用户**: huahua (JIRAUSER10400), email=huahua@3pigc.com
