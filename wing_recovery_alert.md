@@ -1,5 +1,20 @@
 ---
 
+# Gateway Recovery Alert / Jira 巡查日志
+
+---
+
+### 2026-05-26 18:08 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira 代理** (`116.205.141.57:50008`): ✅ **正常**（Bearer Token 有效，`/rest/api/2/search` 正常返回）
+- **当前用户**: huahua (JIRAUSER10400), email=huahua@3pigc.com
+- **处理中 tickets**: **0 条** (assignee=huahua, status="In Progress")
+- **待领取 tickets**: **0 条** (status="Selected for Development", assignee is EMPTY)
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: system self-inspection log 已 commit（[main a4f0d08]）✅
+- **Git remote**: GitHub 仓库 `3pigcn/clawd` 仍返回 404 + refspec master 不匹配 — push 失败 ❌
+- **结论**: ✅ **当前没有待处理的 Jira 任务**。AIWH 项目无处理中/待领取 ticket。
+- **备注**: Jira Cloud 直接访问持续不可用，但本地代理工作正常。无任务需要执行。已 commit 最新系统自巡检日志。
+
 ### 2026-05-26 17:57 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
 - **Jira Cloud** (`3pigc.atlassian.net`): ❌ **不可用**（返回 "Page unavailable"）
 - **Jira 代理** (`116.205.141.57:50008`): ✅ **正常**（Bearer Token 有效，`/rest/api/2/search` 正常返回）
@@ -100,3 +115,16 @@
 - **Git remote**: GitHub 仓库 `3pigcn/clawd` 仍返回 404 (Repository not found) — push 可能失败 ❌
 - **结论**: ✅ **当前没有待处理的 Jira 任务**。AIWH 项目无处理中/待领取 ticket。
 - **备注**: 与上次巡查（16:37 CST）状态一致。Jira API v2 查询正常。已 commit 本次巡查日志。
+
+---
+
+### 2026-05-26 18:18 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira 代理** (`116.205.141.57:50008`): ✅ **正常**（Bearer Token 有效，`/rest/api/2/search` 正常返回）
+- **当前用户**: huahua (JIRAUSER10400), email=huahua@3pigc.com
+- **处理中 tickets**: **0 条** (assignee=huahua, status="In Progress")
+- **待领取 tickets**: **0 条** (status="Selected for Development", assignee is EMPTY)
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: auto_save.log + wing_recovery_alert.md 未 commit（本次巡查追加日志）
+- **Git remote**: 待尝试 push
+- **结论**: ✅ **当前没有待处理的 Jira 任务**。AIWH 项目无处理中/待领取 ticket。
+- **备注**: 与上次巡查（18:08 CST）状态一致。Jira API v2 查询正常。无任务需要执行。
