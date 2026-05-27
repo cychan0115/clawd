@@ -1,5 +1,35 @@
 ---
 
+---
+
+### 2026-05-28 01:25 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira Cloud** (`3pigc.atlassian.net`): ❌ **不可用**（"Site temporarily unavailable"）— 与历史一致
+- **Jira 代理** (`116.205.141.57:50008`): ✅ **正常**（HTTP 200，用户指定 Token 认证有效）
+  - 用户指定 Token (`huahua@3pigc.com`): HTTP 200，用户=huahua (JIRAUSER10400) — **Token 问题已恢复**
+- **处理中 tickets**: **0 条** (status="In Progress", assignee=huahua)
+- **待领取 tickets**: **0 条** (status="Selected for Development", assignee is EMPTY)
+- **AIWH 全量**: 107 个 issues，全部"完成"状态
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: wing_recovery_alert.md 日志更新 — 已 commit `ea3d7f4`，⚠️ push 失败（GitHub repo not found）
+- **状态对比**: 与 01:15 巡查相比，Token 认证从 401 恢复为 200；其余状态一致
+- **结论**: ✅ **当前没有待处理的 Jira 任务**。所有 107 个 AIWH tickets 均已完成，无待领取、无处理中。
+
+---
+
+### 2026-05-28 01:15 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
+- **Jira Cloud** (`3pigc.atlassian.net`): ❌ **不可用**（"Site temporarily unavailable"）— 与历史一致
+- **Jira 代理** (`116.205.141.57:50008`): ⚠️ **部分可用** — 用户指定 Token 401；备用 Token 有效
+  - 用户指定 Token (`huahua@3pigc.com`): HTTP 401 "Client must be authenticated"
+  - 备用 Token (`openclaw-admin`): HTTP 200，认证通过，用户=openclaw-admin (JIRAUSER10300)
+- **处理中 tickets**: **0 条**
+- **待领取 tickets**: **0 条**
+- **AIWH 全量**: 107 个 issues，全部"完成"状态
+- **任务状态管理器**: No active task ✅
+- **Git 本地**: 5 个日志文件修改 — 已 commit `7be05f9`，push 失败（GitHub repo not found）
+- **结论**: ✅ **当前没有待处理的 Jira 任务**；⚠️ **Token 认证需同步**
+
+---
+
 ### 2026-05-28 01:05 CST [cron:8d0227c6-23ec-434c-802a-97bdb590dc1f] [本次]
 - **Jira Cloud** (`3pigc.atlassian.net`): ❌ **不可用**（"Site temporarily unavailable"）— 与历史一致
 - **Jira 代理** (`116.205.141.57:50008`): ✅ **正常**（HTTP 200，共 107 个 issues，全部状态="完成"）— 持续稳定
