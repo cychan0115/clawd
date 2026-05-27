@@ -62,7 +62,7 @@ No active task.
 | Push | ❌ 远程仓库不存在（已知问题） |
 | 当前分支 | main |
 
-**Commit**: `TBD`
+**Commit**: `2836277`
 
 ---
 
@@ -95,5 +95,5 @@ No active task.
 - Jira 代理 Selected for Development 查询: HTTP 200, total=0
 - Jira 代理所有未完成查询: HTTP 200, total=0
 - task_state_manager.py 状态: No active task
-- Git commit: TBD
+- Git commit: 2836277
 - 当前时间: 2026-05-27 18:35 CST (Asia/Shanghai)
