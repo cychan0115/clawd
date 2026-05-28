@@ -1,6 +1,6 @@
 # MINI2 + OpenClaw 自巡检报告
 
-**时间**: 2026-05-28 23:30:07 (Asia/Shanghai)
+**时间**: 2026-05-29 00:30:09 (Asia/Shanghai)
 
 **主机**: mini2 (Mac mini)
 
@@ -9,29 +9,29 @@
 
 ## macOS 主机资源
 
-**负载**: `23:30  up 11 days,  2:22, 6 users, load averages: 1.91 1.66 1.62`
+**负载**: `0:30  up 11 days,  3:22, 6 users, load averages: 1.99 1.87 1.79`
 **内存 (vm_stat)**:
 ```
 Mach Virtual Memory Statistics: (page size of 16384 bytes)
-Pages free:                              679782.
-Pages active:                            552229.
-Pages inactive:                          418422.
-Pages speculative:                       179996.
+Pages free:                              652276.
+Pages active:                            585195.
+Pages inactive:                          410479.
+Pages speculative:                       183582.
 Pages throttled:                              0.
-Pages wired down:                        133723.
-Pages purgeable:                          22619.
-"Translation faults":                8300938318.
-Pages copy-on-write:                  219226226.
-Pages zero filled:                   5554081795.
-Pages reactivated:                     38927174.
-Pages purged:                           3222766.
-File-backed pages:                       527404.
-Anonymous pages:                         623243.
-Pages stored in compressor:              230187.
-Pages occupied by compressor:             97714.
-Decompressions:                        12314853.
+Pages wired down:                        134298.
+Pages purgeable:                          23079.
+"Translation faults":                8304623196.
+Pages copy-on-write:                  219702219.
+Pages zero filled:                   5555632885.
+Pages reactivated:                     38929686.
+Pages purged:                           3232980.
+File-backed pages:                       538942.
+Anonymous pages:                         640314.
+Pages stored in compressor:              227817.
+Pages occupied by compressor:             96636.
+Decompressions:                        12319037.
 Compressions:                          27010022.
-Pageins:                               76100917.
+Pageins:                               76117151.
 Pageouts:                               2996313.
 Swapins:                                      7.
 Swapouts:                                    16.
@@ -42,28 +42,28 @@ Swapouts:                                    16.
 The system has 34359738368 (2097152 pages with a page size of 16384).
 
 Stats: 
-Pages free: 679999 
-Pages purgeable: 22619 
-Pages purged: 3222766 
+Pages free: 652235 
+Pages purgeable: 23079 
+Pages purged: 3232980 
 
 Swap I/O:
 Swapins: 7 
 Swapouts: 16 
 
 Page Q counts:
-Pages active: 552238 
-Pages inactive: 418422 
-Pages speculative: 179996 
+Pages active: 585196 
+Pages inactive: 410479 
+Pages speculative: 183582 
 Pages throttled: 0 
-Pages wired down: 133725 
+Pages wired down: 134298 
 
 Compressor Stats:
-Pages used by compressor: 97714 
-Pages decompressed: 12314853 
+Pages used by compressor: 96636 
+Pages decompressed: 12319037 
 Pages compressed: 27010022 
 
 File I/O:
-Pageins: 76100918 
+Pageins: 76117152 
 Pageouts: 2996313 
 
 System-wide memory free percentage: 88%
@@ -126,7 +126,7 @@ Google    54907 3pigcn  103u  IPv4 0xa14a99c8b00144fd      0t0  TCP localhost:18
 ✅ Gateway status:
 ```
 Service: LaunchAgent (loaded)
-File logs: /tmp/openclaw/openclaw-2026-05-28.log
+File logs: /tmp/openclaw/openclaw-2026-05-29.log
 Command: /opt/homebrew/opt/node@22/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789
 Service file: ~/Library/LaunchAgents/ai.openclaw.gateway.plist
 Working dir: ~/.openclaw
@@ -166,9 +166,9 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
 ## 最近 Cron Runs
 
 最近 10 次运行记录:
-- `8d0227c6-23ec-434c-802a-97bdb590dc1f.jsonl` (更新时间: 2026-05-28 23:25:45)
-- `078443c8-c048-4e69-8dab-eb99c185567b.jsonl` (更新时间: 2026-05-28 23:01:26)
-- `73bbdaca-9c48-41d7-a333-1c3e2d112c95.jsonl` (更新时间: 2026-05-28 23:00:45)
+- `8d0227c6-23ec-434c-802a-97bdb590dc1f.jsonl` (更新时间: 2026-05-29 00:24:17)
+- `078443c8-c048-4e69-8dab-eb99c185567b.jsonl` (更新时间: 2026-05-29 00:01:40)
+- `73bbdaca-9c48-41d7-a333-1c3e2d112c95.jsonl` (更新时间: 2026-05-29 00:01:20)
 - `e3a596af-d4b9-40f1-ae36-d6208dc3e55b.jsonl` (更新时间: 2026-05-28 22:58:24)
 - `5bc40a82-ab3e-4082-ac5a-df1048f3860d.jsonl` (更新时间: 2026-05-28 20:11:22)
 - `f24e53d3-28d8-4c33-8e8f-bd36d6e244c0.jsonl` (更新时间: 2026-05-28 19:03:16)
@@ -179,37 +179,37 @@ Troubleshooting: https://docs.openclaw.ai/troubleshooting
 
 ## Gateway 日志异常
 
+⚠️ `openclaw-2026-05-29.log` 中发现异常:
+  - `{"0":"[tools] edit failed: Found 3 occurrences of the text in /Users/3pigcn/clawd/wing_recovery_alert.md. The text must `
+  - `{"0":"[tools] edit failed: Found 3 occurrences of the text in /Users/3pigcn/clawd/wing_recovery_alert.md. The text must `
+  - `{"0":"[tools] edit failed: Found 3 occurrences of the text in /Users/3pigcn/clawd/wing_recovery_alert.md. The text must `
 ⚠️ `openclaw-2026-05-28.log` 中发现异常:
   - `{"0":"{\"module\":\"cron\",\"storePath\":\"/Users/3pigcn/.openclaw/cron/jobs.json\"}","1":{"jobId":"8d0227c6-23ec-434c-8`
   - `{"0":"[tools] edit failed: Found 7 occurrences of the text in /Users/3pigcn/clawd/wing_recovery_alert.md. The text must `
   - `{"0":"[tools] edit failed: Found 7 occurrences of the text in /Users/3pigcn/clawd/wing_recovery_alert.md. The text must `
-⚠️ `openclaw-2026-05-27.log` 中发现异常:
-  - `{"0":"{\"module\":\"cron\",\"storePath\":\"/Users/3pigcn/.openclaw/cron/jobs.json\"}","1":{"jobId":"8d0227c6-23ec-434c-8`
-  - `{"0":"[tools] edit failed: Could not find the exact text in /Users/3pigcn/clawd/wing_recovery_alert.md. The old text mus`
-  - `{"0":"[tools] edit failed: Could not find the exact text in /Users/3pigcn/clawd/wing_recovery_alert.md. The old text mus`
 
 ## 系统整体状态
 
 **Top 进程**:
 ```
-Processes: 547 total, 2 running, 545 sleeping, 2449 threads 
-2026/05/28 23:30:09
-Load Avg: 1.91, 1.66, 1.62 
-CPU usage: 3.47% user, 9.56% sys, 86.95% idle 
+Processes: 561 total, 3 running, 558 sleeping, 2465 threads 
+2026/05/29 00:30:10
+Load Avg: 1.99, 1.87, 1.79 
+CPU usage: 4.31% user, 18.96% sys, 76.72% idle 
 SharedLibs: 967M resident, 151M data, 136M linkedit.
-MemRegions: 156160 total, 6005M resident, 606M private, 1446M shared.
-PhysMem: 18G used (2089M wired, 1527M compressor), 13G unused.
-VM: 224T vsize, 5703M framework vsize, 7(0) swapins, 16(0) swapouts.
-Networks: packets: 85406389/101G in, 74370951/74G out.
-Disks: 115537048/2096G read, 63376094/3105G written.
+MemRegions: 157455 total, 6183M resident, 630M private, 1452M shared.
+PhysMem: 19G used (2105M wired, 1510M compressor), 13G unused.
+VM: 229T vsize, 5703M framework vsize, 7(0) swapins, 16(0) swapouts.
+Networks: packets: 85592703/101G in, 74575433/74G out.
+Disks: 115837700/2106G read, 63415026/3105G written.
 
-PID    COMMAND      %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID  STATE    BOOSTS %CPU_ME %CPU_OTHRS UID FAULTS COW  MSGSENT MSGRECV SYSBSD SYSMACH CSW    PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER   #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
-98878  du           0.0  00:02.10 1   0   11     5328K 0B   4624K 53376 1     sleeping *0[1]  0.00000 0.00000    501 1401   67   28      12      380709 104     64565  4       0     0.0   0      0      180    3pigcn N/A    N/A   N/A   N/A   N/A   N/A  
-98753  head         0.0  00:00.00 1   0   11     960K  0B   720K  53376 1     sleeping *0[1]  0.00000 0.00000    501 251    59   25      12      132    68      4      2       0     0.0   0      0      180    3pigcn N/A    N/A   N/A   N/A   N/A   N/A  
-98752  sort         0.0  00:00.00 1   0   12     1088K 0B   848K  53376 1     sleeping *0[1]  0.00000 0.00000    501 265    60   27      13      162    69      7      2       0     0.0   0      0      180    3pigcn N/A    N/A   N/A   N/A   N/A   N/A  
-98751  du           0.0  00:03.32 1   0   11     5744K 0B   5024K 53376 1     sleeping *0[1]  0.00000 0.00000    501 1552   67   29      12      664598 107     85443  5       0     0.0   0      0      180    3pigcn N/A    N/A   N/A   N/A   N/A   N/A  
-98541  head         0.0  00:00.00 1   0   11     960K  0B   720K  53376 1     sleeping *0[1]  0.00000 0.00000    501 249    59   25      12      132    68      3      2       0     0.0   0      0      180    3pigcn N/A  
+PID    COMMAND          %CPU TIME     #TH #WQ #PORTS MEM   PURG CMPRS PGRP  PPID STATE    BOOSTS  %CPU_ME %CPU_OTHRS UID FAULTS COW MSGSENT MSGRECV SYSBSD SYSMACH CSW  PAGEINS IDLEW POWER INSTRS CYCLES JETPRI USER            #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+99571  helpd            0.0  00:01.42 4   2   78     11M   448K 0B    99571 1    sleeping *0[1]   0.00000 0.00000    501 3100   196 628     175     32011  2878    4395 171     73    0.0   0      0      40     3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
+99445  com.apple.access 0.0  00:00.04 2   1   36     1904K 0B   0B    99445 1    sleeping *0[5]   0.00000 0.00000    501 843    119 124     44      633    286     200  2       1     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
+99442  com.apple.hiserv 0.0  00:00.02 2   1   47     1952K 0B   0B    99442 1    sleeping *0[5]   0.00000 0.00000    501 703    122 160     54      570    347     71   2       2     0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
+99441  nsattributedstri 0.0  00:00.50 5   2   262    9649K 0B   0B    99441 1    sleeping *148[4] 0.00000 0.00000    501 6134   318 4943    3427    21865  14113   4257 4       138   0.0   0      0      0      3pigcn          N/A    N/A   N/A   N/A   N/A   N/A  
+99439  com.apple.access 0.0  00:00.04 2   1   36     1968K 0B   0B    99439 1    sleeping *0[2]   0.00000 0.00000    200 844    119 120     40      606    278     142  2
 ```
 
 ---
-*报告生成完成 @ 2026-05-28 23:30:07*
+*报告生成完成 @ 2026-05-29 00:30:09*
