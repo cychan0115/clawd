@@ -4,6 +4,11 @@
 # Logs
 *.log
 auto_save.log
+logs/
+
+# Reports
+jira_cron_report_*.md
+wing_recovery_alert.md
 
 # Secrets
 *.key
