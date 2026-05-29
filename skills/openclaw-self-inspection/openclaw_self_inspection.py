@@ -112,53 +112,99 @@ def check_openclaw_processes():
     """检查 OpenClaw 相关进程"""
     lines = [section("OpenClaw 进程")]
     
-    processes = {
-        "gateway": ["openclaw", "gateway"],
-        "agent": ["openclaw", "agent"],
-        "browser": ["Chromium", "Chrome"],
-    }
-    
-    for name, keywords in processes.items():
-        rc, out, err = run_cmd(["pgrep", "-if", keywords[0]])
-        if rc == 0 and out.strip():
-            pids = out.strip().split()
-            lines.append(ok(f"{name}: 运行中 (PIDs: {', '.join(pids)})"))
+    # gateway
+    rc, out, _ = run_cmd(["pgrep", "-if", "openclaw.*gateway"])
+    if rc == 0 and out.strip():
+        pids = out.strip().split()
+        lines.append(ok(f"gateway: 运行中 (PIDs: {', '.join(pids)})"))
+    else:
+        rc2, out2, _ = run_cmd(["ps", "aux"])
+        found = False
+        if rc2 == 0:
+            for line in out2.splitlines():
+                if "openclaw" in line.lower() and "gateway" in line.lower():
+                    found = True
+                    break
+        if found:
+            lines.append(ok("gateway: 运行中 (通过 ps 确认)"))
         else:
-            # 尝试更宽泛的搜索
-            rc2, out2, _ = run_cmd(["ps", "aux"])
-            found = False
-            if rc2 == 0:
-                for line in out2.splitlines():
-                    if any(k.lower() in line.lower() for k in keywords):
-                        found = True
-                        break
-            if found:
-                lines.append(ok(f"{name}: 运行中 (通过 ps 确认)"))
-            else:
-                lines.append(error(f"{name}: 未检测到运行进程"))
+            lines.append(error("gateway: 未检测到运行进程"))
+    
+    # agent — 在 OpenClaw 架构中 agent 不是独立进程，而是通过 gateway 管理
+    # 判断依据：gateway 能返回健康状态且 status 中显示有活跃 session
+    rc, out, _ = run_cmd(["curl", "-s", "http://localhost:18789/health"], timeout=10)
+    if rc == 0 and '"ok":true' in out:
+        # 进一步检查 sessions 活跃情况
+        sessions_file = Path(os.path.expanduser("~/.openclaw/agents/main/sessions/sessions.json"))
+        if sessions_file.exists():
+            try:
+                mtime = sessions_file.stat().st_mtime
+                age_min = (datetime.datetime.now().timestamp() - mtime) / 60
+                if age_min < 60:
+                    lines.append(ok(f"agent: 活跃 (sessions.json 更新于 {age_min:.0f} 分钟前)"))
+                else:
+                    lines.append(ok(f"agent: 运行中 (sessions.json 更新于 {age_min:.0f} 分钟前)"))
+            except Exception:
+                lines.append(ok("agent: gateway 健康，agent 推断正常"))
+        else:
+            lines.append(ok("agent: gateway 健康，agent 推断正常"))
+    else:
+        lines.append(warn("agent: gateway health 异常，无法确认 agent 状态"))
+    
+    # browser — 区分 OpenClaw browser 和 Steam CEF 等
+    rc, out, _ = run_cmd(["curl", "-s", "http://127.0.0.1:18800/json/version"], timeout=5)
+    browser_cdp_ready = rc == 0 and out.strip()
+    
+    rc, out, _ = run_cmd(["ps", "aux"])
+    openclaw_browser_found = False
+    if rc == 0:
+        for line in out.splitlines():
+            low = line.lower()
+            if "openclaw" in low and any(k in low for k in ["google chrome", "chromium"]):
+                openclaw_browser_found = True
+                break
+    
+    if openclaw_browser_found and browser_cdp_ready:
+        lines.append(ok("browser: 运行中且 CDP (18800) 就绪"))
+    elif openclaw_browser_found and not browser_cdp_ready:
+        lines.append(warn("browser: OpenClaw 进程存在但 CDP (18800) 未就绪"))
+    else:
+        lines.append(ok("browser: 未运行（按需启动，非异常）"))
     
     return "\n".join(lines)
 
 def check_ports():
-    """检查端口 18789 和 18800"""
+    """检查端口 18789 (gateway) 和 18800 (browser CDP)"""
     lines = [section("端口监听")]
     
-    for port in [18789, 18800]:
-        rc, out, err = run_cmd(["lsof", "-i", f":{port}"])
-        if rc == 0 and out.strip():
-            lines.append(ok(f"端口 {port}: 监听中\n```\n{out}\n```"))
+    # gateway 端口 18789 — 必须监听
+    rc, out, err = run_cmd(["lsof", "-i", ":18789"])
+    if rc == 0 and out.strip():
+        lines.append(ok(f"端口 18789 (gateway): 监听中\n```\n{out}\n```"))
+    else:
+        rc2, out2, _ = run_cmd(["netstat", "-anv"])
+        listening = False
+        if rc2 == 0:
+            for line in out2.splitlines():
+                if ".18789" in line and ("LISTEN" in line or "listen" in line.lower()):
+                    listening = True
+                    break
+        if listening:
+            lines.append(ok("端口 18789 (gateway): 监听中 (通过 netstat 确认)"))
         else:
-            rc2, out2, _ = run_cmd(["netstat", "-anv"])
-            listening = False
-            if rc2 == 0:
-                for line in out2.splitlines():
-                    if f".{port}" in line and ("LISTEN" in line or "listen" in line.lower()):
-                        listening = True
-                        break
-            if listening:
-                lines.append(ok(f"端口 {port}: 监听中 (通过 netstat 确认)"))
-            else:
-                lines.append(error(f"端口 {port}: 未检测到监听"))
+            lines.append(error("端口 18789 (gateway): 未检测到监听"))
+    
+    # browser CDP 端口 18800 — 按需启动，未运行不算异常
+    rc, out, _ = run_cmd(["lsof", "-i", ":18800"])
+    if rc == 0 and out.strip():
+        lines.append(ok(f"端口 18800 (browser CDP): 监听中\n```\n{out}\n```"))
+    else:
+        # 检查 browser 是否实际在运行
+        rc2, out2, _ = run_cmd(["curl", "-s", "http://127.0.0.1:18800/json/version"], timeout=5)
+        if rc2 == 0 and out2.strip():
+            lines.append(ok("端口 18800 (browser CDP): CDP 就绪"))
+        else:
+            lines.append(ok("端口 18800 (browser CDP): 未监听（browser 按需启动，非异常）"))
     
     return "\n".join(lines)
 
@@ -325,16 +371,26 @@ def main():
     
     print(f"报告已写入: {REPORT_FILE}")
     
-    # 判断是否有异常
-    if "❌" in report or "⚠️" in report:
+    # 判断是否有异常（❌ 为真异常；⚠️ 为警告）
+    has_error = any(line.startswith("❌") for line in report.splitlines())
+    has_warn = any(line.startswith("⚠️") for line in report.splitlines())
+    
+    if has_error:
         print("\n" + "="*50)
         print("发现异常项，请查看报告!")
         print("="*50)
-        # 在终端打印异常部分
         for line in report.splitlines():
             if line.startswith("❌") or line.startswith("⚠️"):
                 print(line)
         return 1
+    elif has_warn:
+        print("\n" + "="*50)
+        print("发现警告项")
+        print("="*50)
+        for line in report.splitlines():
+            if line.startswith("⚠️"):
+                print(line)
+        return 0  # 警告不算失败退出码
     else:
         print("\n✅ 所有检查项正常")
         return 0
