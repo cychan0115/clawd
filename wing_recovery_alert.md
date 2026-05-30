@@ -11,6 +11,8 @@
   2. ✅ 查询待领取 tickets (status="Selected for Development", assignee EMPTY) → 0 个
   3. ✅ 检查本地 git 状态 → 工作树干净，无需 commit/push
   4. ✅ 检查任务状态管理器 → 无活跃任务
+  5. ✅ git commit 记录（main 分支，`0b79c39`）
+  6. ❌ git push origin main → 远程仓库 `https://github.com/3pigcn/clawd.git` 不存在（404）
 - **结论**: ✅ **当前没有待处理的 Jira 任务。**
 - **需要 Anna 处理**:
   - Git 远程仓库 `https://github.com/3pigcn/clawd.git` 仍 404，请确认是否需要更新远程仓库地址。
