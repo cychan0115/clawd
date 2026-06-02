@@ -1,6 +1,6 @@
-# Jira 任务巡查报告 - 2026-06-02 15:34
+# Jira 任务巡查报告 - 2026-06-02 15:44
 
-**巡查时间**: 2026-06-02 15:34 PM (Asia/Shanghai)  
+**巡查时间**: 2026-06-02 15:44 PM (Asia/Shanghai)  
 **巡查 Agent**: huahua (cron job: 8d0227c6-23ec-434c-802a-97bdb590dc1f)  
 **状态**: 🟢 正常（无待处理任务）
 
@@ -8,52 +8,48 @@
 
 ## Jira 连接状态
 
-- **Jira 地址**: http://116.205.141.57:50008（自建服务器）
-- **连接状态**: ✅ 正常
+- **Jira Cloud**: `https://3pigc.atlassian.net` — ❌ **不可用** (404 Site temporarily unavailable)
+- **Jira 自建服务器**: `http://116.205.141.57:50008` — ✅ **正常**
 - **认证方式**: Bearer Token（huahua@3pigc.com）
 
-## AIWH 项目状态
+## AIWH 项目状态（自建服务器）
 
 | 状态 | huahua | 未分配 | 全部 |
 |------|--------|--------|------|
-| Backlog (id=10200) | - | - | 0 |
-| Selected for Development (id=10201) | - | 0 | 0 |
-| 处理中 (id=3) | 0 | - | 0 |
+| Backlog | - | - | 0 |
+| Selected for Development | - | 0 | 0 |
+| 处理中 (In Progress) | 0 | - | 0 |
 | **非完成状态总计** | - | - | **0** |
 
 **结论**: 当前没有待处理的 Jira 任务。
 
 ## 本地代码状态
 
-```
-分支: main
-状态: nothing to commit, working tree clean
-最新 commit: ce59516 JIRA-PATROL: 2026-06-02 15:24 - 无待处理任务
-```
-
-- 没有未提交的代码修改（巡查报告已更新）
-- 没有未 push 的 commits（除 patrol 报告外）
-- task_state_manager: No active task
+- 分支: main
+- 状态: nothing to commit, working tree clean
+- 未 push commits: 较多（历史巡查报告累积）
+- GitHub 远程: `git@github.com:3pigcn/clawd.git` — 仍返回 "Repository not found"
 
 ## 处理中的任务检查
 
-- ✅ 状态="处理中" 且 assignee=huahua 的 ticket: **0 个**
-- ✅ 状态="Selected for Development" 且 assignee=EMPTY: **0 个**
-- ✅ 代码已完成但未 commit/push: **无**
+- ✅ 状态="处理中" 且 assignee=huahua: **0 个**
+- ✅ 无未提交代码修改
 - ✅ 无需写 BLOCKER comment
 
 ## 待领取任务检查
 
-- ✅ 没有新 ticket 可以领取
-- ✅ 不需要执行 claim → 开发 → done 流程
+- ✅ 状态="Selected for Development" 且 assignee=EMPTY: **0 个**
+- ✅ 无需执行 claim → 开发 → done 流程
+
+## 持续问题
+
+1. **Jira Cloud 不可用**: Atlassian Cloud 站点 `3pigc.atlassian.net` 持续返回 404，已数日。当前使用自建服务器作为替代。
+2. **Git push 失败**: GitHub 仓库 `3pigcn/clawd` 返回 "Repository not found"。建议人工检查远程仓库配置或仓库是否存在。
+
+## 行动
+
+- 无待处理任务，无需采取行动。
+- 下次巡查继续监控 Jira Cloud 恢复情况。
 
 ---
-
-## ⚠️ 持续问题
-
-**Git push 失败**: `git@github.com:3pigcn/clawd.git` 返回 "Repository not found"。
-- 此问题在多次巡查中持续存在
-- 建议人工检查：远程仓库配置、仓库是否存在、SSH 密钥权限
-- 影响：patrol 报告和代码变更无法同步到远程仓库
-
-**报告时间**: 2026-06-02 07:34 UTC
+*报告时间: 2026-06-02 07:44 UTC*
