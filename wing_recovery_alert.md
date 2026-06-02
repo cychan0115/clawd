@@ -49,3 +49,7 @@
 ---
 
 **报告时间**: 2026-06-02 06:24 UTC
+
+## ⚠️ 备注
+
+Git push 失败：`git@github.com:3pigcn/clawd.git` 返回 "Repository not found"。此问题在多次巡查中持续存在，需人工检查远程仓库配置或 SSH 密钥权限。
