@@ -1,6 +1,6 @@
-# Jira 任务巡查报告 - 2026-06-02 14:35
+# Jira 任务巡查报告 - 2026-06-02 15:34
 
-**巡查时间**: 2026-06-02 14:35 PM (Asia/Shanghai)  
+**巡查时间**: 2026-06-02 15:34 PM (Asia/Shanghai)  
 **巡查 Agent**: huahua (cron job: 8d0227c6-23ec-434c-802a-97bdb590dc1f)  
 **状态**: 🟢 正常（无待处理任务）
 
@@ -28,10 +28,11 @@
 ```
 分支: main
 状态: nothing to commit, working tree clean
+最新 commit: ce59516 JIRA-PATROL: 2026-06-02 15:24 - 无待处理任务
 ```
 
-- 没有未提交的代码修改
-- 没有未 push 的 commits
+- 没有未提交的代码修改（巡查报告已更新）
+- 没有未 push 的 commits（除 patrol 报告外）
 - task_state_manager: No active task
 
 ## 处理中的任务检查
@@ -48,8 +49,11 @@
 
 ---
 
-**报告时间**: 2026-06-02 06:35 UTC
+## ⚠️ 持续问题
 
-## ⚠️ 备注
+**Git push 失败**: `git@github.com:3pigcn/clawd.git` 返回 "Repository not found"。
+- 此问题在多次巡查中持续存在
+- 建议人工检查：远程仓库配置、仓库是否存在、SSH 密钥权限
+- 影响：patrol 报告和代码变更无法同步到远程仓库
 
-Git push 失败：`git@github.com:3pigcn/clawd.git` 返回 "Repository not found"。此问题在多次巡查中持续存在，需人工检查远程仓库配置或 SSH 密钥权限。
+**报告时间**: 2026-06-02 07:34 UTC
