@@ -1,6 +1,6 @@
-# Jira 任务巡查报告 - 2026-06-02 23:25
+# Jira 任务巡查报告 - 2026-06-02 23:34
 
-**巡查时间**: 2026-06-02 23:25 PM (Asia/Shanghai)
+**巡查时间**: 2026-06-02 23:34 PM (Asia/Shanghai)
 **巡查 Agent**: huahua (cron job: 8d0227c6-23ec-434c-802a-97bdb590dc1f)
 **状态**: 🟢 正常（无待处理任务）
 
@@ -9,7 +9,6 @@
 ## Jira 连接状态
 
 - **Jira 服务器**: `http://116.205.141.57:50008` — ✅ 正常
-- **Jira Cloud**: `https://3pigc.atlassian.net` — ⚠️ 维护中（Atlassian Cloud 不可用）
 - **认证方式**: Bearer Token（huahua@3pigc.com）
 - **AIWH 项目**: 可正常访问
 
@@ -25,7 +24,7 @@
 
 ### 3. 其他检查
 - ✅ 任务状态管理器: No active task
-- ✅ 本地代码: 无未提交变更（wing_recovery_alert.md 已恢复）
+- ✅ 本地代码: 无未提交变更（main 分支，working tree clean）
 - ✅ 无 wing_recovery 需处理
 
 ## 结论
@@ -33,4 +32,4 @@
 **当前没有待处理的 Jira 任务。**
 
 ---
-*报告时间: 2026-06-02 15:25 UTC*
+*报告时间: 2026-06-02 15:34 UTC*
