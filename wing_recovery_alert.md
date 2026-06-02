@@ -1,6 +1,6 @@
-# Jira 任务巡查报告 - 2026-06-02 13:54
+# Jira 任务巡查报告 - 2026-06-02 14:24
 
-**巡查时间**: 2026-06-02 13:54 PM (Asia/Shanghai)  
+**巡查时间**: 2026-06-02 14:24 PM (Asia/Shanghai)  
 **巡查 Agent**: huahua (cron job: 8d0227c6-23ec-434c-802a-97bdb590dc1f)  
 **状态**: 🟢 正常（无待处理任务）
 
@@ -16,31 +16,36 @@
 
 | 状态 | huahua | 未分配 | 全部 |
 |------|--------|--------|------|
-| 处理中 (id=3) | 0 | - | 0 |
+| Backlog (id=10200) | - | - | 0 |
 | Selected for Development (id=10201) | - | 0 | 0 |
-| Backlog (id=10200) | - | 0 | 0 |
-| 非完成状态总计 | - | - | **0** |
-| **结论** | **当前没有待处理的 Jira 任务** | | |
+| 处理中 (id=3) | 0 | - | 0 |
+| **非完成状态总计** | - | - | **0** |
+
+**结论**: 当前没有待处理的 Jira 任务。
 
 ## 本地代码状态
 
 ```
 分支: main
-未 push commits: 5 个（远程仓库不存在）
-最近 commits:
-  ad9bcea (HEAD -> main) JIRA-PATROL: 2026-06-02 13:44 - 更新巡查报告
-  be45168 JIRA-PATROL: 2026-06-02 13:44 - 巡查无任务，记录git状态
-  ...
-  f1ac45c (origin/main) chore: Jira巡查报告更新 2026-06-02 11:58
+状态: nothing to commit, working tree clean
 ```
 
-**⚠️ Git Push 异常**: 远程仓库 `git@github.com:3pigcn/clawd.git` 报错 "Repository not found"，此问题已持续存在。需要人工检查远程仓库配置或仓库是否存在。
+- 没有未提交的代码修改
+- 没有未 push 的 commits
+- task_state_manager: No active task
 
-## 任务状态管理器
+## 处理中的任务检查
 
-```
-No active task.
-```
+- ✅ 状态="处理中" 且 assignee=huahua 的 ticket: **0 个**
+- ✅ 状态="Selected for Development" 且 assignee=EMPTY: **0 个**
+- ✅ 代码已完成但未 commit/push: **无**
+- ✅ 无需写 BLOCKER comment
+
+## 待领取任务检查
+
+- ✅ 没有新 ticket 可以领取
+- ✅ 不需要执行 claim → 开发 → done 流程
 
 ---
-**报告时间**: 2026-06-02 05:54 UTC
+
+**报告时间**: 2026-06-02 06:24 UTC
