@@ -26,9 +26,10 @@
 
 ```
 分支: main
-未 push commits: 4 个（远程仓库不存在）
+未 push commits: 5 个（远程仓库不存在）
 最近 commits:
-  be45168 (HEAD -> main) JIRA-PATROL: 2026-06-02 13:44 - 巡查无任务，记录git状态
+  ad9bcea (HEAD -> main) JIRA-PATROL: 2026-06-02 13:44 - 更新巡查报告
+  be45168 JIRA-PATROL: 2026-06-02 13:44 - 巡查无任务，记录git状态
   961a6ce JIRA-PATROL: 2026-06-02 12:44 - 无待处理任务，记录git push异常
   8b20db3 JIRA-PATROL: 2026-06-02 12:36 - 更新巡查报告，记录git push异常
   c15752b JIRA-PATROL: 2026-06-02 12:34 - 无待处理任务
