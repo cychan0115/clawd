@@ -1,8 +1,8 @@
-# Jira 任务巡查报告 - 2026-06-02 12:34
+# Jira 任务巡查报告 - 2026-06-02 12:44
 
-**巡查时间**: 2026-06-02 12:34 PM (Asia/Shanghai)  
+**巡查时间**: 2026-06-02 12:44 PM (Asia/Shanghai)  
 **巡查 Agent**: huahua (cron job: 8d0227c6-23ec-434c-802a-97bdb590dc1f)  
-**状态**: 🟢 正常
+**状态**: 🟢 正常（无待处理任务）
 
 ---
 
@@ -23,14 +23,15 @@
 
 ```
 分支: main
-状态: 已 commit 但未 push（git push 失败，远程仓库报错）
+状态: 有 2 个未 push 的 commit（远程仓库不存在）
 最近 commits:
-  c15752b (HEAD -> main) JIRA-PATROL: 2026-06-02 12:34 - 无待处理任务
+  8b20db3 (HEAD -> main) JIRA-PATROL: 2026-06-02 12:36 - 更新巡查报告，记录git push异常
+  c15752b JIRA-PATROL: 2026-06-02 12:34 - 无待处理任务
   f1ac45c (origin/main) chore: Jira巡查报告更新 2026-06-02 11:58
   595f0ba JIRA-ROUTINE: 任务巡查报告 2026-06-02 11:24 - 无待处理任务
 ```
 
-**⚠️ Git Push 异常**: 远程仓库 `git@github.com:3pigcn/clawd.git` 报错 "Repository not found"，SSH 认证正常，可能是仓库不存在或权限问题。
+**⚠️ Git Push 异常**: 远程仓库 `git@github.com:3pigcn/clawd.git` 报错 "Repository not found"，此问题已持续存在。需要人工检查远程仓库配置或仓库是否存在。
 
 ## 任务状态管理器
 
@@ -39,4 +40,4 @@ No active task.
 ```
 
 ---
-**报告时间**: 2026-06-02 04:34 UTC
+**报告时间**: 2026-06-02 04:44 UTC
