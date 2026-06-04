@@ -3,3 +3,20 @@ Jira任务巡查记录 - 2026-06-01 16:24 (Asia/Shanghai)
 - 待领取 ticket: 0
 - 所有开放 ticket: 0
 - 结论: 当前没有待处理的 Jira 任务。
+
+Jira任务巡查记录 - 2026-06-04 12:54 (Asia/Shanghai)
+- Cron ID: 8d0227c6-23ec-434c-802a-97bdb590dc1f
+- 处理中 ticket: 0
+- 待领取 ticket: 0
+- 所有开放 ticket: 0
+- 结论: 当前没有待处理的 Jira 任务。
+- 备注: Jira服务恢复（116.205.141.57:50008），此前Atlassian Cloud地址不可用
+
+Jira任务巡查记录 - 2026-06-04 12:44 (Asia/Shanghai)
+- Cron ID: 8d0227c6-23ec-434c-802a-97bdb590dc1f
+- 处理中 ticket: 无法查询 (Jira服务不可用)
+- 待领取 ticket: 无法查询 (Jira服务不可用)
+- Atlassian Status: 无全局事件报告
+- 站点状态: 3pigc.atlassian.net 返回 "Page Unavailable"
+- 本地状态: 无活跃任务，无未提交代码
+- 结论: BLOCKER - Jira服务不可用，已记录 jira_blocker_20260604_1244.md
