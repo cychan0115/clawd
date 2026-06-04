@@ -233,7 +233,10 @@ def check_cron_jobs():
     lines = [section("Cron Jobs")]
     
     jobs_file = Path(os.path.expanduser("~/.openclaw/cron/jobs.json"))
-    if jobs_file.exists():
+    jobs_state_file = Path(os.path.expanduser("~/.openclaw/cron/jobs-state.json.migrated"))
+    if jobs_state_file.exists():
+        lines.append(ok(f"jobs-state.json: 存在 (新格式)"))
+    elif jobs_file.exists():
         try:
             with open(jobs_file) as f:
                 data = json.load(f)
