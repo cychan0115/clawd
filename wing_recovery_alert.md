@@ -17,9 +17,9 @@
 
 **Git 状态**:
 - 分支: main
-- 工作树: clean（无未提交修改）
-- 推送: 已推送 ✅
-- 最新 commit: aac88b8 — Jira patrol: 2026-06-07 06:15
+- 工作树: clean（已提交巡查记录）
+- 推送: ⚠️ 失败 — `repository not found` (远程仓库 `https://github.com/cychan0115/clawd.git` 无法访问)
+- 最新 commit: 2ecb8f7 — Jira patrol: 2026-06-07 07:35
 
 **Actions Taken**:
 - 07:35: Jira Data Center 巡查完成（Bearer Token 认证）
@@ -28,7 +28,9 @@
 - 07:35: 所有 107 个 ticket 状态均为 Done，无待处理任务
 - 07:35: Jira Cloud 站点临时不可用，Jira Data Center 正常
 - 07:35: 本地无 active task，系统运行正常
+- 07:35: 巡查记录已 commit (2ecb8f7)，但 push 失败 — 远程仓库不可访问
 
 > **备注**: 当前无待处理任务。Jira Cloud 站点临时不可用，Jira Data Center 正常。等待新任务分配。
+> **⚠️ 注意**: Git 远程仓库 `cychan0115/clawd` 返回 "Repository not found"，push 失败。请检查仓库 URL 或权限。
 
 *最后更新: 2026-06-07 07:35 CST*
