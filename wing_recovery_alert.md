@@ -5,7 +5,8 @@
 - 当前没有活跃任务 (task_state_manager.py: No active task)
 - **Jira Data Center**: `http://116.205.141.57:50008` / `http://hw4.3pigcn.com:50008` ✅ 正常（Jira 9.4.0，API v2）
 - **AIWH 项目**: ✅ 可正常查询
-- **上次巡查**: 2026-06-06 21:17 CST (本次巡查)
+- **Jira Cloud**: ⚠️ 暂时不可用（Site temporarily unavailable）
+- **上次巡查**: 2026-06-06 21:27 CST (本次巡查)
 
 **检查结果**:
 - 处理中 (status=3) 且 assignee=huahua: **0 个** ✅
@@ -15,16 +16,14 @@
 **Git 状态**:
 - 分支: main
 - 工作树: 干净 (nothing to commit)
-- 最新 commit: `6ba4871` Jira巡查: 2026-06-06 19:34 - 无待处理任务，工作区清理
-- GitHub 远程仓库: `cychan0115/clawd` — ⚠️ push 失败 (remote: Repository not found)
+- 最新 commit: `dfe6a12` Jira巡查: 2026-06-06 21:17 - 无待处理任务
 
 **Actions Taken**:
-- 21:17: 连接 Jira Data Center `hw4.3pigcn.com:50008` → ✅ 正常
-- 21:17: 查询 AIWH 项目 ticket → 0 个处理中，0 个待领取
-- 21:17: 无 ticket 需要处理，本次巡查无任务
-- 21:17: Git 工作区有 wing_recovery_alert.md 更新，已记录状态
-- 21:17: 更新 wing_recovery_alert.md 时间戳
+- 21:27: Jira Cloud 不可用，自动降级到 Jira Data Center `116.205.141.57:50008` → ✅ 正常
+- 21:27: 查询 AIWH 项目 ticket → 0 个处理中，0 个待领取
+- 21:27: 无 ticket 需要处理，本次巡查无任务
+- 21:27: Git 工作区干净，无需提交
 
 > **备注**: 当前无待处理任务。系统运行正常，等待新任务分配。
 
-*最后更新: 2026-06-06 21:17 CST*
+*最后更新: 2026-06-06 21:27 CST*
