@@ -1,29 +1,28 @@
 # 任务恢复告警
 
-**状态**: ⚠️ Atlassian Cloud Jira 服务不可用
+**状态**: ✅ 已恢复 — Jira Data Center 运行正常
 
 - 当前没有活跃任务 (task_state_manager.py: No active task)
-- **Jira 服务 (Atlassian Cloud)**: `pigjira.atlassian.net` ❌ 不可用 — 返回 404 "Page unavailable"
-- **Jira 服务 (本地)**: `http://116.205.141.57:50008` ✅ 运行中（Jira Server 9.4.0），但项目列表为空 `[]`
-- **AIWH 项目**: 无法检查 — Atlassian Cloud 连接中断，本地 Jira 无项目数据
-- **上次巡查**: 2026-06-06 16:14 CST
+- **Jira Data Center**: `http://116.205.141.57:50008` / `http://hw4.3pigcn.com:50008` ✅ 正常（Jira 9.4.0，API v2）
+- **AIWH 项目**: ✅ 可正常查询
+- **上次巡查**: 2026-06-06 16:34 CST
 
 **检查结果**:
-- 处理中 (In Progress) 且 assignee=huahua: ⚠️ 无法查询（Jira 服务不可用）
-- Selected for Development 且 assignee 为空: ⚠️ 无法查询（Jira 服务不可用）
+- 处理中 (status=3) 且 assignee=huahua: 0 个 ✅
+- Selected for Development (status=10201) 且 assignee 为空: 0 个 ✅
 - 完成 (Done): 107 个 ticket（历史累计）
-- **BLOCKER**: Atlassian Cloud 站点不可用，无法执行任何 Jira 操作
 
 **Git 状态**:
 - 分支: main
-- 工作树: 有未提交修改（memory/2026-06-06.md + wing_recovery_alert.md 更新）
-- 最新 commit: `559bf50` Jira巡查: 记录 Atlassian Cloud 服务不可用 2026-06-06 15:34 CST
-- GitHub 远程仓库: `cychan0115/clawd` 待确认
-- 建议: 等待 Atlassian Cloud 恢复或确认本地 Jira 项目数据配置
+- 工作树: 干净（nothing to commit, working tree clean）
+- 最新 commit: 待确认
+- GitHub 远程仓库: `cychan0115/clawd`
 
 **Actions Taken**:
-- 16:14: 尝试连接 pigjira.atlassian.net → 返回 404 HTML error page（服务仍不可用）
-- 16:14: 检查本地 Jira (116.205.141.57:50008) → 运行中但项目列表为空 `[]`
-- 16:14: 更新 wing_recovery_alert.md 并准备 commit
+- 16:34: 连接 Jira Data Center `hw4.3pigcn.com:50008` → ✅ 正常
+- 16:34: 查询 AIWH 项目 ticket → 0 个处理中，0 个待领取
+- 16:34: 更新 wing_recovery_alert.md → 标记为已恢复
 
-*最后更新: 2026-06-06 16:14 CST*
+> **备注**: Atlassian Cloud (`3pigc.atlassian.net`) 仍不可用（HTTP 404），但 Jira Data Center 代理已接管，不影响自动化流程。
+
+*最后更新: 2026-06-06 16:34 CST*
