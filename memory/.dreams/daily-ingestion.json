@@ -1,60 +1,60 @@
 {
   "version": 1,
   "files": {
+    "memory/2026-06-07-jira-blocker.md": {
+      "mtimeMs": 1780778155772,
+      "size": 636,
+      "lastDreamingDayIngested": "2026-06-08"
+    },
     "memory/2026-06-06.md": {
       "mtimeMs": 1780759247384,
       "size": 3443,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-06-jira-blocked.md": {
       "mtimeMs": 1780730232207,
       "size": 1231,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-05.md": {
       "mtimeMs": 1780664788131,
       "size": 1787,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-04.md": {
       "mtimeMs": 1780588140760,
       "size": 685,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-03.md": {
       "mtimeMs": 1780502304505,
       "size": 586,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-03-jira-blocker.md": {
       "mtimeMs": 1780445173705,
       "size": 1440,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-03-jira-patrol.md": {
       "mtimeMs": 1780459650058,
       "size": 1488,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-02.md": {
       "mtimeMs": 1780397233846,
       "size": 513,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-06-01.md": {
       "mtimeMs": 1780316652255,
       "size": 511,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     },
     "memory/2026-05-31.md": {
       "mtimeMs": 1780241520439,
       "size": 3091,
-      "lastDreamingDayIngested": "2026-06-07"
-    },
-    "memory/2026-05-30.md": {
-      "mtimeMs": 1780145006361,
-      "size": 931,
-      "lastDreamingDayIngested": "2026-06-07"
+      "lastDreamingDayIngested": "2026-06-08"
     }
   }
 }
