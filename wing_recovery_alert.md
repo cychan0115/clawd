@@ -8,7 +8,7 @@
 | 待领取 (Selected for Development) 且 assignee=EMPTY | **0 个** ✅ | 无待领取任务 |
 | 所有未完成 (非 Done 状态) | **0 个** ✅ | AIWH 项目全部完成 |
 | 本地 git 状态 | ✅ 干净 | nothing to commit, working tree clean |
-| 最新 commit | e5c72d6 | Jira巡查: 2026-06-08 06:25 - 更新巡查时间戳 |
+| 最新 commit | a2c63f0 | Jira巡查: 2026-06-08 06:35 - 无待处理任务 |
 | Jira Data Center 可用性 | ✅ 可用 | 116.205.141.57:50008 正常响应 |
 | GitHub 远程推送 | ⚠️ 失败 | 仓库 cychan0115/clawd.git 不存在或权限不足 |
 
