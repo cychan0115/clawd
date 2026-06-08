@@ -147,3 +147,26 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 需要重新入队时：先改回 Backlog + assignee=空，再发 comment 触发自动领取
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
+
+## Promoted From Short-Term Memory (2026-06-09)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:12:12 -->
+- 问题详情: **Atlassian Cloud 站点 `3pigc.atlassian.net` 当前不可用** [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:12-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:14:17 -->
+- 问题详情: 07:54 Request ID: 3bcf53c319fb4adbb15e29e758104c37; 08:04 Request ID: 73e49d21558f416c81800cf7de617c35 / 93b9201f9b72466b9c00c498d0fb0372; HTTP 状态: 返回 "Page unavailable" HTML 错误页（非 API JSON）; 持续时间: 至少 10 分钟（07:54 - 08:04） [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:14-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:21:21 -->
+- 影响: 由于 Jira 站点不可用，以下操作无法执行： [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:21-21]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:22:25 -->
+- 影响: ❌ 无法查询"处理中"的 ticket（assignee=huahua）; ❌ 无法查询待领取的 ticket（Selected for Development）; ❌ 无法更新 ticket 状态或添加评论; ❌ 无法领取新任务 [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:22-25]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:28:31 -->
+- 本地状态: Git 工作区: `wing_task_state.log` 有更新（巡查日志）; 最新提交: `190fb0c` - JIRA-PATROL: 07:04 patrol - no active tickets, push still blocked; 无 recovery alert 文件; task_state_manager: **No active task** [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:28-31]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-blocker.md:6:8 -->
+- 检查项: [x] 本地任务状态检查 - 无活跃任务; [x] Git 状态检查 - 工作区干净，无未提交代码; [x] Jira API 连接检查 - **失败** (07:54 和 08:04 两次均失败) [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-blocker.md:6-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:12:14 -->
+- 检查项: [x] "处理中" ticket 查询 - **0 个** (AIWH 项目中 assignee=huahua 且 status=处理中); [x] "Selected for Development" ticket 查询 - **0 个** (assignee is EMPTY); [x] 非"完成"状态 ticket 总数 - **0 个** (全部 107 个 ticket 均已完成) [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:17:17 -->
+- Jira 项目状态概览 (AIWH): 总 ticket 数: 107 [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:17-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:19:19 -->
+- Jira 项目状态概览 (AIWH): 完成: 107 (100%) [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:19-19]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:21:22 -->
+- Jira 项目状态概览 (AIWH): Selected for Development: 0; Backlog: 0 [score=0.806 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:21-22]
