@@ -1,22 +1,28 @@
-# Jira 巡查结果 - 2026-06-08 03:14 CST
+# Jira 巡查 BLOCKER - 2026-06-08 21:44
 
 ## 状态
-- Jira 站点不可用 (https://3pigc.atlassian.net)
-- API 返回 "Page unavailable" 错误页
-- Atlassian Status 页面未报告今日事故，但站点实际不可访问
-- Request ID: 1a71b52af9754da59b8e090cf2d4a92f
+- **Jira 站点**: 不可用（HTTP 404，返回 Page unavailable 维护页面）
+- **Atlassian 状态页面**: 显示全部正常（All Systems Operational），但实际情况不符
+- **本地代码状态**: 干净，无未提交变更（上次提交 f000353）
+- **Task State Manager**: 无活跃任务
 
-## 本地状态
-- task_state_manager: 无活动任务
-- git status: 无未提交更改
-- 最后提交: dreaming: 数据更新 2026-06-08 (99d0011)
+## 影响
+1. 无法查询"处理中"的 ticket（步骤 2）
+2. 无法查询"Selected for Development"的 ticket（步骤 3）
+3. 无法执行任何 Jira API 操作（assign、transition、comment 等）
 
-## BLOCKER
-- 无法查询 "处理中" 或 "Selected for Development" 的 ticket
-- 无法更新 ticket 状态或添加评论
-- 无法领取新任务或提交完成报告
+## 证据
+```bash
+curl -I https://anna-3pigc.atlassian.net/rest/api/2/serverInfo
+# HTTP/2 404
+# content-type: text/html
+# atl-missing-tcs: true  ← 维护页面标志
+```
 
-## 建议
-- 等待 Jira 恢复后重试
-- 可手动访问 https://3pigc.atlassian.net 确认恢复
-- 恢复后重新运行巡查流程
+## 后续行动
+- 等待 Jira 站点恢复后重试
+- 下一轮 cron job (21:44) 会自动重试
+- 如果持续不可用，建议检查 Atlassian 状态页面或联系支持
+
+---
+写入时间: 2026-06-08 21:44 (Asia/Shanghai)
