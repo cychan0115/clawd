@@ -1,9 +1,9 @@
-## 最新 Jira 巡查结果：2026-06-09 18:14 CST (huahua 巡查)
+## 最新 Jira 巡查结果：2026-06-09 18:24 CST (huahua 巡查)
 
 ### 状态更新
 - Jira Data Center (http://116.205.141.57:50008) 运行正常
-- 旧 Jira Cloud (3pigc.atlassian.net) 仍不可用，Data Center 已替代
-- GitHub 访问恢复 (HTTP 200)
+- Bearer Token 认证通过 (HTTP 200)
+- GitHub 访问正常 (HTTP 200)
 
 ### 任务状态
 - 处理中 (status=3 / 处理中) + assignee=huahua: **0 个**
