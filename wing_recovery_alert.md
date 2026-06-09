@@ -27,7 +27,35 @@
 
 ---
 
-## 历史记录 - 2026-06-09 21:04 CST (huahua 巡查)
+## 最新记录 - 2026-06-09 21:34 CST (huahua 巡查)
+
+### 状态更新
+- ❌ Atlassian Cloud (https://3pigc.atlassian.net) **持续不可用** — 返回 "Page unavailable" (HTTP 404)
+- ⚠️ Jira Data Center (http://116.205.141.57:50008) Bearer Token 认证失败（返回匿名用户错误）
+- **无法执行任何 Jira API 调用**
+
+### 任务状态
+- task_state_manager: No active task
+- 无法查询 ticket 状态
+- 基于最近一次可用查询（21:04 CST）：处理中 0 个，待领取 0 个
+
+### Git 本地状态
+- 当前 branch: main
+- 上次 commit: fe21e72 - Jira patrol: Atlassian Cloud unavailable, update wing_recovery_alert.md
+- ⚠️ 远程仓库 origin (https://github.com/cychan0115/clawd.git) 返回 404 "Repository not found"，无法推送
+- Working tree: 干净（wing_recovery_alert.md 已 commit 但未 push）
+
+### 检查摘要
+- ❌ Atlassian Cloud Jira 站点不可用 (https://3pigc.atlassian.net) — 404 Page unavailable
+- ❌ Jira Data Center 认证失败（Bearer Token 不被接受，返回匿名用户错误）
+- ❌ 无法查询处理中 ticket
+- ❌ 无法查询待领取 ticket
+- ✅ Git 工作树已提交（本地 commit fe21e72）
+- ⚠️ 远程 Git 仓库不可用（404）
+- ✅ task_state_manager: No active task
+- **BLOCKER: Jira 服务不可用，无法执行任何 ticket 操作**
+
+
 
 ## 状态更新
 - ✅ Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过 (HTTP 200)
