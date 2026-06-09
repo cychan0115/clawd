@@ -200,3 +200,16 @@
 [main/sessions/main/62fbe3d1-c380-4959-9705-b10eaf8f9723.jsonl#L10] Assistant: 巡检完成，发现2个警告。让我查看报告详情：
 [main/sessions/main/62fbe3d1-c380-4959-9705-b10eaf8f9723.jsonl#L12] Assistant: ## MINI2 + OpenClaw 自巡检结果 **状态：✅ 基本健康，2个日志警告需注意** ### 总体状况 | 项目 | 状态 | |------|------| | 主机负载 | ✅ 正常 (4.36/3.77/3.35) | | 内存 | ✅ 可用 82% | | 系统磁盘 | ✅ 54% | | Data 磁盘 | ⚠️ 97% (411Gi/460Gi，剩余 15Gi) | | Gateway 进程 | ✅ 运行中 | | Agent 进程 | ✅ 活跃 | | Browser/CDP | ✅ 就绪 | |
 [main/sessions/main/62fbe3d1-c380-4959-9705-b10eaf8f9723.jsonl#L12] Assistant: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/6531e582-1075-4f95-b52c-784cd4c6a7a5.jsonl#L22] Assistant: ## Jira 巡查结果 **当前没有待处理的 Jira 任务。** ### 检查项汇总 | 检查项 | 结果 | 详情 | |--------|------|------| | 🔄 处理中 (In Progress / 状态 3) + assignee=huahua | **0 个** ✅ | 无进行中任务 | | 📥 待领取 (Selected for Development / 状态 10201) + assignee=EMPTY | **0 个** ✅ | 无待领取任务 | | 📝 所有未完成 (非 Done)
+[main/sessions/main/68f7b560-f6b6-4650-be84-2a1288161805.jsonl#L12] Assistant: 当前没有待处理的 Jira 任务。 **巡查结果**： - **处理中 (In Progress) 且 assignee=huahua**: 0 个 ticket - **待领取 (Selected for Development) 且 assignee 为空**: 0 个 ticket - **Jira Data Center**: ✅ 正常 (Bearer Token 认证有效) - **当前时间**: 2026-06-07 04:54 CST
+[main/sessions/main/68f7b560-f6b6-4650-be84-2a1288161805.jsonl#L14] Assistant: Jira 巡查完成。系统状态正常，等待 Anna 分配新任务。
+[main/sessions/main/6903f9fe-f95a-4160-94b0-4ddc26794374.jsonl#L19] Assistant: ## Jira 巡查报告 ### 检查结果 | 状态 | 数量 | 说明 | |------|------|------| | **处理中 (In Progress)** | 0 | 无 huahua 持有的 ticket | | **待领取 (Selected for Development)** | 0 | 无待领取 ticket | | **To Do** | 0 | 无待处理 | | **Backlog** | 0 | 无积压 | ### Git 状态 - 分支: main - 工作树: **干净**（无未提交修改）
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L6] Assistant: 我来执行Jira任务巡查流程。首先检查当前状态和任务管理器。
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L9] Assistant: 现在查询Jira中"处理中"的ticket。我需要Jira实例URL，先检查是否有配置：
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L17] Assistant: 找到Jira地址了。现在开始执行巡查流程。 **步骤1: 查询处理中的 ticket（AIWH，状态=3，assignee=huahua）**
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L19] Assistant: 没有处理中的 ticket。继续检查待领取的 ticket（Selected for Development，assignee 为空）： **步骤2: 查询待领取 ticket**
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L21] Assistant: 也没有待领取的 ticket。让我检查全量未完成任务和恢复告警：
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L24] Assistant: 所有检查完成。生成本次巡查报告：
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L34] Assistant: 提交巡查记录到仓库：
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L36] Assistant: **Jira 任务巡查完成 — 2026-06-07 22:15 CST** --- ### 巡查结果 **当前没有待处理的 Jira 任务。** | 检查项 | 结果 | 说明 | |--------|------|------| | 1️⃣ 处理中 (In Progress / 状态 3) 且 assignee=huahua | **0 个** ✅ | 无进行中任务 | | 2️⃣ 待领取 (Selected for Development / 状态 10201) 且 assignee 为空 | **0 个** ✅ | 
+[main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L36] Assistant: found"（已知问题） 等待新任务分配。🌙

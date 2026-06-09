@@ -244,3 +244,46 @@
 [main/sessions/main/633b7b92-8e26-4678-9552-c695357dad2e.jsonl#L14] Assistant: 本地 Jira Server 查询结果： - **处理中 ticket（In Progress + assignee=huahua）**：0 个 - **待领取 ticket（Selected for Development + assignee=EMPTY）**：0 个 - **task_state_manager 状态**：No active task 所有指标一致：**当前没有待处理的 Jira 任务**。 更新巡查记录：
 [main/sessions/main/633b7b92-8e26-4678-9552-c695357dad2e.jsonl#L16] Assistant: ## Jira 任务巡查报告 — 2026-06-05 07:04 CST | 检查项 | 结果 | |--------|------| | Jira Server | ✅ 正常访问 | | 处理中 ticket (huahua / In Progress) | ✅ **0 个** | | 待领取 ticket (Selected for Development, unassigned) | ✅ **0 个** | | 本地 Git 工作树 | ✅ 干净，无未提交修改 | | 活跃任务状态 | ✅ No active tas
 [main/sessions/main/63cdd052-56a2-409b-b662-e8e5e4c2d5c6.jsonl#L10] Assistant: 自巡检完成，报告已写入 `logs/openclaw_self_inspection/latest.md`。 --- **整体状态：✅ 正常** | 检查项 | 状态 | |-------|------| | macOS 主机负载 | 3.1~3.25（运行7天，正常） | | 内存 | 84%空闲，无Swap压力 | | 磁盘空间 | 43%已用（/），24G可用 | | Gateway 进程 | 运行中（pid 70593） | | Agent 活跃度 | 0分钟前更新 | | 端口 18789 | 监听中 | | Ga
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L6] Assistant: # 🎬 Jira 全自动任务巡查开始 执行流程：检查"处理中" ticket → 检查待领取 ticket → 执行或报告 --- ## 第一步：检查"处理中"的 ticket 查询 AIWH 项目中状态="处理中" 且 assignee=huahua 的 ticket...
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L8] Assistant: 让我先检查基础状态，再尝试 Jira API：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L12] Assistant: 上次巡查使用的是本地 Jira Server (`http://116.205.141.57:50008`)。让我尝试正确的 API 端点：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L14] Assistant: JQL 语法错误。让我修正状态名查询：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L18] Assistant: **处理中的 ticket**: 0 个 现在检查待领取的 ticket（status=10201, Selected for Development）：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L22] Assistant: 让我尝试用更简单的方式查询：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L26] Assistant: 输出太长了，让我用更精确的方式查询：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L32] Assistant: 处理中的 ticket: 0。检查待领取的 ticket（status=10201）：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L34] Assistant: 检查所有未完成的 ticket：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L36] Assistant: 所有检查完成。让我检查本地 git 状态并生成巡查报告：
+[main/sessions/main/64c852ad-c76d-4ac2-b657-20006275e034.jsonl#L40] Assistant: --- # 🎯 Jira 全自动任务巡查结果 ## 检查摘要 | 检查项 | 结果 | 数量 | |--------|------|------| | 处理中 ticket (assignee=huahua) | ✅ 无 | 0 | | 待领取 ticket (Selected for Development) | ✅ 无 | 0 | | 未完成 ticket (非完成状态) | ✅ 无 | 0 | | 本地 Git 状态 | ✅ 干净 | - | | Task State Manager | ✅ 无活跃任务 | - | 
+[main/sessions/main/65fc4575-c21f-4301-a3fe-772ce584d78a.jsonl#L13] Assistant: ## 🔍 Jira 任务巡查结果 **时间**: 2026-06-05 09:44 CST（Asia/Shanghai） ### 检查 1：处理中的 ticket（huahua, "In Progress"） - **JQL**: `project=AIWH AND status="In Progress" AND assignee=huahua` - **结果**: 0 个 ticket - **本地 Git 状态**: clean（无需 commit/push） ### 检查 2：待领取的 ticket（Selecte
+[main/sessions/main/6821a6b9-52c2-4ff7-b42b-0883088d8d2e.jsonl#L10] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-05 15:00 (Asia/Shanghai) ### 整体状态: 🟢 健康 | 检查项 | 状态 | |--------|------| | 主机负载 | 3.90/3.58/3.41 - 偏高但稳定 | | 内存 | 84% 空闲，无 swap | | 主磁盘 / | 47% 使用率 ✅ | | 数据卷 /Data | 96% 使用率 (剩余 20Gi) | | Gateway 进程 | 运行中 ✅ | | Agent 活跃 | 
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L6] Assistant: 好的，开始执行 Jira 全自动任务处理流程。 首先，并行检查本地代码状态和 Jira 查询：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L11] Assistant: Jira API 查询返回空内容，需要排查。让我先检查 API 连接和本地状态：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L15] Assistant: 无法连接到 Jira 服务器（HTTP 000）。让我排查网络问题：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L19] Assistant: Jira 域名无法解析。让我检查本地配置和历史记录：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L27] Assistant: 找到正确的 Jira 服务器地址是 `http://116.205.141.57:50008`。让我重新查询：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L31] Assistant: 目前查询到： - **处理中（assignee=huahua）**: 0 个 - **Selected for Development（unassigned）**: 0 个 让我再检查所有 AIWH 项目中的非完成状态 ticket，确保没有遗漏：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L33] Assistant: AIWH 项目中没有任何待处理的 ticket。让我检查 wing_recovery_alert 文件并记录巡查结果：
+[main/sessions/main/685c908d-e183-44c2-ab73-0b61eea76600.jsonl#L36] Assistant: --- ## Jira 任务巡查报告 **巡查时间**: 2026-06-05 05:24 CST **检查结果**: | 检查项 | 结果 | |--------|------| | Jira Server (http://116.205.141.57:50008) | ✅ 正常访问 | | 处理中 ticket (huahua / In Progress) | ✅ 0 个 | | 待领取 ticket (Selected for Development / unassigned) | ✅ 0 个 | | 所有 AIWH 
+[main/sessions/main/68786ede-5cc8-4b2f-86da-22553a185254.jsonl#L6] Assistant: 好的，开始执行 Jira 任务巡查。让我先检查当前状态和必要的文件。
+[main/sessions/main/68786ede-5cc8-4b2f-86da-22553a185254.jsonl#L9] Assistant: 上次巡查报告是 20 分钟前的，状态可能已经变化。让我重新查询当前 Jira 状态和本地代码状态。
+[main/sessions/main/68786ede-5cc8-4b2f-86da-22553a185254.jsonl#L14] Assistant: 查询结果汇总： ## 🔍 巡查结果 **本地代码状态：** - 分支：main - 状态：clean（nothing to commit, working tree clean） - 最新 commit：`7528b23 docs: daily memory update 2026-06-05` **步骤 1：检查"处理中"的 ticket（assignee=huahua, status=3）** - JQL: `project=AIWH AND status=3 AND assignee=huahua` - **结果：0
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L6] Assistant: 开始执行 Jira 任务巡查流程。首先检查处理中的 ticket：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L12] Assistant: Jira 服务当前不可用（Atlassian Cloud 返回 Page Unavailable）。让我检查本地状态和替代方案：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L16] Assistant: 发现上次巡查使用的是**本地 Jira Server**（`116.205.141.57:50008`），但当前 cron 指令要求连接 **Atlassian Cloud**（`3pigc.atlassian.net`）。Atlassian Cloud 当前返回 Page Unavailable。让我检查本地 Jira Server 状态：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L19] Assistant: 本地 Jira Server 也返回 403 认证失败。让我检查更多情况：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L25] Assistant: jira_auto.py 使用 Bearer Token 认证本地 Jira Server 成功！让我确认完整结果：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L27] Assistant: 所有检查完成。当前情况总结：
+[main/sessions/main/68ec87ac-4884-46ab-bab0-82d6015e39c4.jsonl#L29] Assistant: ## Jira 任务巡查完成 **巡查结果：当前没有待处理的 Jira 任务。** ### 检查详情 | 步骤 | 检查项 | 结果 | 行动 | |------|--------|------|------| | 1 | 处理中 ticket (huahua) | **0 个** | 无 | | 2 | 待领取 ticket (Selected for Development) | **0 个** | 无 | | 3 | 本地未提交代码 | **clean** | 无 | | 4 | Task State Manager 
+[main/sessions/main/6917139d-a6ca-4ed7-af22-8bf6d08e1ccf.jsonl#L10] Assistant: 现在检查 Jira 中的"处理中" ticket：
+[main/sessions/main/6917139d-a6ca-4ed7-af22-8bf6d08e1ccf.jsonl#L24] Assistant: 当前没有待处理的 Jira 任务。
+[main/sessions/main/6917139d-a6ca-4ed7-af22-8bf6d08e1ccf.jsonl#L26] Assistant: 当前没有待处理的 Jira 任务。
+[main/sessions/main/69d7629c-7422-4d84-b821-b20afdab4126.jsonl#L54] Assistant: ## ✅ Jira 任务巡查完成 — 当前没有待处理的 Jira 任务 --- ### 检查结果 | 检查项 | 数量 | 状态 | |--------|------|------| | **处理中** (huahua, status=处理中) | 0 | ✅ 无 | | **待领取** (Selected for Development, assignee=EMPTY) | 0 | ✅ 无 | | **AIWH 项目总 ticket** | 107 | 全部"完成" | | **本地未提交代码** | 0 | ✅ clea
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L6] Assistant: 好的，收到 Jira 任务巡查指令。让我先查看当前任务状态，然后检查 Jira 中的待处理任务。
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L18] Assistant: 已获取 Jira 配置。现在按流程执行： **Step 1: 检查"处理中"的 tickets**
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L22] Assistant: **处理中 tickets = 0**，继续检查待领取的 tickets。
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L24] Assistant: **待领取 tickets = 0**。让我再确认一下所有 AIWH tickets 的状态，确保没有遗漏。
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L26] Assistant: **Jira 巡查结果：** | 检查项 | 结果 | |--------|------| | 处理中 tickets (huahua) | 0 个 | | 待领取 tickets (Selected for Development) | 0 个 | | AIWH 项目总计 | 50 个，全部"完成" | 当前没有待处理的 Jira 任务。让我更新巡查记录。
+[main/sessions/main/69dcda3f-25c7-4af1-afc2-377a85153efb.jsonl#L28] Assistant: ## ✅ Jira 巡查完成 — 当前没有待处理的 Jira 任务 **本次检查时间：** 2026-06-05 05:04 CST (Asia/Shanghai) **详细结果：** | 检查项 | 结果 | |--------|------| | 处理中 tickets (assignee=huahua) | **0 个** | | 待领取 tickets (Selected for Development, assignee EMPTY) | **0 个** | | AIWH 项目全部 tickets | **50 个
+[main/sessions/main/6b066e1a-da41-4dd4-a67f-84364c0a17d0.jsonl#L22] Assistant: 当前没有待处理的 Jira 任务。 --- **巡查证据：** | 检查项 | 结果 | |--------|------| | Jira Server (http://116.205.141.57:50008) | ✅ 正常访问 | | 处理中 ticket (huahua assignee) | ✅ 0 个 | | 待领取 ticket (Selected for Development / unassigned) | ✅ 0 个 | | 所有 AIWH ticket | ✅ 107 个，全部状态为"完成" | | 本地
+[main/sessions/main/6bb653ac-faf1-4342-9231-4c528d603ea2.jsonl#L10] Assistant: 🍳 晚餐提醒（周五） ⚠️ **weekly-meal-plan.md 还是空白模板，今晚具体菜谱未填写！** --- **饮食禁忌提醒（今晚做菜必看）：** 🚫 **yingying（尿酸高）** - ❌ 避免：牛肉、虾/海鲜、浓肉汤、动物内脏、豆类过多 - ✅ 优选：鸡蛋、蔬菜、低嘌呤肉类（如猪肉适量） 🧂 **嫲嫲** - 少盐少糖，清淡烹饪 - 避免腌制/酱料过重 --- 请 CY 先填写 `/Users/3pigcn/clawd/memory/weekly-meal-plan.md`，我下次就能自动播报具体菜

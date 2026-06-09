@@ -1,0 +1,29 @@
+[main/sessions/main/171276c6-288b-4ddd-99d7-a1c15f1888f2.jsonl#L24] Assistant: 当前没有待处理的 Jira 任务。 --- **巡查结果：** | 检查项 | 状态 | |--------|------| | Jira Data Center (116.205.141.57:50008) | ✅ 正常 | | Atlassian Cloud (3pigc.atlassian.net) | ❌ 不可用（Page Unavailable） | | 处理中 (In Progress) + assignee=huahua | ✅ 0 个 | | 待领取 (Selected for Development) + 
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L11] Assistant: Jira Cloud 服务当前不可用，返回了 "Page unavailable" 页面。让我先检查 Atlassian 状态，同时查看本地代码状态是否有遗留改动。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L13] Assistant: Atlassian 状态页显示"全部系统正常"，但 Jira API 返回不可用。让我等待几秒重试，同时检查本地 git 状态。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L16] Assistant: Jira Cloud 仍然不可用（`Site temporarily unavailable`），但本地 git 状态是干净的，没有遗留改动。让我检查 wing_recovery_alert 文件并记录本次巡查结果。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L18] Assistant: 历史记录显示 **Jira Data Center** (`http://116.205.141.57:50008`) 是实际可达的 Jira 实例。Atlassian Cloud 已废弃不可用。让我用 Data Center 地址查询任务。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L20] Assistant: JQL assignee 格式问题。让我尝试不同格式查询，同时检查 Jira Data Center 的可用性和项目信息。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L24] Assistant: JQL 解析问题出在 URL 编码。让我修复 URL 编码方式。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L27] Assistant: JQL 解析有编码问题。让我用 POST 方法或更简单的 URL 编码来查询 Jira Data Center。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L30] Assistant: 成功连接 Jira Data Center！查询结果： - 处理中 (In Progress): **0 个 ticket** - 待领取 (Selected for Development): **0 个 ticket** 让我进一步确认：检查 assignee=huahua 的处理中任务，以及查看整个项目状态概览。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L34] Assistant: 所有查询结果一致：**0 个待处理任务**。让我更新巡查记录并提交日志。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L39] Assistant: Git commit 成功，但 push 时远程仓库返回 404。让我检查远程配置并尝试修复。
+[main/sessions/main/173531e3-fa69-412d-b742-e68fb4ffad6f.jsonl#L41] Assistant: 远程仓库 `https://github.com/cychan0115/clawd.git` 返回 404，似乎已被删除或重命名。但本地 commit 已保留，后续可解决远程问题。 --- ## ✅ 本次 Jira 巡查结果（2026-06-10 01:14 CST） | 检查项 | 结果 | |--------|------| | Jira Data Center (116.205.141.57:50008) | ✅ 正常，HTTP 200 | | Atlassian Cloud (3pigc.atlassian.net)
+[main/sessions/main/35ec881f-5d41-4454-9d25-fcba4709a36a.jsonl#L6] Assistant: 收到，系统每小时巡检任务已确认。无需我进一步处理。
+[main/sessions/main/361c1fd4-b9a6-40b6-afe8-ffa1545c6b57.jsonl#L6] Assistant: 收到。系统每小时巡检已正常执行，无异常则无需处理。
+[main/sessions/main/3666388a-e12e-4296-8ced-c52a9bab66b1.jsonl#L6] Assistant: 我来执行主动发现检查。
+[main/sessions/main/3666388a-e12e-4296-8ced-c52a9bab66b1.jsonl#L11] Assistant: **主动发现检查结果** — 12:49 AM | 检查项 | 状态 | |--------|------| | 📋 待办追踪 | 4 项待办（微信通知修复、Jira 优化、代码检查、文档同步），均非紧急 | | 🎫 Jira ticket | 无活跃任务 | | 📝 Git 状态 | 工作区干净，无未提交更改 | | 💾 磁盘空间 | `/` 使用率 44%（17Gi 已用 / 22Gi 可用），正常 | | ⚡ 系统负载 | 运行 11 天 17 小时，负载 1.86~2.16 | **结论：一切正常** ✅ 无
+[main/sessions/main/43128024-70d7-48a8-bd31-fb5e92cdbb9d.jsonl#L10] Assistant: ## ✅ MINI2+OpenClaw 自巡检完成 **报告**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ### 📊 整体状态：正常（⚠️ 2个注意项） | 检查项 | 状态 | |--------|------| | 主机负载 | ✅ 2.56（正常，运行11天+） | | 内存 | ✅ 83%空闲，无swap压力 | | 主磁盘 / | ✅ 44%使用率 | | **数据盘 /System/Volumes/Data** | ⚠
+[main/sessions/main/4ad25255-b65c-4173-bbc5-c20ad4845eac.jsonl#L10] Assistant: ## ✅ 自巡检完成 **整体状态**: 系统健康，OpenClaw 核心服务全部正常。 | 检查项 | 状态 | |--------|------| | 主机负载 | ✅ 2.62 (正常) | | 内存 | ✅ 83% 空闲，无 swap | | 磁盘 (/) | ✅ 43% 使用 | | 磁盘 (/Data) | ⚠️ **95% 使用** (403Gi/460Gi) | | Gateway | ✅ 运行中 | | Agent | ✅ 活跃 | | Browser/CDP | ✅ 就绪 | | 端口 18789/188
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L6] Assistant: 我将执行 Jira 任务巡查流程。让我先检查状态，然后查询处理中的任务。
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L8] Assistant: 没有活跃任务。现在查询 Jira 中处理中的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L14] Assistant: Jira 站点返回 404 不可用页面。让我尝试不同的认证方式：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L22] Assistant: 找到了正确的 Jira 地址。让我查询处理中的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L30] Assistant: 所有查询到的 ticket 状态都是"完成"。让我查询"Selected for Development"状态的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L38] Assistant: 找到了状态名称。让我重新查询"处理中"状态的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L46] Assistant: 没有处理中的 ticket。现在查询 "Selected for Development" 状态的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L60] Assistant: 让我用更简单的方式查询所有未完成的 ticket：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L62] Assistant: 所有 107 个 ticket 都已完成。让我再检查各待办状态：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L70] Assistant: AIWH 项目中所有 107 个 ticket 均已完成。让我检查本地代码状态，确认没有遗留的未提交工作：
+[main/sessions/main/658e4b1d-9ef1-4228-8ea9-fc83e8a3e3e4.jsonl#L76] Assistant: --- ## Jira 任务巡查结果 ### 1. 检查"处理中"的 ticket - **查询条件**: `project=AIWH AND status=处理中 AND assignee=huahua` - **结果**: 0 个 ticket ### 2. 检查待领取的 ticket - **查询条件**: `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` - **结果**: 0 个 ticket - **Backlog
