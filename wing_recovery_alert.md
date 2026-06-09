@@ -1,4 +1,33 @@
-# huahua 最新 Jira 巡查结果：2026-06-09 21:04 CST (当前)
+
+# huahua 最新 Jira 巡查结果：2026-06-09 21:24 CST (当前)
+
+## 状态更新
+- ⚠️ Atlassian Cloud (https://3pigc.atlassian.net) 仍不可用 — 返回 "Page unavailable"
+- Jira Data Center (http://116.205.141.57:50008) 运行正常（历史记录显示可用，但当前任务指令指定使用 Atlassian Cloud）
+- **无法执行 Jira API 调用**
+
+## 任务状态
+- task_state_manager: No active task
+- 由于 Atlassian Cloud 不可用，无法查询 ticket 状态
+- 基于上一次成功查询（21:04 CST）：处理中 0 个，待领取 0 个
+
+## Git 本地状态
+- 当前 branch: main
+- Working tree: 干净（无未提交代码）
+- 上次 commit: 32ba9e0 - Log updates: system check and Jira patrol records (2026-06-09 21:04 CST)
+- ⚠️ 远程仓库 origin (https://github.com/cychan0115/clawd.git) 返回 404 "Repository not found"
+
+## 检查摘要
+- ❌ Atlassian Cloud Jira 站点不可用 (https://3pigc.atlassian.net)
+- ❌ 无法查询处理中 ticket
+- ❌ 无法查询待领取 ticket
+- ✅ Git 工作树干净（无代码待提交）
+- ✅ task_state_manager: No active task
+- **BLOCKER: Jira Atlassian Cloud 不可用，无法执行任何 ticket 操作**
+
+---
+
+## 历史记录 - 2026-06-09 21:04 CST (huahua 巡查)
 
 ## 状态更新
 - ✅ Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过 (HTTP 200)
@@ -122,7 +151,7 @@
 
 ### 任务状态
 - 处理中 (status=3) + assignee=huahua: **0 个**
-- 待领取 (status=10201 / Selected for Development) + assignee EMPTY: **0 个**
+- 待领取 (status=10201 / Selected for Development") + assignee EMPTY: **0 个**
 - 当前状态: 无待处理任务
 - 所有可见 ticket 均为 "完成" 状态
 
@@ -149,7 +178,7 @@
 
 ### 任务状态
 - 处理中 (status=3) + assignee=huahua: **0 个**
-- 待领取 (status=10201 / Selected for Development) + assignee EMPTY: **0 个**
+- 待领取 (status=10201 / Selected for Development") + assignee EMPTY: **0 个**
 - 当前状态: 无待处理任务
 
 ### ⚠️ BLOCKER - 2026-06-09 19:07 CST
@@ -183,7 +212,7 @@
 
 ### 任务状态
 - 处理中 (status=3) + assignee=huahua: **0 个**
-- 待领取 (status=10201 / Selected for Development) + assignee EMPTY: **0 个**
+- 待领取 (status=10201 / Selected for Development") + assignee EMPTY: **0 个**
 - 整个项目"处理中"状态: **0 个**
 - 当前状态: **无待处理任务**
 - task_state_manager: No active task
@@ -207,7 +236,7 @@
 
 ### 任务状态
 - 处理中 (status=3) + assignee=huahua: **0 个**
-- 待领取 (status=10201 / Selected for Development) + assignee EMPTY: **0 个**
+- 待领取 (status=10201 / Selected for Development") + assignee EMPTY: **0 个**
 - 整个项目"处理中"状态: **0 个**
 - 当前状态: 无待处理任务
 - task_state_manager: No active task
