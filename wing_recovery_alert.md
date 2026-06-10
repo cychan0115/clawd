@@ -1,29 +1,26 @@
 
-## 最新记录 - 2026-06-10 09:44 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-10 09:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
-- ✅ Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过
-- 用户: huahua (huahua@3pigc.com), active: true
-- ✅ Jira API 查询成功
+- ⚠️ Jira Data Center (http://116.205.141.57:50008) 认证失败
+- Bearer Token 返回 401 Unauthorized
+- Basic Auth (huahua@3pigc.com + token) 也返回 401 AUTHENTICATED_FAILED
+- 用户: huahua (huahua@3pigc.com), 上次认证成功: 09:44 CST
 
 ### 任务状态
-- 处理中 (status="In Progress") + assignee=huahua: **0 个**
-- 待领取 (status="Selected for Development") + assignee EMPTY: **0 个**
-- 当前状态: **无待处理任务**
+- 无法查询 Jira — 认证中断
+- 当前状态: **未知** (Jira 不可达)
 - task_state_manager: No active task
 
 ### Git 本地状态
-- `~/clawd`: wing_recovery_alert.md 已更新（之前巡查的时间戳更新），已 commit 但 **push 失败**（远程仓库 `https://github.com/cychan0115/clawd.git` 返回 404 Not Found）
-- `~/workspace/wing_1`: 未在本次巡查中检查（无待处理 ticket 无需操作）
+- `~/clawd`: clean (无未提交修改)
 
 ### 检查摘要
-- ✅ Jira Data Center REST API 可达，认证通过
-- ✅ 处理中: 0 ticket
-- ✅ 待领取: 0 ticket
-- ✅ AIWH 项目无待处理任务
-- ✅ task_state_manager: No active task
-- ⚠️ Git push 失败: 远程仓库 `cychan0115/clawd` 不存在 (404)
-- **当前没有待处理的 Jira 任务。**
+- ❌ Jira Data Center REST API 认证失败 (401)
+- ⚠️ 上次成功巡查: 09:44 CST (仅10分钟前)
+- ⚠️ 可能原因: Token 过期、服务器认证配置变更、或临时服务问题
+- 建议: 检查 Jira 服务器状态，或更新认证凭据
+- **当前没有待处理的 Jira 任务。** (无法确认)
 
 ---
 
