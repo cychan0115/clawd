@@ -366,3 +366,32 @@
 [main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L20] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L22] Assistant: ⚠️ Agent failed before reply: All models failed (1): ccapi/gpt-4o: Provider ccapi is in cooldown (suspending lanes) (timeout). Logs: openclaw logs --follow
 [main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L24] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L26] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L28] Assistant: ⚠️ Agent failed before reply: All models failed (1): ccapi/gpt-4o: Provider ccapi is in cooldown (suspending lanes) (timeout). Logs: openclaw logs --follow
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L30] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L32] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L35] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L37] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L39] Assistant: ⚠️ Agent failed before reply: All models failed (1): ccapi/gpt-4o-mini: Provider ccapi is in cooldown (suspending lanes) (timeout). Logs: openclaw logs --follow
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L41] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L43] Assistant: ⚠️ Agent failed before reply: All models failed (1): ccapi/gpt-4o-mini: Provider ccapi is in cooldown (suspending lanes) (timeout). Logs: openclaw logs --follow
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L46] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L48] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6c7d15bc-7a7f-48f7-ac78-46df25ef41af.jsonl#L52] Assistant: 刚查了当前会话状态：现在实际跑的是 **ccapi/gpt-4o**，不是 GPT-5.5。 之前我回答成 `kimi/kimi-for-coding` 是按默认/角色配置说的，不是当前运行模型；这个我说错了。 如果你要切到 GPT-5.5，可以执行模型切换；按当前别名配置里 GPT-5.5 对应的是 **ccapi/gpt-5.5**。
+[main/sessions/main/6ed52f5e-f305-4d08-9549-7dfb3575a7e4.jsonl#L6] Assistant: 收到，开始执行 Jira 任务巡查。
+[main/sessions/main/6ed52f5e-f305-4d08-9549-7dfb3575a7e4.jsonl#L14] Assistant: 当前没有待处理的 Jira 任务。 **巡查结果摘要：** | 检查项 | 结果 | |--------|------| | 处理中 (In Progress) 且 assignee=huahua | ✅ 无 (0 个) | | 待领取 (Selected for Development) 且 assignee=EMPTY | ✅ 无 (0 个) | | 本地 active task | 无 | | 本地 git 状态 | `wing_recovery_alert.md` 待提交（上次巡查遗留） | **操作：** 清理遗留
+[main/sessions/main/6ed52f5e-f305-4d08-9549-7dfb3575a7e4.jsonl#L18] Assistant: ✅ **Jira 任务巡查完成** - 处理中 ticket：**0** - 待领取 ticket：**0** - 本地工作区：**已清理，状态干净** 当前没有待处理的 Jira 任务。
+[main/sessions/main/6f2fb97d-ae71-4a2f-9910-430ed56ed5fa.jsonl#L6] Assistant: HEARTBEAT_OK 系统巡检正常完成。时间：20:11 CST。
+[main/sessions/main/6fa91953-b0b2-4de5-b09f-92f0c4ee0f9f.jsonl#L6] Assistant: 我先查看当前任务状态，然后检查Jira。
+[main/sessions/main/6fa91953-b0b2-4de5-b09f-92f0c4ee0f9f.jsonl#L8] Assistant: 没有活跃任务。按流程先检查"处理中"的 ticket。
+[main/sessions/main/6fa91953-b0b2-4de5-b09f-92f0c4ee0f9f.jsonl#L12] Assistant: Jira Cloud 站点当前不可用，返回了 Page Unavailable 错误。让我重试一次。
+[main/sessions/main/6fa91953-b0b2-4de5-b09f-92f0c4ee0f9f.jsonl#L14] Assistant: Jira Cloud 站点暂时不可用。让我检查本地是否有遗留代码修改，然后报告状态。
+[main/sessions/main/6fa91953-b0b2-4de5-b09f-92f0c4ee0f9f.jsonl#L16] Assistant: ## Jira 任务巡查报告 **时间**: 2026-06-08 09:24 AM (Asia/Shanghai) **结果**: 🚫 **BLOCKER — Jira Cloud 不可用** Jira API 返回错误： ``` {"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"} ``` **本地状态**： - 当前无活跃任务 (`task_state_manager.py status` → "No active task") 
+[main/sessions/main/70177049-3eb9-4bcb-a946-1d20cf03b496.jsonl#L41] Assistant: ## Jira 巡查结果：当前没有待处理的 Jira 任务。 ### 检查详情 | 检查项 | 结果 | |--------|------| | **处理中 (In Progress) + assignee=huahua** | 0 个 | | **待领取 (Selected for Development) + assignee=EMPTY** | 0 个 | | **Jira Data Center** | ✅ 正常 (`hw4.3pigcn.com:50008`) | | **Atlassian Cloud** | ❌
+[main/sessions/main/7065b4a9-d890-4b8c-bba1-7038ef83657d.jsonl#L6] Assistant: 收到系统巡检报告。每小时系统巡检脚本已自动完成： - ✅ K8S 日志检查 - ✅ 主机资源检查 - ✅ HTTP 端点检查 异常自动通知：13926262295@139.com 无需 Agent 进一步处理。
+[main/sessions/main/73040562-b2f8-47ee-a577-2282bd596b7b.jsonl#L24] Assistant: ## Jira 巡查结果 (2026-06-08 12:04 CST) ### 查询结果 | 检查项 | 结果 | |--------|------| | 处理中 (In Progress) 且 assignee=huahua | ✅ **0 个** | | 待领取 (Selected for Development) 且 assignee=EMPTY | ✅ **0 个** | | 本地 git 状态 | ✅ **干净**（无未提交修改） | | 最新 commit | `0d87297`（本次巡查记录） | ### 环境
+[main/sessions/main/73957274-5588-42c7-9ea4-bd19ae651962.jsonl#L6] Assistant: 收到 👌 系统每小时巡检正常执行，K8S + 主机 + HTTP 端点无异常，无需我介入。 huahua 待命。
+[main/sessions/main/73e454a0-c65c-4b88-b63c-cd9b17446d5a.jsonl#L6] Assistant: 收到。每小时系统巡检已自动完成： - K8S日志检查 ✅ - 主机资源检查 ✅ - HTTP端点检查 ✅ 如检测到异常，邮件报告已自动发送至 `13926262295@139.com`。 无需进一步处理。
+[main/sessions/main/74439f79-e9a0-4f20-a2b2-713cfbfd2341.jsonl#L14] Assistant: Jira Cloud (`3pigc.atlassian.net`) 返回维护页面，不可用。根据历史记录，需要切换到 Data Center 实例继续巡查。
+[main/sessions/main/74439f79-e9a0-4f20-a2b2-713cfbfd2341.jsonl#L19] Assistant: AIWH 项目全部完成。现在更新巡查记录并提交。
+[main/sessions/main/74439f79-e9a0-4f20-a2b2-713cfbfd2341.jsonl#L35] Assistant: ## Jira 任务巡查结果 (2026-06-08 02:34 CST) ### 检查项目 | 检查项 | 结果 | 说明 | |--------|------|------| | **处理中 (In Progress)** 且 assignee=huahua | **0 个** ✅ | 无进行中任务 | | **待领取 (Selected for Development)** 且 assignee 为空 | **0 个** ✅ | 无待领取任务 | | **所有非 Done 状态** | **0 个** ✅ | AIWH

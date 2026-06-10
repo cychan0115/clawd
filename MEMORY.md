@@ -170,3 +170,26 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 检查项: | 检查项 | 结果 | |--------|------| | Jira API 可达性 | ✅ 正常 (116.205.141.57:50008) | | 处理中 (In Progress) + assignee=huahua | ✅ 无 (0) | [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:4-7]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-04.md:8:11 -->
 - 检查项: | 待领取 (Selected for Development) + assignee=EMPTY | ✅ 无 (0) | | 所有未分配非完成 ticket | ✅ 无 (0) | | 本地 Git 工作树 | ✅ clean | | 活跃任务状态 | ✅ 无 (No active task) | [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:8-11]
+
+## Promoted From Short-Term Memory (2026-06-11)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:12:14 -->
+- ⚠️ 异常项: **gateway 日志异常**; `web_fetch failed: 400` (1 次) + `404` (2 次) — 外部网站访问失败; `exec failed: sandbox requires a sandbox runtime` (3 次) — 6/4 的 exec 工具配置问题 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:17:20 -->
+- 系统状态: 负载: 2.44-2.56 (正常); 内存: 85% 空闲，无 swap; 运行时长: 6 天 20 小时; Gateway: 健康，端口 18789 正常 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:25:27 -->
+- 下一步: Data 卷 95% 需关注，待评估是否需要清理; exec sandbox 错误需检查是否有未配置 sandbox 的 agent 在使用 exec; web_fetch 400/404 可能是外部网站临时问题，持续观察 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:25-27]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:5:5 -->
+- 04:30 OpenClaw 自巡检 (cron): [巡检报告](../logs/openclaw_self_inspection/latest.md) [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:8:11 -->
+- ⚠️ 异常项: **Data 卷使用率 95%** (`/System/Volumes/Data`); 主磁盘 / 使用率 41%（正常）; Data 卷 400Gi/460Gi 已用，仅 26Gi 可用; 建议：清理大文件或检查是否有日志膨胀 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:8-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:21:22 -->
+- 系统状态: Agent: 活跃; Cron: 正常 [score=0.841 recalls=0 avg=0.620 source=memory/2026-06-05.md:21-22]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:17:20 -->
+- 23:44 巡查: **Jira 服务**: 正常; **处理中 ticket**: 0; **待领取 ticket**: 0; **结论**: 无待处理任务 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-03.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:11:14 -->
+- 已尝试的 API 端点:: `GET /rest/api/2/search?jql=project=AIWH...` → 404 Page Unavailable; `GET /rest/api/3/search?jql=project=AIWH...` → 404 Page Unavailable; `GET /rest/api/3/myself` → 404; `GET /rest/api/2/project/AIWH` → 404 Page Unavailable [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:11-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:17:18 -->
+- Atlassian 状态页面:: https://status.atlassian.com 显示 "No incidents reported today"; 但实际服务不可用，可能是未报告的区域性问题 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:17-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:21:23 -->
+- 本地状态:: Git 工作目录: clean (nothing to commit, working tree clean); 分支: main; task_state_manager: No active task. [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:21-23]

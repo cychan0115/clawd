@@ -213,3 +213,28 @@
 [main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L34] Assistant: 提交巡查记录到仓库：
 [main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L36] Assistant: **Jira 任务巡查完成 — 2026-06-07 22:15 CST** --- ### 巡查结果 **当前没有待处理的 Jira 任务。** | 检查项 | 结果 | 说明 | |--------|------|------| | 1️⃣ 处理中 (In Progress / 状态 3) 且 assignee=huahua | **0 个** ✅ | 无进行中任务 | | 2️⃣ 待领取 (Selected for Development / 状态 10201) 且 assignee 为空 | **0 个** ✅ | 
 [main/sessions/main/697ea25b-34f2-4aa4-8176-8de8380f6c6d.jsonl#L36] Assistant: found"（已知问题） 等待新任务分配。🌙
+[main/sessions/main/7016f706-0711-445e-8ea4-e2cc7cdc9a3d.jsonl#L10] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-07 01:00 (Asia/Shanghai) **触发**: cron job `73bbdaca-9c48-41d7-a333-1c3e2d112c95` --- ### 📊 系统状态总览 | 检查项 | 状态 | 说明 | |--------|------|------| | **主机负载** | ⚠️ | 4.10/3.85/3.53 — 略高 | | **内存** | ✅ | 82% 空闲，无 Swap 压力 | | **主
+[main/sessions/main/7016f706-0711-445e-8ea4-e2cc7cdc9a3d.jsonl#L10] Assistant: 格式错误，可能是某次工具调用传入了格式不正确的 patch - 1 条 `message processed` — 正常 cron 日志，非异常 --- ### 📁 报告已写入 ``` /Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md ``` --- ### 📝 结论 **无需进一步处理。** 系统整体健康，OpenClaw 各组件运行正常。 - 日志中的 `apply_patch` 错误属于历史操作错误，不影响当前服务 - `ENOENT` 读日志错
+[main/sessions/main/7072586b-5b15-487d-b050-40b386fac4a8.jsonl#L6] Assistant: 收到。系统每小时巡检已自动完成，无需我介入处理。 - ✅ K8S日志检查 - ✅ 主机资源检查 - ✅ HTTP端点检查 如有异常，邮件已自动发送至 `13926262295@139.com`。
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L6] Assistant: 我来执行 Jira 任务巡查流程。 **Step 1: 检查当前任务状态和 recovery alert**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L10] Assistant: **Step 2: 查询 Jira 处理中 ticket（优先级最高）**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L12] Assistant: 没有处理中的 ticket。继续查询待领取的 ticket： **Step 3: 查询待领取的 ticket**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L14] Assistant: 待领取的 ticket 也为 0。让我再确认一下整个 AIWH 项目的未完成任务情况： **Step 4: 确认所有非完成状态 ticket**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L16] Assistant: **Step 5: 检查本地 git 状态**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L20] Assistant: **Step 6: 更新 wing_recovery_alert.md**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L22] Assistant: **Step 7: Commit 更新**
+[main/sessions/main/70854c64-32df-49a7-a4b1-ef573f2b1d1e.jsonl#L30] Assistant: --- ## ✅ Jira 任务巡查完成 **时间**: 2026-06-07 15:26 CST ### 巡查结果 | 检查项 | 结果 | |--------|------| | 处理中 (In Progress) + assignee=huahua | **0 个** | | 待领取 (Selected for Development) + assignee=EMPTY | **0 个** | | 所有非完成/关闭状态 ticket | **0 个** | | AIWH 项目累计完成 ticket | 107 个 | 
+[main/sessions/main/709913a2-354d-4218-959d-674f4c7229fb.jsonl#L6] Assistant: 我来执行 Jira 任务巡查。先检查配置和当前状态。
+[main/sessions/main/709913a2-354d-4218-959d-674f4c7229fb.jsonl#L35] Assistant: ## Jira 任务巡查报告 — 2026-06-07 01:04 CST **Jira 服务器**: `http://hw4.3pigcn.com:50008` ✅ 正常（Jira 9.4.0，API v2） ### 检查项 1: 处理中 (In Progress) + assignee=huahua - **结果**: 0 个 ✅ ### 检查项 2: 待领取 (Selected for Development) + assignee=EMPTY - **结果**: 0 个 ✅ ### 检查项 3: 所有未完成状态 - 
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L6] Assistant: I'll execute this Jira task inspection workflow. Let me start with parallel checks for status, recovery alerts, and Jira queries.
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L11] Assistant: Jira Cloud 不可用（与 recovery alert 一致）。切换到 Data Center 版本查询。
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L15] Assistant: Data Center API 调用失败。让我检查脚本使用的认证方式和实际 API 端点配置。
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L18] Assistant: API 调用失败。让我调试 Data Center 连接并确认实际状态。
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L23] Assistant: Bearer token 认证有效！让我用现有脚本或直接查询确认当前状态。
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L27] Assistant: 所有查询结果一致，确认当前状态。让我更新 recovery alert 并提交本次巡查记录。
+[main/sessions/main/711a1a82-66b1-42b6-8725-a0cd9b494bbd.jsonl#L31] Assistant: --- ## Jira 任务巡查结果 — 2026-06-07 16:54 CST ### 检查项 1：处理中且 assignee=huahua 的 ticket **结果：0 个** ✅ - Data Center API (`116.205.141.57:50008`) 正常响应 - Bearer Token 认证通过（huahua / JIRAUSER10400） - 无代码修改需提交（git working tree clean） ### 检查项 2：待领取 (Selected for Development) 且 
+[main/sessions/main/722c2da0-8be5-423e-865e-a8946c61adeb.jsonl#L11] Assistant: ## 主动发现检查结果 | 检查项 | 结果 | |--------|------| | **Jira ticket** | ✅ 无未完成任务 (`No active task`) | | **Git 未提交更改** | ✅ 干净，无待提交内容 | | **磁盘空间** | ✅ 可用 22Gi，不紧急 | | **系统负载** | ⚠️ 略高 (3.15/3.23/3.35)，但非紧急 | | **proactive-tracker** | 4 项待办改进（已知事项，无新增） | **结论：暂无需要立即关注的新问题。** 系
+[main/sessions/main/72bd1a3a-f44c-46a1-90f1-76fdbf6c2def.jsonl#L14] Assistant: **Jira 任务巡查结果 (09:35 CST)** | 检查项 | 结果 | |--------|------| | 处理中 (In Progress) + assignee=huahua | **0 个** | | 待领取 (Selected for Development) + assignee 为空 | **0 个** | | Git 工作树状态 | **干净** ✅ | | 本地 active task | **无** ✅ | **当前没有待处理的 Jira 任务。** - 历史累计完成 107 个 ticket
+[main/sessions/main/73dddc77-4654-4149-b9e4-70b7da8f0852.jsonl#L6] Assistant: 好的，执行主动发现检查。
+[main/sessions/main/73dddc77-4654-4149-b9e4-70b7da8f0852.jsonl#L11] Assistant: 检查完成。当前状态：**正常**。 | 检查项 | 结果 | |--------|------| | 主动待办 | 4 项待改进，非紧急 | | Jira ticket | 无活跃任务 | | Git 未提交 | `wing_recovery_alert.md`（1 文件） | | 磁盘空间 | 可用 23G / 46G（43% 已用） | | 系统负载 | 3.06 / 3.33 / 3.42（正常） | | 运行时间 | 8 天 19 小时 | 结论：无紧急事项。唯一的 `wing_recovery_alert.md` 
+[main/sessions/main/744abcaa-b494-4417-a3b1-eb5141da78c6.jsonl#L18] Assistant: **Jira 任务巡查结果** --- ### 1. 处理中 ticket (优先级最高) - 查询条件：`project=AIWH AND status="In Progress" AND assignee=huahua@3pigc.com` - **结果：0 个** ### 2. 待领取 ticket - 查询条件：`project=AIWH AND status="Selected for Development" AND assignee is EMPTY` - **结果：0 个** --- 📭 **当前没有待处理
