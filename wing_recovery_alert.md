@@ -1,6 +1,38 @@
 ---
 
-## 最新记录 - 2026-06-11 18:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-11 19:04 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ❌ Jira Cloud (https://3pigc.atlassian.net): **不可用** — API 返回 404 / "Page unavailable" 维护页面
+- ✅ Atlassian Status Page: 今天无报告事件，但 3pigc.atlassian.net 实例无法访问
+- ✅ task_state_manager: No active task
+- ✅ Git workspace (~/clawd): 在 main 分支，working tree clean
+- ✅ 最新提交: b75d463 (18:34 巡查记录)
+- ✅ Git push: 18:34 提交已推送（或本地已记录）
+
+### Jira 巡查结果
+- **[BLOCKER] Jira Cloud 实例 https://3pigc.atlassian.net 无法访问**
+- API `/rest/api/2/search` 返回 HTML 维护页面 "Page unavailable"
+- API `/rest/api/2/myself` 返回 HTTP 404
+- 无法查询"处理中" ticket
+- 无法查询"Selected for Development" ticket
+- **本次巡查无法执行 Jira 任务处理**
+
+### 对比参考：Jira Data Center
+- Data Center (http://116.205.141.57:50008) 在 18:34 巡查时正常
+- 107 个 ticket 全部"完成"，无待处理任务
+- 但当前 cron 指令指定使用 Atlassian Cloud，无法切换
+
+### 行动记录
+- [x] 巡查触发，检测到 Jira Cloud 不可用
+- [x] 记录 BLOCKER 到 wing_recovery_alert.md
+- [x] Git 无需要 commit/push 的代码
+- [x] 无活跃任务状态
+- [x] 等待 Jira Cloud 恢复后重新执行巡查
+
+---
+
+## 历史记录 - 2026-06-11 18:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
 - ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token 认证有效
