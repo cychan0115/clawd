@@ -148,48 +148,25 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-10)
+## Promoted From Short-Term Memory (2026-06-12)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:25:28 -->
-- 本地状态: 最新 commit: `65f2226` - JIRA-PATROL: 20260603_1205 - 无待处理任务，更新巡查记忆; Branch: main; 工作区: clean (after commit); Recovery alert: 无 [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:25-28]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03-jira-patrol.md:8:11 -->
-- 检查项: [x] 本地任务状态检查 - **无活跃任务** (task_state_manager.py status); [x] Git 工作区检查 - **有未提交文件** (memory/2026-06-03-jira-patrol.md)，已 commit; [x] Git push 状态 - **失败** (SSH auth issue to github.com:3pigcn/clawd.git); [x] Jira API 连接检查 - **正常** (http://116.205.141.57:50008) [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03-jira-patrol.md:8-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:11:14 -->
-- 23:14 巡查: **Jira 服务**: 正常; **处理中 ticket**: 0; **待领取 ticket**: 0; **结论**: 无待处理任务 [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03.md:11-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:23:23 -->
-- 23:44 巡查: 所有 AIWH 项目 ticket (107个) 均处于完成状态。 [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03.md:23-23]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:4:7 -->
-- 23:54 巡查: **Jira 服务**: 正常 (http://116.205.141.57:50008); **处理中 ticket**: 0; **待领取 ticket**: 0; **本地代码状态**: 干净 (无未提交/未推送) [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:8:8 -->
-- 23:54 巡查: **结论**: 当前没有待处理的 Jira 任务 [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-03.md:8-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-04.md:14:17 -->
-- 结论: **当前没有待处理的 Jira 任务**; Jira 服务已恢复正常（之前巡查记录显示曾不可用）; 本地无遗留代码需要提交; 无需执行任何操作 [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:14-17]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-04.md:20:20 -->
-- 结论: *自动巡查记录 - cron: 8d0227c6-23ec-434c-802a-97bdb590dc1f* [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:20-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-04.md:4:7 -->
-- 检查项: | 检查项 | 结果 | |--------|------| | Jira API 可达性 | ✅ 正常 (116.205.141.57:50008) | | 处理中 (In Progress) + assignee=huahua | ✅ 无 (0) | [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-04.md:8:11 -->
-- 检查项: | 待领取 (Selected for Development) + assignee=EMPTY | ✅ 无 (0) | | 所有未分配非完成 ticket | ✅ 无 (0) | | 本地 Git 工作树 | ✅ clean | | 活跃任务状态 | ✅ 无 (No active task) | [score=0.830 recalls=0 avg=0.620 source=memory/2026-06-04.md:8-11]
-
-## Promoted From Short-Term Memory (2026-06-11)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:12:14 -->
-- ⚠️ 异常项: **gateway 日志异常**; `web_fetch failed: 400` (1 次) + `404` (2 次) — 外部网站访问失败; `exec failed: sandbox requires a sandbox runtime` (3 次) — 6/4 的 exec 工具配置问题 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:12-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:17:20 -->
-- 系统状态: 负载: 2.44-2.56 (正常); 内存: 85% 空闲，无 swap; 运行时长: 6 天 20 小时; Gateway: 健康，端口 18789 正常 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:17-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:25:27 -->
-- 下一步: Data 卷 95% 需关注，待评估是否需要清理; exec sandbox 错误需检查是否有未配置 sandbox 的 agent 在使用 exec; web_fetch 400/404 可能是外部网站临时问题，持续观察 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:25-27]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:5:5 -->
-- 04:30 OpenClaw 自巡检 (cron): [巡检报告](../logs/openclaw_self_inspection/latest.md) [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:5-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:8:11 -->
-- ⚠️ 异常项: **Data 卷使用率 95%** (`/System/Volumes/Data`); 主磁盘 / 使用率 41%（正常）; Data 卷 400Gi/460Gi 已用，仅 26Gi 可用; 建议：清理大文件或检查是否有日志膨胀 [score=0.851 recalls=0 avg=0.620 source=memory/2026-06-05.md:8-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-05.md:21:22 -->
-- 系统状态: Agent: 活跃; Cron: 正常 [score=0.841 recalls=0 avg=0.620 source=memory/2026-06-05.md:21-22]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-03.md:17:20 -->
-- 23:44 巡查: **Jira 服务**: 正常; **处理中 ticket**: 0; **待领取 ticket**: 0; **结论**: 无待处理任务 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-03.md:17-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:11:14 -->
-- 已尝试的 API 端点:: `GET /rest/api/2/search?jql=project=AIWH...` → 404 Page Unavailable; `GET /rest/api/3/search?jql=project=AIWH...` → 404 Page Unavailable; `GET /rest/api/3/myself` → 404; `GET /rest/api/2/project/AIWH` → 404 Page Unavailable [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:11-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:17:18 -->
-- Atlassian 状态页面:: https://status.atlassian.com 显示 "No incidents reported today"; 但实际服务不可用，可能是未报告的区域性问题 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:17-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:21:23 -->
-- 本地状态:: Git 工作目录: clean (nothing to commit, working tree clean); 分支: main; task_state_manager: No active task. [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:21-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:26:28 -->
+- 无法执行的步骤:: 无法查询"处理中"的 ticket; 无法查询"待领取"的 ticket; 无法执行任何 Jira 操作 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:26-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:31:33 -->
+- 建议:: 等待 Atlassian 服务恢复后重试; 或确认 Jira 实例 URL 是否已变更; 当前本地无待处理代码变更 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:31-33]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06-jira-blocked.md:5:8 -->
+- 状态: BLOCKED - Jira 服务不可用: **问题**: Atlassian Cloud 实例 `3pigc.atlassian.net` 返回 404 Page Unavailable **HTTP Code**: 404 **Response**: Atlassian Cloud Notifications - Page Unavailable **Request IDs**: 8fad0b833ad34e02b04c55cdf16e3060, f8c42a86b63c433db08a1f38f803fc97, ebb21652-588e-47c1-a158-f142178d5cce [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06-jira-blocked.md:5-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:14:14 -->
+- 结论: 当前没有待处理的 Jira 任务。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:14-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:17:18 -->
+- 发现的问题: **GitHub 仓库已删除或迁移**: `git@github.com:cychan0115/clawd.git` 返回 404; 这意味着之前的代码推送都失败了，但本地代码完整保留 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:17-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:21:22 -->
+- 建议: 检查 GitHub 仓库是否已删除或迁移到新地址; 更新远程仓库配置或创建新仓库 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:21-22]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:29:32 -->
+- 检查状态: **当前任务**: 无 (task_state_manager.py: No active task); **Git 状态**: 有未提交修改（memory/2026-06-06.md + wing_recovery_alert.md 更新）; **GitHub 远程**: `git@github.com:cychan0115/clawd.git` → push 失败 "Repository not found"; **本地 commit**: `f306b1d` Jira巡查: 服务仍不可用 2026-06-06 16:14 CST [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:29-32]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:4:6 -->
+- 检查状态: **当前任务**: 无 (task_state_manager.py: No active task); **Git 状态**: 干净，main 分支，工作树无修改; **GitHub 远程**: 仓库 `cychan0115/clawd` 不存在 (404) [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:4-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-06.md:9:11 -->
+- Jira 查询结果: **处理中 (In Progress) 且 assignee=huahua**: 0 个 ticket; **Selected for Development 且未分配**: 0 个 ticket; **AIWH 项目未完成总数**: 0 个 ticket [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-06.md:9-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-07-jira-blocker.md:1:1 -->
+- Jira 服务不可用 - 2026-06-07 04:35 CST [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-07-jira-blocker.md:1-1]
