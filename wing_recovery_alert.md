@@ -11,6 +11,7 @@
 - ✅ Git workspace (~/clawd): 在 main 分支，working tree clean，无待提交修改
 - ✅ 最新提交: d42eb5a (17:44 巡查记录)
 - ✅ 当前时间: 2026-06-11 17:54 (Asia/Shanghai)
+- ⚠️ Git push 持续失败: remote repository 不可访问（已尝试 2 次），本地提交已记录（d965188）
 
 ### Jira 巡查结果
 - 无"处理中" ticket 分配给 huahua
