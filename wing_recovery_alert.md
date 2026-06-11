@@ -4,7 +4,40 @@
 
 ---
 
-## 最新记录 - 2026-06-11 13:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-11 14:14 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ⚠️ Jira Cloud (https://3pigc.atlassian.net): **不可用**（返回 HTTP 404，持续多轮）
+- ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token 认证有效
+- ✅ 处理中 (In Progress, status=3) + assignee=huahua: **0**
+- ✅ Selected for Development (status=10201) + assignee EMPTY: **0**
+- ✅ AIWH 项目总 ticket: 107，全部状态为"完成" (status=10001)
+- ✅ task_state_manager: No active task
+- ✅ Git workspace (~/clawd): working tree clean（wing_recovery_alert.md 有未提交变更）
+- ✅ 当前时间: 2026-06-11 14:14 (Asia/Shanghai)
+
+### Jira 巡查结果
+- **Jira Cloud 仍不可用**，已切换到 Jira Data Center 检查
+- 无"处理中" ticket 分配给 huahua
+- 无"Selected for Development" 待领取 ticket
+- 107 个 ticket 全部状态为"完成"
+- **无需要执行的 Jira 任务**
+
+### 当前状态分布（Jira Data Center）
+| 状态 | 数量 |
+|------|------|
+| 完成 (Done) | 107 |
+| 处理中 (In Progress) | 0 |
+| Selected for Development | 0 |
+
+### 行动记录
+- [x] 巡查完成，Jira Data Center 无待处理任务
+- [x] Jira Cloud 不可用（已持续多轮，需关注 Atlassian 状态）
+- [x] 本次巡查记录已写入 wing_recovery_alert.md
+
+---
+
+## 历史记录 - 2026-06-11 13:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
 - ⚠️ Jira Cloud (https://3pigc.atlassian.net): **不可用**（返回 HTTP 404）
@@ -435,3 +468,40 @@
 - [x] 本次巡查记录已写入 wing_recovery_alert.md
 
 ---
+
+---
+
+## 最新记录 - 2026-06-11 14:04 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ⚠️ Jira Cloud (https://3pigc.atlassian.net): **不可用**（返回 HTTP 404，持续多轮）
+- ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token 认证有效
+- ✅ 处理中 (In Progress, status=3) + assignee=huahua: **0**
+- ✅ Selected for Development (status=10201) + assignee EMPTY: **0**
+- ✅ AIWH 项目总 ticket: 107，全部状态为"完成" (status=10001)
+- ✅ task_state_manager: No active task
+- ✅ Git workspace (~/clawd): wing_recovery_alert.md 已提交 commit 1b47f60
+- ⚠️ Git push: 失败（远程仓库 cychan0115/clawd 不存在，已知问题，需 CY 处理）
+- ✅ 当前时间: 2026-06-11 14:04 (Asia/Shanghai)
+
+### Jira 巡查结果
+- **Jira Cloud 仍不可用**，已切换到 Jira Data Center 检查
+- 无"处理中" ticket 分配给 huahua
+- 无"Selected for Development" 待领取 ticket
+- 107 个 ticket 全部状态为"完成"
+- **无需要执行的 Jira 任务**
+
+### 当前状态分布（Jira Data Center）
+| 状态 | 数量 |
+|------|------|
+| 完成 (Done) | 107 |
+| 处理中 (In Progress) | 0 |
+| Selected for Development | 0 |
+
+### 行动记录
+- [x] 巡查完成，Jira Data Center 无待处理任务
+- [x] Jira Cloud 不可用（已持续多轮，需关注 Atlassian 状态）
+- [x] wing_recovery_alert.md 已提交 commit 1b47f60
+- [ ] Git push 远程仓库问题：需 CY 确认仓库状态（已知问题，已持续多轮）
+- [x] 本次巡查记录已写入 wing_recovery_alert.md
+
