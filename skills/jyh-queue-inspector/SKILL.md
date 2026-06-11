@@ -1,24 +1,19 @@
 ---
 name: "jyh-queue-inspector"
-description: "Check JYH community DB queue + Redis live status on K8S ocr1"
+description: "Fast JYH community queue count check on K8S ocr1"
 ---
 
 # JYH Queue Inspector
 
-Check report generation task queue for a JYH community.
-Uses **MySQL as primary source** (persistent, complete), Redis as optional live supplement.
+Quickly check queue counts for a JYH community. Fast by default, detail optional.
 
 ## Target
 - **K8S cluster**: ocr1 (via SSH)
-- **DB**: MySQL, pulled from pod env (DB_HOST/DB_PORT/DB_USER/DB_PASSWORD/DB_NAME)
-- **Redis**: pulled from pod env (REDIS_HOST/REDIS_PORT/REDIS_PASSWORD/REDIS_PREFIX)
+- **DB**: MySQL, pulled from pod env
 
-## Primary: DB query (MySQL)
-
+## Fast query (default)
 ```sql
-SELECT status, name, COUNT(*) FROM queue
-GROUP BY status, name
-ORDER BY status, cnt DESC;
+SELECT status, COUNT(*) FROM queue GROUP BY status;
 ```
 
 | status | meaning |
@@ -26,41 +21,35 @@ ORDER BY status, cnt DESC;
 | 0 | pending |
 | 1 | processing |
 | 2 | done |
-| 3 | failed / error |
+| 3 | failed |
 
-## Supplemental: Redis (live locks)
-- Queue list length for comparison
-- Active lock count (how many pods are currently running)
+## Detail query (--detail flag)
+```sql
+SELECT status, name, COUNT(*) FROM queue GROUP BY status, name;
+```
 
 ## Usage
+Trigger: "查 huadu 队列" / "huadu 多少报告" / "队列状态"
 
-Trigger phrases: "check JYH queue", "查队列", "还有多少报告没跑完", "huadu 队列"
-
-### Manual script
 ```bash
-python3 ~/.openclaw/skills/jyh-queue-inspector/scripts/inspect_queue.py huadu
+# Fast (default)
+python3 scripts/inspect_queue.py huadu
+
+# With detail
+python3 scripts/inspect_queue.py huadu --detail
 ```
 
 ## Report output
 ```
-=== {namespace} 队列统计 (DB) ===
-总计: 73,601
-  待处理: 4,369
-  处理中: 30
-  已完成: 59,864
-  异常/失败: 9,338
-
-待处理分布:
-  导出Word报告通知: 2,892
-  生成报告（拆）: 796
-  生成报告通知: 674
-
-Redis 补充:
-  Redis 队列列表: 4,369
-  活跃锁: 29 个
+=== huadu 队列 ===
+待处理: 11
+处理中: 0
+已完成: 64372
+异常: 9338
+总计: 73721
 ```
 
 ## Safety
-- Read-only DB queries
+- Read-only
 - SSH key pre-configured for ocr1
-- Credentials pulled from pod env, never hardcoded
+- Credentials from pod env, cached locally after first run
