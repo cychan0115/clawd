@@ -1,67 +1,66 @@
 ---
 name: "jyh-queue-inspector"
-description: "Check JYH community Redis queue status on K8S ocr1 cluster"
+description: "Check JYH community DB queue + Redis live status on K8S ocr1"
 ---
 
 # JYH Queue Inspector
 
-Check how many report generation tasks are queued/pending/done for a specific JYH community.
+Check report generation task queue for a JYH community.
+Uses **MySQL as primary source** (persistent, complete), Redis as optional live supplement.
 
 ## Target
 - **K8S cluster**: ocr1 (via SSH)
-- **Redis**: 10.0.0.6:6379
-- **Queue key pattern**: `{prefix}{prefix}_queue_queue_list`
-- **Lock key pattern**: `{prefix}user_deal_queue_lock:{prefix}:{queue_id}`
+- **DB**: MySQL, pulled from pod env (DB_HOST/DB_PORT/DB_USER/DB_PASSWORD/DB_NAME)
+- **Redis**: pulled from pod env (REDIS_HOST/REDIS_PORT/REDIS_PASSWORD/REDIS_PREFIX)
+
+## Primary: DB query (MySQL)
+
+```sql
+SELECT status, name, COUNT(*) FROM queue
+GROUP BY status, name
+ORDER BY status, cnt DESC;
+```
+
+| status | meaning |
+|--------|---------|
+| 0 | pending |
+| 1 | processing |
+| 2 | done |
+| 3 | failed / error |
+
+## Supplemental: Redis (live locks)
+- Queue list length for comparison
+- Active lock count (how many pods are currently running)
 
 ## Usage
 
-### 1. Discover community namespace
+Trigger phrases: "check JYH queue", "查队列", "还有多少报告没跑完", "huadu 队列"
+
+### Manual script
 ```bash
-ssh ocr1 "kubectl get namespaces | grep -E '^[a-z]+[0-9]*'"
+python3 ~/.openclaw/skills/jyh-queue-inspector/scripts/inspect_queue.py huadu
 ```
 
-### 2. Get Redis credentials from any pod in the namespace
-```bash
-ssh ocr1 "kubectl exec -n <namespace> <any-pod> -- env | grep -E 'REDIS_HOST|REDIS_PASSWORD|REDIS_PREFIX'"
+## Report output
 ```
+=== {namespace} 队列统计 (DB) ===
+总计: 73,601
+  待处理: 4,369
+  处理中: 30
+  已完成: 59,864
+  异常/失败: 9,338
 
-### 3. Inspect queue (Python via SSH to ocr1 host)
-```python
-import redis, json
-r = redis.Redis(host=REDIS_HOST, port=6379, password=REDIS_PASSWORD, decode_responses=True, protocol=2)
-queue_list = r.lrange(f"{REDIS_PREFIX}{REDIS_PREFIX}_queue_queue_list", 0, -1)
+待处理分布:
+  导出Word报告通知: 2,892
+  生成报告（拆）: 796
+  生成报告通知: 674
 
-# Count by status
-completed = 0
-pending = 0
-processing = 0
-for item in queue_list:
-    data = json.loads(item)
-    content = data.get("content_json", [])
-    deal_status = content[3].get("deal_status") if len(content)>=4 and isinstance(content[3], dict) else None
-    if deal_status is True: completed += 1
-    elif deal_status is False: processing += 1
-    else: pending += 1
+Redis 补充:
+  Redis 队列列表: 4,369
+  活跃锁: 29 个
 ```
-
-### 4. Report output
-```
-=== {namespace} 队列统计 ===
-队列总数: {total}
-  已完成: {completed}
-  处理中: {processing}
-  待处理: {pending}
-活跃队列锁: {lock_count} 个
-```
-
-## Queue types observed
-- `生成报告（拆）` - batch report generation (20 reports per item)
-- `导出Word报告通知` - Word export notification
-- `生成报告通知` - single report notification
-- `自定义导入答卷` - custom answer import
-- `导出Word报告` - Word export
 
 ## Safety
-- Read-only operation; no queue mutation
-- SSH key must be pre-configured for ocr1 access
-- Redis password is pulled from pod env, not hardcoded
+- Read-only DB queries
+- SSH key pre-configured for ocr1
+- Credentials pulled from pod env, never hardcoded
