@@ -31,5 +31,10 @@ Jira Cloud 站点 (3pigc.atlassian.net) 当前不可用，无法:
 ### 建议
 等待 Jira Cloud 恢复后重试巡查。建议人工确认 Atlassian 状态页面或检查是否站点 URL/认证信息有变更。
 
+### 额外发现
+- GitHub 远程仓库 `cychan0115/clawd` 返回 404，可能已被删除或重命名
+- 本地提交已记录 (commit: 08872e1)
+- SSH 认证正常，但仓库不存在
+
 ---
 生成时间: 2026-06-11 12:06 CST
