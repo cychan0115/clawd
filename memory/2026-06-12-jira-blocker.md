@@ -1,24 +1,20 @@
-# Jira 巡查 BLOCKER - 2026-06-12 07:24 AM (Asia/Shanghai)
+# Jira 巡查结果 - 2026-06-12 07:44 AM (Asia/Shanghai)
 
 ## 状态
-Atlassian Cloud 站点当前不可用 (HTTP 503/Page unavailable)
-- Request ID: 1314aba379574bd3914958eee25b4311
-- 影响范围：所有 Jira API 调用
-- 本地状态：task_state_manager.py 显示无活跃任务
+Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过。
 
 ## 检查步骤
-1. ✅ 检查 "处理中" ticket —— 服务中断，无法查询
-2. ✅ 检查 "待领取" ticket —— 服务中断，无法查询
-3. ✅ 检查本地 git 状态 —— 无未提交代码（见下方 git status）
+1. ✅ 检查 "处理中" ticket —— 无处理中的 ticket（状态="处理中" 且 assignee=huahua）
+2. ✅ 检查 "待领取" ticket —— 无待领取的 ticket（状态="Selected for Development" 且 assignee=EMPTY）
+3. ✅ 检查所有未完成 ticket —— 无（所有 AIWH 项目 ticket 状态均为 "Done"）
+4. ✅ 检查本地 git 状态 —— 无未提交代码（仅本文件修改）
 
-## 本地 Git 状态
-- 仓库: ~/clawd
-- 无未提交修改（除本次 blocker 记录外）
-- 无未 push 的 commit
+## Jira 项目状态摘要
+- 项目: AIWH
+- 处理中: 0
+- 待领取: 0
+- 已完成: 多个（所有现有 ticket 均为 Done 状态）
+- 结论: 当前没有待处理的 Jira 任务。
 
-## 结论
-Jira 服务中断，本次巡查无法执行。等待 Jira 服务恢复后重试。
-
-## 建议
-1. 检查 https://status.atlassian.com 确认服务状态
-2. 服务恢复后手动触发重试或等待下次 cron 执行
+## 说明
+07:24 AM 的 blocker 记录已纠正：Jira 实际地址为 `http://116.205.141.57:50008`，非 `aiwh.atlassian.net`。该站点运行正常。
