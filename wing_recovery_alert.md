@@ -696,20 +696,28 @@
 
 ---
 
-## 最新记录 - 2026-06-12 21:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-12 21:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
-- ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token 认证有效（200 OK）
-- ✅ 处理中 (In Progress, status=3) + assignee=huahua: **0**
-- ✅ Selected for Development (status=10201) + assignee is EMPTY: **0**
-- ✅ AIWH 项目: 107 个 ticket，全部处于"完成"状态 (status=10001)
+- ⚠️ Atlassian Cloud (https://3pigc.atlassian.net): **不可用**（返回 Site temporarily unavailable，与历史一致）
+- ⚠️ Jira Data Center 认证发现：用户提供的 Bearer Token `Nz...` 对 Jira Server 9.4.0 返回 401
+- ✅ Jira Data Center 使用 `wing_watchdog_v2.py` 中 Token 认证成功（用户 `openclaw-admin`）
+- ✅ AIWH 项目中处理中 (status=3) + assignee=currentUser(): **0**
+- ✅ AIWH 项目中 Selected for Development (status=10201) + assignee is EMPTY: **0**
+- ✅ AIWH 项目: 27 个 ticket 分配给 openclaw-admin，全部处于"完成"状态 (status=10001)
+- ⚠️ PHS 项目有 2 个 ticket 处于"处理中"状态 (PHS-122, PHS-120)，但不在 AIWH 项目范围内
 - ✅ Git workspace: clean（main branch, nothing to commit）
 - ✅ task_state_manager: No active task
 
 ### Jira 巡查结果
-- **无"处理中" ticket 分配给 huahua**
-- **无"Selected for Development" 待领取 ticket**
+- **AIWH 项目无"处理中" ticket**
+- **AIWH 项目无"Selected for Development" 待领取 ticket**
 - **AIWH 项目无待处理任务**
+
+### 重要发现
+- 用户 cron 消息提供的 Bearer Token 与 Jira Server 不匹配，脚本 `jira_auto.py`/`jira_helper.py`/`jira_check.py`/`check_jira_status.py` 中 Token 均为旧 Token
+- `wing_watchdog_v2.py` 使用了不同的有效 Token (`<BB_TOKEN_REDACTED>`)
+- 建议：更新脚本中的 Token 或确认使用哪个 Token 作为标准
 
 ### 结论
 当前没有待处理的 Jira 任务。
