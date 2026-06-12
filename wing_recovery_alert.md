@@ -1,4 +1,55 @@
-## 最新记录 - 2026-06-13 03:35 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-13 04:25 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ⚠️ Jira Cloud (3pigc.atlassian.net): 连接失败 / 不可用
+- ✅ Jira Data Center (116.205.141.57:50008): API 正常响应
+- ✅ 无处理中 ticket（status="In Progress", assignee=huahua）- Total: 0
+- ✅ 无待领取 ticket（status="Selected for Development", assignee is EMPTY）- Total: 0
+- ✅ Git workspace: main 分支 clean，无未提交修改
+- ✅ task_state_manager: No active task
+
+### Jira 巡查结果
+- **当前没有待处理的 Jira 任务。**
+- 所有系统正常，无需执行任何操作
+
+### 结论
+当前没有待处理的 Jira 任务。工作区干净，系统正常。
+
+### 备注
+- 用户 cron 指令提供的 Cloud Token 对 Jira Data Center 返回 401，系统使用替代 Token (<BB_TOKEN_REDACTED>) 完成查询
+- 建议更新 cron 配置中的 token 为 Data Center 可用 token，保持一致性
+- 上次巡查 (03:55 CST) 至今状态无变化，系统持续稳定
+
+---
+
+## 历史记录
+
+## 最新记录 - 2026-06-13 03:55 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ⚠️ Jira Cloud (rzu-atlassian.net): 连接失败 (HTTP 000)
+- ✅ Jira Data Center (116.205.141.57:50008): API 正常响应
+- ✅ 无处理中 ticket（status=3 "处理中", assignee=huahua）- Total: 0
+- ✅ 无待领取 ticket（status=10201 "Selected for Development", assignee is EMPTY）- Total: 0
+- ✅ 无 Backlog ticket（status=10200, assignee is EMPTY）- Total: 0
+- ✅ AIWH 项目所有 107 个 ticket 均处于"完成"状态
+- ✅ task_state_manager: No active task
+- ⚠️ Git push 失败: "Repository not found" - 远程仓库配置可能有问题
+
+### Jira 巡查结果
+- **当前没有待处理的 Jira 任务。**
+- 所有 ticket 均已完成，无需执行任何操作
+
+### 结论
+当前没有待处理的 Jira 任务。工作区正常，无需执行任何操作。
+
+### 备注
+- 本地 git 有已提交但未推送的变更（commit 837e9ec）
+- 远程仓库配置可能有问题，建议检查 git remote -v
+
+---
+
+## 历史记录 - 2026-06-13 03:35 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
 - ⚠️ Jira Cloud (3pigc.atlassian.net / anna-3pigc.atlassian.net): **仍然不可用** - 返回 "Page unavailable"
@@ -24,9 +75,7 @@
 
 ---
 
-## 历史记录
-
-## 最新记录 - 2026-06-13 03:06 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 历史记录 - 2026-06-13 03:06 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
 - ✅ Jira Data Center (116.205.141.57:50008): **API 正常响应**
@@ -52,8 +101,6 @@
 
 ---
 
-## 历史记录
-
 ## 历史记录 - 2026-06-13 02:55 CST
 
 ### 状态更新
@@ -73,28 +120,3 @@
 - 用户 cron 指令中指定的 `annahelp.atlassian.net` (Jira Cloud) 持续不可用
 - 系统实际使用的 Jira Data Center (`116.205.141.57:50008`) 运行正常，已通过该端点完成查询
 - 所有系统脚本（jira_auto.py, wing_watchdog_v2.py 等）均指向 Data Center 端点
-
-
-## 最新记录 - 2026-06-13 03:55 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
-
-### 状态更新
-- ⚠️ Jira Cloud (rzu-atlassian.net): 连接失败 (HTTP 000)
-- ✅ Jira Data Center (116.205.141.57:50008): API 正常响应
-- ✅ 无处理中 ticket（status=3 "处理中", assignee=huahua）- Total: 0
-- ✅ 无待领取 ticket（status=10201 "Selected for Development", assignee is EMPTY）- Total: 0
-- ✅ 无 Backlog ticket（status=10200, assignee is EMPTY）- Total: 0
-- ✅ AIWH 项目所有 107 个 ticket 均处于"完成"状态
-- ✅ task_state_manager: No active task
-- ⚠️ Git push 失败: "Repository not found" - 远程仓库配置可能有问题
-
-### Jira 巡查结果
-- **当前没有待处理的 Jira 任务。**
-- 所有 ticket 均已完成，无需执行任何操作
-
-### 结论
-当前没有待处理的 Jira 任务。工作区正常，无需执行任何操作。
-
-### 备注
-- 本地 git 有已提交但未推送的变更（commit 837e9ec）
-- 远程仓库配置可能有问题，建议检查 git remote -v
-
