@@ -22,3 +22,16 @@ Jira Cloud 实例 `ai-whisky.atlassian.net` 持续不可用。已等待服务恢
 - 如有紧急任务，请检查 Jira Cloud 状态 https://status.atlassian.com
 
 ---
+
+## 后续巡查 - 2026-06-13 02:45 CST
+
+### 状态更新
+- ✅ Jira Data Center (116.205.141.57:50008): **已恢复**，API 正常响应
+- ✅ 无处理中 ticket（status=3, assignee=huahua）
+- ✅ 无待领取 ticket（status=10201, assignee is EMPTY）
+- ✅ Git workspace: main 分支 clean
+- ✅ task_state_manager: No active task
+- ✅ 当前没有待处理的 Jira 任务
+
+### 结论
+Jira Cloud 不可用期间，系统已切换/恢复至 Jira Data Center。当前无待处理任务，工作区干净。
