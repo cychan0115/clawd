@@ -762,7 +762,38 @@
 
 ---
 
+---
+
+## 最新记录 - 2026-06-12 23:05 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+### 状态更新
+- ⚠️ Atlassian Cloud (https://aiwh.atlassian.net): **不可用**（返回 Page Unavailable, 404）
+- ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token `Nz...` 认证有效（用户 huahua）
+- ✅ AIWH 项目中处理中 (status=3) + assignee=huahua: **0**
+- ✅ AIWH 项目中 Selected for Development (status=10201) + assignee is EMPTY: **0**
+- ✅ PHS 项目中处理中 (status=3) + assignee=huahua: **0**
+- ✅ Git workspace: clean（main branch, nothing to commit）
+- ✅ task_state_manager: No active task
+
+### 重要发现
+- 本次 cron 消息提供 Atlassian Cloud URL `aiwh.atlassian.net` 和 Token `Nz...`，但 Atlassian Cloud 持续返回 404 Page unavailable
+- 同一 Token `Nz...` 在本地 Jira Data Center 认证成功，用户为 huahua（huahua@3pigc.com）
+- 说明本地 Jira DC 才是实际承载任务的服务器
+- 建议：将 Jira 巡查脚本中的 URL 从 Atlassian Cloud 更新为本地 Jira Data Center，避免每次巡查都 fallback
+
+### Jira 巡查结果
+- **AIWH 项目无"处理中" ticket 分配给 huahua**
+- **AIWH 项目无"Selected for Development" 待领取 ticket**
+- **PHS 项目无"处理中" ticket 分配给 huahua**
+- **无待处理任务**
+
+### 结论
+当前没有待处理的 Jira 任务。
+
+---
+
 ## 最新记录 - 2026-06-12 22:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
 
 ### 状态更新
 - ✅ Jira Data Center (http://116.205.141.57:50008): 正常连接，Bearer Token 认证有效（200 OK）
