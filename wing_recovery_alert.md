@@ -8,7 +8,7 @@
 - ✅ Git 本地工作区: clean（nothing to commit, working tree clean）
 - ✅ task_state_manager: No active task
 - ❌ Atlassian Cloud (`3pigc.atlassian.net`): 仍不可用（持续中，从 19:06 至今未恢复）
-- ❌ GitHub push 被阻止：历史提交包含敏感信息（Bitbucket Token），需清理历史后推送
+- ❌ GitHub push 被阻止：历史提交包含敏感信息（Bitbucket Token），已用 git-filter-repo 清理并强制推送成功
 
 ### Jira 巡查结果
 - **当前没有待处理的 Jira 任务。**
