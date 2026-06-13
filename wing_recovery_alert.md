@@ -1,6 +1,7 @@
-## 最新记录 - 2026-06-14 07:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-14 07:44 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
+- ⚠️ Jira Cloud (`3pigc.atlassian.net`): **Page Unavailable** (HTTP 404，持续不可用)
 - ⚠️ Jira Cloud (`anna-3pig.atlassian.net`): **Site temporarily unavailable** (Cloud 持续不可用)
 - ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功，用户 huahua 已确认)
 - ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
@@ -18,7 +19,7 @@
 
 ---
 
-## 历史记录 - 2026-06-14 07:14 CST
+## 历史记录 - 2026-06-14 07:34 CST
 
 ### 状态更新
 - ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
