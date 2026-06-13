@@ -170,3 +170,26 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 状态: **Jira 站点**: 不可用（HTTP 404，返回 Page unavailable 维护页面）; **Atlassian 状态页面**: 显示全部正常（All Systems Operational），但实际情况不符; **本地代码状态**: 干净，无未提交变更（上次提交 f000353）; **Task State Manager**: 无活跃任务 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:4-7]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:12:12 -->
 - 检查项: ✅ 本地 git 状态 → 工作树干净，3 个未推送 commits + 1 个新提交（本地记录） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:12-12]
+
+## Promoted From Short-Term Memory (2026-06-14)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:17:20 -->
+- Jira Cloud: 从 14:14 CST 开始返回 404; 当前 15:17 CST，仍然不可用; 无法查询任何 ticket 状态; 无法领取或完成任务 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:23:26 -->
+- GitHub / Git 仓库: GitHub API 确认仓库 `cychan0115/clawd` 不存在; GitHub 网页服务 504 超时; 本地有 3 个未推送 commits（14:24-14:34 的巡查记录）; 本次巡查新增 1 个本地提交（记录当前状态） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:23-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:29:32 -->
+- 结论: **无待处理的 Jira 任务**（task_state_manager 确认）; **Jira Cloud 服务不可用**，无法进行正常的任务领取/处理流程; **GitHub 远程仓库不存在**，本地 commits 无法同步; 这是一个系统级阻塞，需要等待外部服务恢复 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:29-32]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:5:5 -->
+- 状态: ⚠️ **多项服务不可用** — 无法执行 Jira 任务处理 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:8:11 -->
+- 检查项: ❌ Jira Cloud 主站 → 404（维护中，已持续约63分钟）; ❌ GitHub 仓库 → 不存在（API 404）; ❌ GitHub 服务 → 504 Gateway Timeout; ✅ 本地任务状态 → No active task [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:8-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:1:1 -->
+- 2026-06-08 14:16 CST Jira cron巡查: Jira Cloud 维护中，无活跃任务，git干净。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08.md:1-1]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:12:15 -->
+- 检查证据: 处理中查询: `total: 0`（Jira Data Center API HTTP 200）; 待领取查询: `total: 0`（Jira Data Center API HTTP 200）; task_state_manager: `No active task`; Git 工作树: 干净（无未提交代码） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:12-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:16:16 -->
+- 检查证据: 远程仓库: 404（不影响本次结论） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:16-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:19:19 -->
+- 结论: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:19-19]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:6:9 -->
+- 检查项目: 处理中 (In Progress) + assignee=huahua: **0 个**; 待领取 (Selected for Development) + assignee EMPTY: **0 个**; 整个 AIWH 项目"处理中": **0 个**; 整个项目"待领取": **0 个** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:6-9]
