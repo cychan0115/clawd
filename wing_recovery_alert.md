@@ -1,28 +1,11 @@
-## 最新记录 - 2026-06-14 07:14 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 最新记录 - 2026-06-14 07:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
-- ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
+- ⚠️ Jira Cloud (`anna-3pig.atlassian.net`): **Site temporarily unavailable** (Cloud 持续不可用)
+- ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功，用户 huahua 已确认)
 - ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
 - ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
 - ✅ task_state_manager: No active task
-- ✅ 本地 git 状态干净（branch master, up to date with origin/master, nothing to commit）
-
-### Jira 巡查结果
-- **当前没有待处理的 Jira 任务。**
-- AIWH 项目所有 ticket 均已完成或已分配，无待处理任务
-- 无需执行任何操作
-
-### 结论
-当前没有待处理的 Jira 任务。系统正常。无需执行任何操作。
-
----
-
-### 状态更新
-- ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
-- ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
-- ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
-- ✅ task_state_manager: No active task
-- ✅ 上次巡查记录已 commit & push (198e81b)
 - ✅ 本地 git 状态干净（branch main, up to date with origin/main, nothing to commit）
 
 ### Jira 巡查结果
@@ -35,11 +18,9 @@
 
 ---
 
-
-
+## 历史记录 - 2026-06-14 07:14 CST
 
 ### 状态更新
-- ⚠️ Jira Cloud (`3pigc.atlassian.net`): **Page Unavailable** (与上次巡查一致)
 - ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
 - ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
 - ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
@@ -56,26 +37,7 @@
 
 ---
 
-
-
-### 状态更新
-- ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
-- ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
-- ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
-- ✅ task_state_manager: No active task
-- ✅ 本地 git 已清理：回退 jira_auto.py/jira_helper.py 硬编码 token → commit push 完成 (b9e30d3)
-
-### Jira 巡查结果
-- **当前没有待处理的 Jira 任务。**
-- AIWH 项目所有 ticket 均已完成或已分配，无待处理任务
-- 无需执行任何操作
-
-### 结论
-当前没有待处理的 Jira 任务。系统正常。无需执行任何操作。
-
----
-
-## 最新记录 - 2026-06-14 05:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+## 历史记录 - 2026-06-14 05:54 CST
 
 ### 状态更新
 - ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
@@ -136,21 +98,3 @@
 
 ---
 
----
-
-## 最新记录 - $(date "+%Y-%m-%d %H:%M") CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
-
-### 状态更新
-- ✅ Jira Data Center (`116.205.141.57:50008`): API 正常响应 (Bearer 认证成功)
-- ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
-- ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
-- ✅ task_state_manager: No active task
-- ✅ 本地 git 状态干净（branch master, up to date with origin/master, nothing to commit）
-
-### Jira 巡查结果
-- **当前没有待处理的 Jira 任务。**
-- AIWH 项目所有 ticket 均已完成或已分配，无待处理任务
-- 无需执行任何操作
-
-### 结论
-当前没有待处理的 Jira 任务。系统正常。无需执行任何操作。
