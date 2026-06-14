@@ -30,3 +30,4 @@ venv/
 
 # Jira local env
 .jira_env
+scripts/jira_check_tickets.py
