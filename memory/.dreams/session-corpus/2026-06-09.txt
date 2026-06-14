@@ -348,3 +348,21 @@
 [main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L24] Assistant: 没有处理中的 ticket。现在检查待领取的 ticket（状态 10201）：
 [main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L26] Assistant: 也没有待领取的 ticket。检查本地 git 状态和恢复提醒：
 [main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L28] Assistant: 有 `wing_recovery_alert.md` 修改。检查是否有恢复任务：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L30] Assistant: 查看具体修改内容：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L32] Assistant: 只是时间戳更新。让我检查更多未完成的 ticket 状态，然后提交更改并生成报告：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L34] Assistant: JQL 语法问题。检查所有未完成的 ticket 用不同的方式：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L40] Assistant: 确认无任务。现在更新 `wing_recovery_alert.md` 并提交：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L44] Assistant: 提交更新并生成巡查报告：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L46] Assistant: Commit 完成，push 失败（远程仓库不存在，已知问题）。生成本次巡查报告：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L48] Assistant: 提交报告文件：
+[main/sessions/main/811afa4e-a6a3-48a3-9557-d967ed290f54.jsonl#L50] Assistant: ## ✅ Jira 任务巡查完成 — 2026-06-09 09:24 **当前没有待处理的 Jira 任务。** ### 检查结果 | 检查项 | 结果 | |--------|------| | 处理中 (status=3) + assignee=huahua | **0 个** | | 待领取 (status=10201) + assignee EMPTY | **0 个** | | 本地活跃任务 | **无** | | Git 状态 | **clean（已提交 wing_recovery_alert.md 更新）**
+[main/sessions/main/839c5773-b338-4197-877c-9d0924b652fb.jsonl#L10] Assistant: 巡检脚本执行完毕。发现 **3 类异常**需要进一步排查： ## 异常汇总 | 级别 | 问题 | 详情 | |------|------|------| | 🔴 磁盘 | `/System/Volumes/Data` 使用率 **96%** | 用户数据卷仅剩 ~21Gi 可用 | | 🟡 日志 | `~/.jira_env` 不存在 | 06-09 日志中两次 `read failed` | | 🟡 日志 | `j.3pigc.com` DNS 失败 | 06-08 日志中两次 `getaddrinfo ENOTF
+[main/sessions/main/83f313e3-8372-4a6c-b2f9-d4825a1346dd.jsonl#L12] Assistant: **[MINI2+OpenClaw 自巡检完成]** ✅ | 检查项 | 状态 | |--------|------| | macOS 负载/内存 | ✅ 正常 (负载 3.3, 内存空闲 83%) | | 磁盘空间 | ⚠️ `/System/Volumes/Data` 95% 满载，但主系统 `/` 仅 45% | | Gateway 进程 | ✅ 运行中 (pid 47290) | | Agent 状态 | ✅ 活跃 (0 分钟前更新) | | 端口 18789 | ✅ 监听正常 | | Gateway Health 
+[main/sessions/main/84afbfda-f52e-4b73-8a5b-44ef8e9f94a2.jsonl#L10] Assistant: **✅ MINI2 + OpenClaw 自巡检完成** **整体状态**：系统运行正常，但发现 **2 项需注意**。 --- ### 主机状态 - **负载**: 1.90 / 2.24 / 2.26 — 正常 - **内存**: 82% 空闲 — 健康 - **运行时间**: 11 天 15 小时 ### ⚠️ 磁盘空间警报 | 卷 | 使用率 | 状态 | |---|---|---| | `/` (系统) | 43% | ✅ | | `/System/Volumes/Data` (数据) | **95%** | ⚠️
+[main/sessions/main/84afbfda-f52e-4b73-8a5b-44ef8e9f94a2.jsonl#L10] Assistant: 报告已保存至：`/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/84d3a781-8698-4226-ab2c-fe2ea7a499bd.jsonl#L6] Assistant: 正在执行 Jira 任务巡查... 让我先检查状态和配置。
+[main/sessions/main/84d3a781-8698-4226-ab2c-fe2ea7a499bd.jsonl#L9] Assistant: wing_recovery_alert.md 显示之前的巡查记录，让我直接查询 Jira 服务器获取最新状态。
+[main/sessions/main/84d3a781-8698-4226-ab2c-fe2ea7a499bd.jsonl#L13] Assistant: Jira 服务器确认：没有处理中的任务，也没有待领取的任务。本地有 `wing_recovery_alert.md` 未提交。让我更新日志并提交。
+[main/sessions/main/84d3a781-8698-4226-ab2c-fe2ea7a499bd.jsonl#L21] Assistant: 日志已提交，但推送仍失败（远程仓库 404，与之前一致）。让我记录此状态并汇报。
+[main/sessions/main/84d3a781-8698-4226-ab2c-fe2ea7a499bd.jsonl#L23] Assistant: --- ## ✅ Jira 任务巡查结果：2026-06-09 08:36 CST **当前状态：没有待处理的 Jira 任务。** ### 1. 检查"处理中"的 ticket（优先级最高） - 查询条件：`project=AIWH AND status="In Progress" AND assignee=huahua` - **结果：0 个** — 无处理中任务 ### 2. 检查"待领取"的 ticket - 查询条件：`project=AIWH AND status="Selected for Developmen
+[main/sessions/main/86a237fc-b118-4716-9fe4-b8bae2e22ca6.jsonl#L18] Assistant: 自巡检完成。报告已更新至 `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`。 ## 巡检结果摘要 | 检查项 | 状态 | |--------|------| | macOS 负载 | ✅ 3.44/2.82/2.69（正常） | | 内存压力 | ✅ 69% free，无 swap | | 磁盘 (/) | ✅ 44% 使用率 | | Gateway 进程 | ✅ 运行中 (pid 47290) | | Agent 活跃 | ✅ 0 分钟前更新 | 

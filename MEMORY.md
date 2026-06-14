@@ -148,48 +148,25 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-13)
+## Promoted From Short-Term Memory (2026-06-15)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-07-jira-blocker.md:10:11 -->
-- 结论: Jira 实例 (3pigc.atlassian.net) 当前不可用，无法执行 ticket 查询和处理。 这是 Atlassian Cloud 服务端问题，非本地网络问题。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-07-jira-blocker.md:10-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-07-jira-blocker.md:14:15 -->
-- 本地状态: Git 工作区: clean (no uncommitted changes); Task State: No active task [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-07-jira-blocker.md:14-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-07-jira-blocker.md:18:18 -->
-- 建议: 等待 Atlassian 服务恢复后重试。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-07-jira-blocker.md:18-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-07-jira-blocker.md:4:7 -->
-- 检查步骤: 尝试连接 Jira API: https://3pigc.atlassian.net/rest/api/2/search; 返回结果: "Page unavailable" (Atlassian Cloud 服务页面); 检查 Atlassian Status: 状态页面显示无报告事件; 网络连通性: ping 3pigc.atlassian.net 正常 (51ms) [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-07-jira-blocker.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-blocker.md:10:12 -->
-- 影响: 无法查询"处理中"的 ticket（步骤 2）; 无法查询"Selected for Development"的 ticket（步骤 3）; 无法执行任何 Jira API 操作（assign、transition、comment 等） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:10-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-blocker.md:16:16 -->
-- 证据: curl -I https://anna-3pigc.atlassian.net/rest/api/2/serverInfo [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:16-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-blocker.md:23:25 -->
-- 后续行动: 等待 Jira 站点恢复后重试; 下一轮 cron job (21:44) 会自动重试; 如果持续不可用，建议检查 Atlassian 状态页面或联系支持 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:23-25]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-blocker.md:28:28 -->
-- 后续行动: 写入时间: 2026-06-08 21:44 (Asia/Shanghai) [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:28-28]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-blocker.md:4:7 -->
-- 状态: **Jira 站点**: 不可用（HTTP 404，返回 Page unavailable 维护页面）; **Atlassian 状态页面**: 显示全部正常（All Systems Operational），但实际情况不符; **本地代码状态**: 干净，无未提交变更（上次提交 f000353）; **Task State Manager**: 无活跃任务 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-blocker.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:12:12 -->
-- 检查项: ✅ 本地 git 状态 → 工作树干净，3 个未推送 commits + 1 个新提交（本地记录） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:12-12]
-
-## Promoted From Short-Term Memory (2026-06-14)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:17:20 -->
-- Jira Cloud: 从 14:14 CST 开始返回 404; 当前 15:17 CST，仍然不可用; 无法查询任何 ticket 状态; 无法领取或完成任务 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:17-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:23:26 -->
-- GitHub / Git 仓库: GitHub API 确认仓库 `cychan0115/clawd` 不存在; GitHub 网页服务 504 超时; 本地有 3 个未推送 commits（14:24-14:34 的巡查记录）; 本次巡查新增 1 个本地提交（记录当前状态） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:23-26]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:29:32 -->
-- 结论: **无待处理的 Jira 任务**（task_state_manager 确认）; **Jira Cloud 服务不可用**，无法进行正常的任务领取/处理流程; **GitHub 远程仓库不存在**，本地 commits 无法同步; 这是一个系统级阻塞，需要等待外部服务恢复 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:29-32]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:5:5 -->
-- 状态: ⚠️ **多项服务不可用** — 无法执行 Jira 任务处理 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:5-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08-jira-inspection.md:8:11 -->
-- 检查项: ❌ Jira Cloud 主站 → 404（维护中，已持续约63分钟）; ❌ GitHub 仓库 → 不存在（API 404）; ❌ GitHub 服务 → 504 Gateway Timeout; ✅ 本地任务状态 → No active task [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08-jira-inspection.md:8-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:1:1 -->
-- 2026-06-08 14:16 CST Jira cron巡查: Jira Cloud 维护中，无活跃任务，git干净。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-08.md:1-1]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:12:15 -->
-- 检查证据: 处理中查询: `total: 0`（Jira Data Center API HTTP 200）; 待领取查询: `total: 0`（Jira Data Center API HTTP 200）; task_state_manager: `No active task`; Git 工作树: 干净（无未提交代码） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:16:16 -->
-- 检查证据: 远程仓库: 404（不影响本次结论） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:16-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:19:19 -->
-- 结论: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:19-19]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:6:9 -->
-- 检查项目: 处理中 (In Progress) + assignee=huahua: **0 个**; 待领取 (Selected for Development) + assignee EMPTY: **0 个**; 整个 AIWH 项目"处理中": **0 个**; 整个项目"待领取": **0 个** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-09.md:6-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:1:1 -->
+- Jira 任务巡查结果 - 2026-06-09 23:04 CST [score=0.824 recalls=0 avg=0.620 source=memory/2026-06-09.md:1-1]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-09.md:3:3 -->
+- **状态**: 无待处理任务 [score=0.824 recalls=0 avg=0.620 source=memory/2026-06-09.md:3-3]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:13:15 -->
+- 处理中 (In Progress) 检查: **查询条件**: project=AIWH AND status="In Progress" AND assignee=huahua; **结果**: 0 个 ticket; ✅ 无处理中任务需要完成 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:13-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:18:20 -->
+- 待领取 (Selected for Development) 检查: **查询条件**: project=AIWH AND status="Selected for Development" AND (assignee is EMPTY OR assignee=null); **结果**: 0 个 ticket; ✅ 无待领取任务 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:18-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:23:25 -->
+- 本地代码状态检查: **分支**: main; **修改**: wing_recovery_alert.md (巡查记录更新); **操作**: 已 commit + push [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:23-25]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:3:6 -->
+- Jira 任务巡查报告: **巡查时间**: 2026-06-10 15:14 CST (Wednesday) **巡查者**: huahua (cron:8d0227c6-23ec-434c-802a-97bdb590dc1f) **Jira 实例**: Jira Data Center @ http://116.205.141.57:50008 **认证**: Bearer Token (huahua@3pigc.com) ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:32:33 -->
+- ⚠️ 指令 URL 错误: 本次 cron 指令中给出的 Jira URL (`https://3pigc.atlassian.net`) 是**错误的 Atlassian Cloud 端点**，实际返回 `Page unavailable` 错误。 正确的 Jira Data Center 实例是 **`http://116.205.141.57:50008`**。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:32-33]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1514-jira-inspection.md:39:41 -->
+- 结论: ✅ **当前没有待处理的 Jira 任务。**; ✅ 本地代码已提交并推送; 无需执行任何操作 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1514-jira-inspection.md:39-41]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:13:16 -->
+- 检查结果: ✅ 无"Selected for Development" 待领取 ticket; ✅ 无未分配的非完成状态 ticket; ✅ 无需执行任何操作; ✅ 无 BLOCKER 情况 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:13-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:19:22 -->
+- 当前状态分布: | 状态 | 数量 | |------|------| | 完成 | 107 | | 处理中 | 0 | [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:19-22]

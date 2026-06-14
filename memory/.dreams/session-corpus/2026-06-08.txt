@@ -436,3 +436,13 @@
 [main/sessions/main/7ca1fbd6-6e0c-4cb8-9b97-90a65446e03c.jsonl#L14] Assistant: Jira Cloud 主站仍不可用，但历史记录显示有 Jira 代理可用。让我尝试代理并提交本地修改：
 [main/sessions/main/7ca1fbd6-6e0c-4cb8-9b97-90a65446e03c.jsonl#L18] Assistant: Jira 代理也无响应。现在提交本地修改并记录本次巡查：
 [main/sessions/main/7ca1fbd6-6e0c-4cb8-9b97-90a65446e03c.jsonl#L28] Assistant: ## Jira 任务巡查报告 (2026-06-08 12:24 CST) ### 执行结果 | 步骤 | 状态 | 详情 | |------|------|------| | 查询处理中 ticket | ❌ 失败 | Jira Cloud 返回 "Page unavailable" 维护页面 | | 查询待领取 ticket | ❌ 失败 | 同上，服务中断 | | 检查 Jira 代理 | ❌ 无响应 | 116.205.141.57:50008 健康检查超时 | | 本地 git 状态 | ✅ 干净 | 无代码修改，
+[main/sessions/main/86ed4144-8ee7-4e96-8c53-5e18191f5a99.jsonl#L15] Assistant: ✅ **MINI2+OpenClaw 自巡检完成** — 报告已写入 `logs/openclaw_self_inspection/latest.md` --- ## 巡检结果摘要 | 检查项 | 状态 | 说明 | |--------|------|------| | **主机负载** | ⚠️ 偏高 | `4.20 / 3.96 / 3.63` — 负载偏高但正常范围 | | **内存** | ✅ 正常 | 80% free，无 swap | | **主磁盘 (/)** | ✅ 正常 | 54% 使用率 | | **Da
+[main/sessions/main/86ed4144-8ee7-4e96-8c53-5e18191f5a99.jsonl#L15] Assistant: 3. ⚠️ Jira 任务巡查 cron 脚本错误（已重复多次） - `[tools] edit failed`：编辑 `wing_recovery_alert.md` 时文本匹配失败 - `[tools] message failed`：发送消息时缺少 `target` - `web_fetch failed`：Jira Cloud (`3pigc.atlassian.net`) 返回 404 维护页面 - 这些错误在 06-07 和 06-08 日志中反复出现 ### 4. ⚠️ 长时运行会话 - `Jira任务巡查` 
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L6] Assistant: 收到 Jira 任务巡查指令。开始执行。 首先检查系统状态和必要的文件：
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L9] Assistant: wing_recovery_alert 显示 Jira 实际 host 为 116.205.141.57:50008。继续执行 Jira 巡查。
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L12] Assistant: 状态名称需要确认。先查询项目可用状态：
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L14] Assistant: 状态名编码有问题。用状态 ID 重新查询：
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L17] Assistant: 两次查询均返回 0 个 ticket，确认无待处理任务。让我再检查完整状态：
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L19] Assistant: 查看 AIWH 项目最新 ticket 状态（AIWH-104 已完成）。现在检查本地 git 状态：
+[main/sessions/main/8750e95a-08d0-4e02-b27c-b188f6c8d317.jsonl#L21] Assistant: ## Jira 任务巡查结果 **本地状态检查：** - `git status` → ✅ working tree clean - 最新 commit: `6d7aae8` (chore(git): update .gitignore patterns) - `task_state_manager.py` → No active task **Jira 查询结果：** - 处理中 (status=3) 且 assignee=huahua → **0 ticket** - 待领取 (Selected for Developm
+[main/sessions/main/8810b143-57a4-4d80-95a3-769aae25a260.jsonl#L13] Assistant: **主动检查完成 — 一切正常，无需打扰。** | 检查项 | 状态 | |--------|------| | 待办主动改进 | 4项未处理（微信通知、Jira优化、代码检查、文档同步），均非紧急 | | Jira 活跃任务 | 无 | | Git 未提交更改 | 无，工作区干净 | | 磁盘空间 | 45% / 21Gi 可用，正常 | | 系统负载 | 2.4-3.2，偏高但主要是 `mediaanalysisd-access`（照片库索引，正常后台进程） | | OpenClaw 网关 | 运行正常，CPU 3.8%
