@@ -1,14 +1,15 @@
 # Jira 任务巡查 - 最近一次执行
 
-## 最新记录 - 2026-06-14 14:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+
+## 最新记录 - 2026-06-14 14:54 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
 ### 状态更新
-- ⚠️ 3pigc.atlassian.net (Atlassian Cloud): **Page unavailable** (站点当前不可用，自 09:44 起持续不可用)
+- ⚠️ 3pigc.atlassian.net (Atlassian Cloud): **Page unavailable** (站点当前不可用，自 09:44 起间歇性不可用)
 - ✅ Jira Data Center (`http://116.205.141.57:50008`): API 正常响应 (Bearer 认证成功，用户 huahua 已确认)
-- ✅ **无处理中 ticket**（status=3, assignee=huahua）- Total: 0
-- ✅ **无待领取 ticket**（status=10201, assignee is EMPTY）- Total: 0
+- ✅ **无处理中 ticket**（status="In Progress", assignee=huahua）- Total: 0
+- ✅ **无待领取 ticket**（status="Selected for Development", assignee is EMPTY）- Total: 0
 - ✅ task_state_manager: No active task
-- ✅ 本地 git 状态：工作区干净，无未提交修改（branch: main, up to date with origin/main）
+- ✅ 本地 git 状态：wing_recovery_alert.md 有修改（日志更新，非任务代码）
 - ✅ AIWH 项目所有 ticket 均已完成状态，无待处理任务
 
 ### Jira 巡查结果
