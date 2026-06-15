@@ -397,3 +397,31 @@
 [main/sessions/main/84b2c169-db04-4166-b1b6-4d0ecd3bb1e6.jsonl#L39] Assistant: ## Jira 巡查报告 — 07:54 CST | 项目 | 状态 | |------|------| | Jira Data Center | ✅ 连接正常，认证通过 | | 处理中 ticket | ✅ 0 个 | | 待领取 ticket | ✅ 0 个 | | wing_1 Git | ✅ clean | | clawd Git | ✅ 提交成功（本地） | | GitHub Push | ⚠️ 仓库不可用（已知问题） | **结论：当前没有待处理的 Jira 任务。** - `AIWH` 项目中无处理中/待领取的
 [main/sessions/main/86adb816-a08f-4330-9a5f-f8a50dddc065.jsonl#L12] Assistant: **OpenClaw 自巡检完成 ✅** **整体状态：健康** | 检查项 | 状态 | |--------|------| | macOS 负载 | ✅ 正常 (2.31/2.76/2.98) | | 内存 | ✅ 正常 (84% free) | | 磁盘 / | ✅ 43% | | Gateway 进程 | ✅ 运行中 | | Agent 活跃 | ✅ 1分钟前活跃 | | Browser CDP | ✅ 就绪 | | 端口 18789 | ✅ 监听 | | 端口 18800 | ✅ 监听 | | Gateway He
 [main/sessions/main/872f939d-78af-4ceb-af94-6ac3b2a5643c.jsonl#L30] Assistant: **Jira 任务巡查完成** 📊 **结果：当前没有待处理的 Jira 任务。** --- **执行摘要：** | 检查项 | 结果 | |--------|------| | Jira 连接 (`hw4.3pigcn.com:50008`) | ✅ 正常，Bearer Token 认证通过 | | 本地 git 状态 | ✅ 干净（main 分支，无未提交代码） | | 处理中 ticket (status=3, assignee=huahua) | **0 个** | | 待领取 ticket (status=102
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L6] Assistant: 我来开始执行 Jira 任务巡查。先检查当前任务状态，然后查询处理中的 ticket。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L9] Assistant: 任务状态管理器显示没有活动任务。Jira 查询可能有编码问题。让我尝试不同方式查询，并检查 recovery alert。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L12] Assistant: 从历史记录中可以看到，正确的 Jira Data Center 端点是 `http://116.205.141.57:50008`。让我用这个正确端点来查询。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L15] Assistant: 查询结果： - **处理中 ticket 分配给 huahua**：0 条 - **Selected for Development 待领取**：0 条 当前没有待处理的 Jira 任务。让我检查本地代码状态并更新巡查记录。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L17] Assistant: 本地代码状态 clean，分支 main。现在更新巡查记录文件。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L19] Assistant: 我需要保留历史记录。让我重新补充完整内容。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L21] Assistant: 文件已更新。让我 commit 这个变更，并尝试 push。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L25] Assistant: Commit 成功（hash: 4e9ddce）。Push 被中断（可能是远程仓库问题）。让我检查一下当前状态。
+[main/sessions/main/89c036fd-c661-4e63-a3c2-fcd2d811686d.jsonl#L27] Assistant: --- ## 🌸 Jira 任务巡查结果 **时间:** 2026-06-10 17:05 CST (Asia/Shanghai) ### 检查项 | 检查项 | 结果 | |--------|------| | task_state_manager | ✅ No active task | | 处理中 ticket (huahua) | ✅ 0 条 | | 待领取 ticket | ✅ 0 条 | | 本地代码状态 | ✅ Clean | | Jira API | ✅ 正常连接 | ### 当前状态分布 | 状态 | 数
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L6] Assistant: 好的，开始执行 Jira 任务巡查流程。
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L8] Assistant: 当前没有活跃任务。继续检查 Jira 中"处理中"的 ticket...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L16] Assistant: Jira 服务器 (jira.3pigc.com) 当前无法连接。让我检查本地配置和环境...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L20] Assistant: 原来Jira Data Center 地址是 `116.205.141.57:50008`，让我继续巡查...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L22] Assistant: 处理中 (In Progress) 的 ticket: **0 个** 检查待领取 (Selected for Development) 的 ticket...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L24] Assistant: 待领取 (Selected for Development) 的 ticket: **0 个** 检查本地 Git 状态...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L26] Assistant: Git 工作树干净，无未提交代码。更新巡查记录...
+[main/sessions/main/8af202ad-342e-495d-89da-f650d97f72fc.jsonl#L28] Assistant: --- ## Jira 任务巡查完成 — 01:34 CST ### 巡查结果 | 检查项 | 状态 | 数量 | |--------|------|------| | Jira Data Center API | ✅ 正常 | - | | 处理中 (In Progress) + huahua | ✅ 无 | 0 | | 待领取 (Selected for Development) + EMPTY | ✅ 无 | 0 | | Git 本地未提交代码 | ✅ 干净 | 无 | | task_state_manager | ✅ 
+[main/sessions/main/8afddc2c-8b46-428b-992f-fdd37f32388b.jsonl#L10] Assistant: ✅ **MINI2 + OpenClaw 自巡检完成** — 系统状态正常。 **报告**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ### 巡检摘要 | 检查项 | 状态 | |--------|------| | **主机负载** | ✅ 2.17 / 2.27 / 2.26 — 正常 | | **内存** | ✅ 84% free，无 swap 压力 | | **主磁盘** | ✅ 40% 使用率 — 健康 | | **Gate
+[main/sessions/main/8da9b2a2-1666-43b6-89ef-cca99cf8e94a.jsonl#L6] Assistant: 我来执行 Jira 任务巡查流程。
+[main/sessions/main/8da9b2a2-1666-43b6-89ef-cca99cf8e94a.jsonl#L24] Assistant: 找到了正确的 Jira API 地址。让我开始执行巡查流程。
+[main/sessions/main/8da9b2a2-1666-43b6-89ef-cca99cf8e94a.jsonl#L37] Assistant: 当前没有待处理的 Jira 任务。
+[main/sessions/main/8da9b2a2-1666-43b6-89ef-cca99cf8e94a.jsonl#L39] Assistant: **Jira 巡查结果：** - 检查 "处理中" 且 assignee=huahua 的 ticket：**0 个** - 检查 "Selected for Development" 且 assignee=EMPTY 的 ticket：**0 个** - AIWH 项目所有 107 个 ticket 状态均为 **"完成"** 当前没有待处理的 Jira 任务。
+[main/sessions/main/8dc9cb74-01c3-445b-8487-ef6e2739af71.jsonl#L6] Assistant: 我来开始 Jira 任务巡查。首先检查 Jira API 配置和当前状态。
+[main/sessions/main/8dc9cb74-01c3-445b-8487-ef6e2739af71.jsonl#L15] Assistant: Jira 配置已找到。现在开始查询 **处理中** 的 ticket（最高优先级）。
+[main/sessions/main/8dc9cb74-01c3-445b-8487-ef6e2739af71.jsonl#L23] Assistant: 没有处理中的 ticket。现在查询 **Selected for Development** 且未分配的 ticket。
+[main/sessions/main/8dc9cb74-01c3-445b-8487-ef6e2739af71.jsonl#L47] Assistant: **Jira 任务巡查完成 — 21:34 CST** ### 巡查结果 **当前没有待处理的 Jira 任务。** ### 检查详情 | 检查项 | 结果 | |--------|------| | Jira Data Center 连接 | ✅ 正常 (`http://116.205.141.57:50008`) | | Bearer Token 认证 | ✅ 成功 | | 处理中 + assignee=huahua | 0 个 | | Selected for Development + 空 assignee | 0 
+[main/sessions/main/8e8054f4-d071-48dc-8ace-799060b0d1b4.jsonl#L12] Assistant: ## 巡检完成 — 状态正常 ⚡ **时间**: 2026-06-10 10:00:55 (Asia/Shanghai) **主机**: mini2 (Mac mini) **触发**: cron job `73bbdaca-9c48-41d7-a333-1c3e2d112c95` ### 核心服务状态 | 检查项 | 状态 | |--------|------| | macOS 负载 | ✅ 3.29 (正常) | | 内存 | ✅ 84% 可用 | | 主磁盘 (/) | ✅ 40% 使用率 | | OpenClaw G
+[main/sessions/main/8e8054f4-d071-48dc-8ace-799060b0d1b4.jsonl#L12] Assistant: 报告已写入：`/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
