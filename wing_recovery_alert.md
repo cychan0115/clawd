@@ -1,20 +1,18 @@
-## 最新记录 - 2026-06-16 00:34 CST (huahua 巡查 - cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
+### 🚨 Jira 任务巡查受阻 - 2026-06-16 01:34 CST (cron:8d0227c6-23ec-434c-802a-97bdb590dc1f)
 
-### ✅ 巡查结果：无待处理任务
+**Jira Cloud 状态**: `Site temporarily unavailable` ❌
+- **Jira Cloud URL**: `https://3pigc.atlassian.net` 不可用（Atlassian Cloud 维护/故障）
+- **Jira Data Center 端点**: `http://116.205.141.57:50008` 状态正常（version 9.4.0，RUNNING）✅
+- **认证状态**: Bearer Token 可用（huahua@3pigc.com）
+- **本地任务状态**: `No active task`（task_state_manager）✅
+- **Git 状态**: main 分支，干净 ✅
+- **最新 commit**: `733b569` - JIRA: 更新巡查记录 2026-06-16 00:34
 
-- **Jira DC URL**: `http://116.205.141.57:50008` (Jira Data Center 9.4.0) ✅ 在线
-- **认证状态**: Bearer Token 认证正常 ✅ (huahua@3pigc.com)
-- **当前用户**: `huahua` (JIRAUSER10400) ✅
-- **task_state_manager**: No active task ✅
-- **"处理中" (status="In Progress") + assignee=huahua**: 0 ticket ✅
-- **"Selected for Development" + assignee is EMPTY**: 0 ticket ✅
-- **AIWH 项目总 ticket 数**: 107（全部完成状态）
-- **Git 状态** (clawd): main 分支，干净（无未提交更改）
-- **最新 commit**: `ed2486a` - JIRA: 预提交 wing_recovery_alert.md 更新
-- **当前时间**: 2026-06-16 00:34 CST (Tuesday)
+**尝试的操作**:
+1. 查询 Jira Cloud "处理中" + assignee=huahua → 返回 `Site temporarily unavailable` ❌
+2. 查询 Jira Cloud "Selected for Development" + EMPTY assignee → 返回 `Site temporarily unavailable` ❌
+3. 尝试 Jira Data Center 备用端点 → 返回 JQL 语法错误（状态名不同）⚠️
 
-### ✅ 结论
-当前没有待处理的 Jira 任务。系统正常（Jira 无待处理任务，Git 已同步）。
+**结论**: Jira Cloud 当前不可用，无法执行正常的任务巡查流程。本地无待提交代码。等待 Jira Cloud 恢复后重新巡查。
 
 ---
-
