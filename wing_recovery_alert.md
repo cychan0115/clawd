@@ -3,8 +3,8 @@
 ## 当前状态：不可用 ⚠️
 - **Jira 实例**：3pigc.atlassian.net
 - **首次发现时间**：2026-06-16 23:45 CST
-- **当前检查时间**：2026-06-17 02:25 CST
-- **持续时长**：约 160 分钟
+- **当前检查时间**：2026-06-17 05:54 CST
+- **持续时长**：约 369 分钟
 - **Atlassian Status**：https://status.atlassian.com 显示无已知事件（可能是实例级别维护或订阅问题）
 - **错误信息**：Page unavailable / 404
 - **HTTP 状态**：404
@@ -29,6 +29,11 @@
   2. 检查"待领取"的 ticket
 
 ## 自动检查记录
+- 05:54 CST - Jira 仍不可用（本次检查），已持续约 **369 分钟**
+  - task_state_manager: No active task
+  - Data Center 代理正常，AIWH 100 tickets 全部完成
+  - 本地 git: clean，无未提交修改
+  - 无待处理 ticket
 - 05:34 CST - Jira 仍不可用（本次检查），已持续约 **349 分钟**
   - task_state_manager: No active task
   - Data Center 代理正常，AIWH 100 tickets 全部完成
@@ -43,3 +48,13 @@
   - Data Center 代理正常，AIWH 100 tickets 全部完成
   - 无活跃任务，无待处理 ticket
   - 建议：如持续不可用请联系 Atlassian 支持
+
+## 自动检查记录
+- 06:06 CST - Jira Cloud 仍不可用（本次检查），已持续约 **371 分钟**
+  - Data Center 代理正常，使用 Bearer Token 认证成功
+  - AIWH 项目: 0 个 "处理中" ticket（huahua）
+  - AIWH 项目: 0 个 "Selected for Development" ticket（assignee EMPTY）
+  - AIWH 项目: 0 个非完成状态 ticket（全部完成）
+  - task_state_manager: No active task
+  - 本地 git: 无未提交修改（仅本文件更新）
+  - 结论：无待处理 Jira 任务
