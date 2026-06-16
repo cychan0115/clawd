@@ -425,3 +425,8 @@
 [main/sessions/main/8dc9cb74-01c3-445b-8487-ef6e2739af71.jsonl#L47] Assistant: **Jira 任务巡查完成 — 21:34 CST** ### 巡查结果 **当前没有待处理的 Jira 任务。** ### 检查详情 | 检查项 | 结果 | |--------|------| | Jira Data Center 连接 | ✅ 正常 (`http://116.205.141.57:50008`) | | Bearer Token 认证 | ✅ 成功 | | 处理中 + assignee=huahua | 0 个 | | Selected for Development + 空 assignee | 0 
 [main/sessions/main/8e8054f4-d071-48dc-8ace-799060b0d1b4.jsonl#L12] Assistant: ## 巡检完成 — 状态正常 ⚡ **时间**: 2026-06-10 10:00:55 (Asia/Shanghai) **主机**: mini2 (Mac mini) **触发**: cron job `73bbdaca-9c48-41d7-a333-1c3e2d112c95` ### 核心服务状态 | 检查项 | 状态 | |--------|------| | macOS 负载 | ✅ 3.29 (正常) | | 内存 | ✅ 84% 可用 | | 主磁盘 (/) | ✅ 40% 使用率 | | OpenClaw G
 [main/sessions/main/8e8054f4-d071-48dc-8ace-799060b0d1b4.jsonl#L12] Assistant: 报告已写入：`/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/585aa343-4a4e-4c36-aa07-207f9ce234a5.jsonl#L6] Assistant: 收到，系统巡检 cron 任务运行正常。我检查一下它的状态确保一切正常。
+[main/sessions/main/585aa343-4a4e-4c36-aa07-207f9ce234a5.jsonl#L8] Assistant: 系统巡检 cron 任务状态正常 ✅ - **上次运行**: 成功 (ok) - **连续错误**: 0 次 - **当前状态**: 正在运行中 - **下次执行**: 每小时整点（Asia/Shanghai） K8S 日志 + 主机资源 + HTTP 端点检查正常轮转，异常时会自动邮件通知至 13926262295@139.com。无需额外处理。
+[main/sessions/main/5a1064eb-5cf8-45c1-8e73-9c168bf4dc97.jsonl#L22] Assistant: ## Jira 任务巡查完成 — 07:34 CST ### 状态摘要 | 检查项 | 结果 | |--------|------| | Jira Data Center | ✅ 运行正常 | | 认证 (huahua) | ✅ 通过 | | 处理中 + assignee=huahua | **0 ticket** | | 待领取 + assignee EMPTY | **0 ticket** | | task_state_manager | No active task | | ~/workspace/wing_1 Git
+[main/sessions/main/91c487bb-a014-424b-8deb-d8b84b41d973.jsonl#L6] Assistant: 执行 MINI2+OpenClaw 自巡检...
+[main/sessions/main/91c487bb-a014-424b-8deb-d8b84b41d973.jsonl#L8] Assistant: 发现警告项，查看详细报告...

@@ -148,25 +148,25 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-16)
+## Promoted From Short-Term Memory (2026-06-17)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:23:24 -->
-- 当前状态分布: | Selected for Development | 0 | | Backlog | 0 | [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:23-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:27:27 -->
-- 结论: 当前没有待处理的 Jira 任务。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:27-27]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:4:6 -->
-- 执行信息: 时间: 2026-06-10 16:15 (Asia/Shanghai); Agent: huahua (cron:8d0227c6-23ec-434c-802a-97bdb590dc1f); 状态: 无待处理任务 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:4-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10-1615-jira-inspection.md:9:12 -->
-- 检查结果: ✅ Jira Data Center (http://116.205.141.57:50008) 正常连接; ✅ Bearer Token 认证成功 (huahua@3pigc.com); ✅ AIWH 项目共 107 个 ticket，全部已完成; ✅ 无"处理中" ticket 分配给 huahua [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10-1615-jira-inspection.md:9-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:12:15 -->
-- 检查结果: **Jira 连接状态**: ❌ 不可用; 站点: https://3pigcn.atlassian.net; 返回: HTTP 404 / "Page unavailable"; 状态页面: https://status.atlassian.com 显示今日无事件 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:18:20 -->
-- 影响: 无法查询"处理中"的 ticket; 无法领取新 ticket; 无法更新 ticket 状态 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10.md:18-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:23:24 -->
-- 建议: 等待 Jira 服务恢复后自动重试; 或检查站点配置是否正确（域名是否已变更） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10.md:23-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:3:3 -->
-- Jira 巡查 - 2026-06-10 23:07 (Asia/Shanghai): **状态**: BLOCKER — Jira 站点不可访问 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10.md:3-3]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:6:8 -->
-- 检查结果: **本地代码状态**: 干净 ✅; 分支: main; 最新提交: 4336193 (Jira巡查 22:54) [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-10.md:6-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:13:16 -->
-- 2026-06-11 09:44 Jira 任务巡查: 触发器: cron:8d0227c6-23ec-434c-802a-97bdb590dc1f; Jira 地址: http://116.205.141.57:50008; 处理中 (In Progress) + assignee=huahua: **0**; Selected for Development + assignee EMPTY: **0** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-11.md:13-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:17:20 -->
+- 2026-06-11 09:44 Jira 任务巡查: AIWH 项目所有 ticket: **107** 个，全部状态为"完成"; task_state_manager: No active task; Git workspace (~/workspace/wing_1): clean; 结论: **当前没有待处理的 Jira 任务** [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-11.md:17-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:26:29 -->
+- 2026-06-11 10:04 Jira 任务巡查: 触发器: cron:8d0227c6-23ec-434c-802a-97bdb590dc1f; Jira 地址: http://116.205.141.57:50008; 处理中 (In Progress) + assignee=huahua: **0**; Selected for Development + assignee EMPTY: **0** [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-11.md:26-29]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:30:33 -->
+- 2026-06-11 10:04 Jira 任务巡查: AIWH 项目所有 ticket: **107** 个，全部状态为"完成"; task_state_manager: No active task; Git workspace (~/workspace/wing_1): clean; Git status (~/clawd): wing_recovery_alert.md 未提交（09:44 巡查遗留，远程仓库不存在） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-11.md:30-33]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:4:7 -->
+- 2026-06-11 09:30 OpenClaw 自巡检: 状态: ✅ 正常; 主机: mini2 已运行13天，负载正常; Gateway: 健康 (`ok:true`, status=live); Agent: 活跃 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-11.md:4-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-11.md:8:9 -->
+- 2026-06-11 09:30 OpenClaw 自巡检: 警告: 日志关键词误报，无实际异常; 报告: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-11.md:8-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:13:13 -->
+- Jira 项目状态摘要: 项目: AIWH [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:13-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:16:17 -->
+- Jira 项目状态摘要: 已完成: 多个（所有现有 ticket 均为 Done 状态）; 结论: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:16-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:20:20 -->
+- 说明: 07:24 AM 的 blocker 记录已纠正：Jira 实际地址为 `http://116.205.141.57:50008`，非 `aiwh.atlassian.net`。该站点运行正常。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:20-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:4:4 -->
+- 状态: Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:4-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:7:10 -->
+- 检查步骤: ✅ 检查 "处理中" ticket —— 无处理中的 ticket（状态="处理中" 且 assignee=huahua）; ✅ 检查 "待领取" ticket —— 无待领取的 ticket（状态="Selected for Development" 且 assignee=EMPTY）; ✅ 检查所有未完成 ticket —— 无（所有 AIWH 项目 ticket 状态均为 "Done"）; ✅ 检查本地 git 状态 —— 无未提交代码（仅本文件修改） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:7-10]
