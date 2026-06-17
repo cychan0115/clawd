@@ -3,27 +3,29 @@
 ## 当前状态：不可用 ⚠️（已停用）
 - **Jira 实例**：3pigc.atlassian.net
 - **首次发现时间**：2026-06-16 23:45 CST
-- **当前检查时间**：2026-06-17 22:35 CST
-- **持续时长**：约 1390 分钟（~23.2 小时）
+- **当前检查时间**：2026-06-18 00:57 CST
+- **持续时长**：约 1522 分钟（~25.4 小时）
 - **根本原因**：实例因不活跃被 Atlassian 暂停（suspendedInactivityPage），订阅未激活
 - **Atlassian Status**：https://status.atlassian.com 显示无已知事件（实例级别停用）
 - **HTTP 状态**：返回 "Jira has been deactivated" 页面
 - **本地代码状态**：git clean，无未提交修改
 - **任务状态管理器**：无活跃任务
-- **Data Center 代理**：正常，AIWH 100 tickets 全部完成
+- **Data Center 代理**：❌ 401 Unauthorized（Token 已过期/失效）
 - **处理中 ticket**：0
 - **待领取 ticket**：0
 
 ## Jira Data Center 代理状态
 - **代理地址**：`http://116.205.141.57:50008`
-- **状态**：✅ 正常（API 响应正常）
-- **AIWH 项目**：100 tickets，全部"完成"
-- **待处理任务**：无
+- **状态**：❌ **401 Unauthorized**（2026-06-18 00:57 CST 确认）
+- **原因**：Bearer Token 认证失败，可能已过期或被撤销
+- **之前状态**：✅ 正常（截至 2026-06-18 00:39 CST）
+- **待处理任务**：无法查询（认证失败）
 
 ## 影响
-- 无法直接访问 Jira Cloud
-- 通过 Data Center 代理可正常使用 API
+- 无法直接访问 Jira Cloud（实例已停用）
+- 无法通过 Data Center 代理访问 API（401 Unauthorized）
 - 当前无待处理 ticket 需要执行
+- **需要 CY 介入**：恢复 Jira Cloud 订阅 或 更新 Data Center 代理 Token
 
 ## 恢复后行动
 - 下次 cron 执行会自动重试连接
@@ -32,6 +34,25 @@
   2. 检查"待领取"的 ticket
 
 ## 自动检查记录
+- **00:57 CST (2026-06-18)** - 本次巡查（cron 触发）
+  - Jira Cloud `3pigc.atlassian.net` 仍不可用（"Jira has been deactivated"），已持续约 **~1522 分钟**（自 2026-06-16 23:45 CST）
+  - Atlassian 全局状态：All Systems Operational（无已知事件）
+  - Data Center 代理 `116.205.141.57:50008` **返回 401 Unauthorized**，Bearer Token 认证失败
+  - 无法查询 AIWH 项目 ticket 状态（认证失败）
+  - task_state_manager: No active task
+  - 本地 git: wing_recovery_alert.md 有修改（本次记录更新），待提交
+  - 结论：**无待处理 Jira 任务，但 Jira Cloud 和 Data Center 代理均不可用**
+  - **行动建议**：需要 CY 恢复 Jira Cloud 订阅 或 更新 Data Center 代理的认证 Token
+- **00:39 CST (2026-06-18)** - 本次巡查（cron 触发）
+  - Jira Cloud `3pigc.atlassian.net` 仍不可用（"Jira has been deactivated"），已持续约 **~1434 分钟**（自 2026-06-16 23:45 CST）
+  - Atlassian 全局状态：All Systems Operational（无已知事件）
+  - Data Center 代理 `116.205.141.57:50008` 正常，Bearer Token 认证成功
+  - AIWH 项目: 0 个 "处理中" ticket（assignee=huahua, status=3）
+  - AIWH 项目: 0 个 "Selected for Development" ticket（assignee EMPTY, status=10201）
+  - AIWH 项目: 100 tickets 全部"完成"（status=10001），无未完成任务
+  - task_state_manager: No active task
+  - 本地 git: main 分支 clean，无未提交修改，最新 commit `4261c0b`
+  - 结论：**无待处理 Jira 任务**
 - **22:35 CST** - 本次巡查（cron 触发）
   - Jira Cloud `3pigc.atlassian.net` 仍不可用（"Jira has been deactivated"），已持续约 **1390 分钟**（自 2026-06-16 23:45 CST）
   - Atlassian 全局状态：All Systems Operational（无已知事件）
