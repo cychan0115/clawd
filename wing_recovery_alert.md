@@ -3,7 +3,7 @@
 ## 当前状态：不可用 ⚠️
 - **Jira 实例**：3pigc.atlassian.net
 - **首次发现时间**：2026-06-16 23:45 CST
-- **当前检查时间**：2026-06-17 10:44 CST
+- **当前检查时间**：2026-06-17 10:54 CST
 - **持续时长**：约 659 分钟
 - **Atlassian Status**：https://status.atlassian.com 显示无已知事件（可能是实例级别维护或订阅问题）
 - **错误信息**：Page unavailable / 404
