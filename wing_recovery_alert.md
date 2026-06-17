@@ -3,8 +3,8 @@
 ## 当前状态：不可用 ⚠️（已停用）
 - **Jira 实例**：3pigc.atlassian.net
 - **首次发现时间**：2026-06-16 23:45 CST
-- **当前检查时间**：2026-06-18 01:34 CST
-- **持续时长**：约 1549 分钟（~25.8 小时）
+- **当前检查时间**：2026-06-18 03:20 CST
+- **持续时长**：约 1595 分钟（~26.6 小时）
 - **根本原因**：实例因不活跃被 Atlassian 暂停（suspendedInactivityPage），订阅未激活
 - **Atlassian Status**：https://status.atlassian.com 显示无已知事件（实例级别停用）
 - **HTTP 状态**：返回 "Jira has been deactivated" 页面
@@ -495,4 +495,16 @@
   - AIWH 项目: 0 个非完成状态 ticket（assignee=huahua）
   - task_state_manager: No active task
   - 本地 git: 有 dream 相关文件修改（非任务代码），无任务代码未提交修改
+  - 结论：**无待处理 Jira 任务**
+
+## 自动检查记录
+- **04:03 CST (2026-06-18)** - 本次巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net` / `anna1314.atlassian.net` 仍不可用（curl 返回 000，无法连接），已持续约 **~1598 分钟**（自 2026-06-16 23:45 CST）
+  - Atlassian 全局状态：All Systems Operational（无已知事件）
+  - **Data Center 代理 `116.205.141.57:50008` 正常（HTTP 200）**，Bearer Token 认证成功（huahua@3pigc.com）
+  - AIWH 项目: **0 个 "处理中" ticket**（assignee=huahua, status=3）
+  - AIWH 项目: **0 个 "Selected for Development" ticket**（assignee EMPTY, status=10201）
+  - AIWH 项目: 0 个非完成状态 ticket（全部完成）
+  - task_state_manager: **No active task**
+  - 本地 git: 仅 wing_recovery_alert.md 有修改（巡查记录更新），无任务代码未提交修改
   - 结论：**无待处理 Jira 任务**
