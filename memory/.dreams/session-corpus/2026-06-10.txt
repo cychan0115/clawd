@@ -430,3 +430,16 @@
 [main/sessions/main/5a1064eb-5cf8-45c1-8e73-9c168bf4dc97.jsonl#L22] Assistant: ## Jira 任务巡查完成 — 07:34 CST ### 状态摘要 | 检查项 | 结果 | |--------|------| | Jira Data Center | ✅ 运行正常 | | 认证 (huahua) | ✅ 通过 | | 处理中 + assignee=huahua | **0 ticket** | | 待领取 + assignee EMPTY | **0 ticket** | | task_state_manager | No active task | | ~/workspace/wing_1 Git
 [main/sessions/main/91c487bb-a014-424b-8deb-d8b84b41d973.jsonl#L6] Assistant: 执行 MINI2+OpenClaw 自巡检...
 [main/sessions/main/91c487bb-a014-424b-8deb-d8b84b41d973.jsonl#L8] Assistant: 发现警告项，查看详细报告...
+[main/sessions/main/46aece93-0c91-402b-991a-707c61d56b50.jsonl#L14] Assistant: 当前 **Jira 服务不可用**，无法执行任何 ticket 处理。 ## 状态检查 **task_state_manager.py status:** `No active task.` **Jira API 响应:** Atlassian Cloud 返回 404 错误页面，提示 "Page unavailable" ``` HTTP_STATUS: 404 Your Atlassian Cloud site is currently unavailable. ``` **Request ID:** `7cae10f6
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L9] Assistant: 让我执行 Jira 任务巡查。首先查询处理中和新待领取的 ticket。
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L11] Assistant: 没有处理中的 ticket。查询待领取的 ticket：
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L13] Assistant: 无待领取的 ticket。再检查所有非完成状态的 ticket：
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L19] Assistant: 有 wing_recovery_alert.md 的修改未提交。先更新它记录本次巡查，然后 commit：
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L29] Assistant: 收到，继续执行 Jira 任务巡查。重新检查当前状态：
+[main/sessions/main/48056172-6d19-433f-b3d5-e14375a8de9c.jsonl#L42] Assistant: **Jira 任务巡查完成 - 报告** --- ### 检查时间 `2026-06-10 14:44 CST` (Asia/Shanghai) ### 检查结果 ✅ **当前没有待处理的 Jira 任务** | 检查项 | 结果 | |--------|------| | "处理中" ticket 分配给 huahua | 0 issues | | "Selected for Development" 待领取 ticket | 0 issues | | AIWH 项目所有非完成状态 ticket | 0 issues | 
+[main/sessions/main/4ad25255-b65c-4173-bbc5-c20ad4845eac.jsonl#L10] Assistant: ## ✅ 自巡检完成 **整体状态**: 系统健康，OpenClaw 核心服务全部正常。 | 检查项 | 状态 | |--------|------| | 主机负载 | ✅ 2.62 (正常) | | 内存 | ✅ 83% 空闲，无 swap | | 磁盘 (/) | ✅ 43% 使用 | | 磁盘 (/Data) | ⚠️ **95% 使用** (403Gi/460Gi) | | Gateway | ✅ 运行中 | | Agent | ✅ 活跃 | | Browser/CDP | ✅ 就绪 | | 端口 18789/188
+[main/sessions/main/4b6b7d98-564e-47f4-adb5-6144b557f856.jsonl#L6] Assistant: 执行 MINI2+OpenClaw 自巡检脚本。
+[main/sessions/main/4b6b7d98-564e-47f4-adb5-6144b557f856.jsonl#L8] Assistant: 发现警告项，读取详细报告。
+[main/sessions/main/4b6b7d98-564e-47f4-adb5-6144b557f856.jsonl#L10] Assistant: ## MINI2 + OpenClaw 自巡检结果 **执行时间**: 2026-06-10 19:09:36 (Asia/Shanghai) **状态**: ✅ 核心系统正常，有 2 项警告 --- ### ✅ 正常项目 | 检查项 | 状态 | |--------|------| | macOS 主机运行 | 已运行 12天11小时，负载正常 (3.24) | | 内存压力 | 84% 可用，无 swap，无内存压力 | | 主磁盘 (/) | 使用率 40%，正常 | | OpenClaw Gateway | 运行中 
+[main/sessions/main/4b6b7d98-564e-47f4-adb5-6144b557f856.jsonl#L10] Assistant: |--------|------| | 中 | 清理 `/System/Volumes/Data` 磁盘空间（94% 使用率） | | 低 | 检查 `.jira_env` 配置是否需要修复 | | 低 | 日志中的 `edit failed` 是工具调用问题，不影响系统运行 | --- 报告已写入：`/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/4bf51ca3-9323-4bf5-851d-eae5f1d3fab5.jsonl#L50] Assistant: --- ## 📋 Jira 任务巡查结果 | 检查项 | 状态 | |--------|------| | Jira Data Center 连接 | ✅ 正常 | | Bearer Token 认证 | ✅ 成功 | | "处理中" ticket (huahua) | ✅ 0 个 | | "待领取" ticket | ✅ 0 个 | | AIWH 项目总 ticket | 107 个（全部完成） | | task_state_manager | ✅ No active task | **结论：当前没有待处理的 Jira 

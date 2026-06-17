@@ -389,3 +389,30 @@
 [main/sessions/main/8feda50e-d451-467f-bb17-bc4f579a99dc.jsonl#L70] Assistant: 所有 ticket 均已完成。现在更新巡查记录并检查本地状态。
 [main/sessions/main/8feda50e-d451-467f-bb17-bc4f579a99dc.jsonl#L74] Assistant: 有巡查记录更新，立即提交并推送。
 [main/sessions/main/8feda50e-d451-467f-bb17-bc4f579a99dc.jsonl#L76] Assistant: ## ✅ Jira 任务巡查完成 - 12:34 CST ### 执行结果 | 检查项 | 结果 | |--------|------| | **Atlassian Cloud** (`3pigc.atlassian.net`) | ⚠️ **不可用** (自 09:44 起持续，约 2.5 小时) | | **Jira Data Center** (`116.205.141.57:50008`) | ✅ 正常，认证成功 | | **处理中 ticket** (huahua) | ✅ 0 个 | | **待领取 ticket
+[main/sessions/main/477ae006-e168-4db8-b5ce-b0455bb5503f.jsonl#L6] Assistant: 收到 Jira 巡查任务。开始执行流程。
+[main/sessions/main/477ae006-e168-4db8-b5ce-b0455bb5503f.jsonl#L10] Assistant: Jira 服务暂时不可用。让我重试一次：
+[main/sessions/main/477ae006-e168-4db8-b5ce-b0455bb5503f.jsonl#L18] Assistant: Jira 站点完全不可用（多次尝试均返回 404），这是一个系统级 BLOCKER。 让我记录巡查状态并报告：
+[main/sessions/main/477ae006-e168-4db8-b5ce-b0455bb5503f.jsonl#L20] Assistant: ## Jira 巡查结果报告 **状态**: ❌ BLOCKER - 系统级故障 **时间**: 2026-06-14 18:05 CST **执行步骤**: 1. ✅ `task_state_manager.py status` → 无活跃任务 2. ❌ 查询"处理中" ticket → **Jira 服务不可用** (HTTP 404) 3. ❌ 查询"待领取" ticket → **未执行**（Jira 不可用） **证据**: - 请求 URL: `https://aiwithhuahua.atlassian.net
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L6] Assistant: 开始执行 Jira 任务巡查流程。先检查当前任务状态和代码状态。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L9] Assistant: 当前没有活跃任务，但发现 `wing_recovery_alert.md` 有未提交的修改。先检查代码修改，同时查询 Jira。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L12] Assistant: Jira API 返回空响应（Atlassian Cloud 可能不可用）。先查看 wing_recovery_alert.md 的上下文，然后尝试正确的 API 端点。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L15] Assistant: Atlassian Cloud 返回 404（站点不可用），Jira Data Center 在 `http://116.205.141.57:50008` 运行正常。让我尝试 Data Center 端点。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L18] Assistant: Jira Data Center 返回 400（认证问题）。查看现有的 Jira 脚本配置。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L21] Assistant: 脚本中的 Token 被 redacted。直接用提供的 Token 查询 Data Center，先尝试获取项目信息。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L24] Assistant: Jira Data Center API 正常。现在用正确 JQL 查询 ticket 状态。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L27] Assistant: JQL 转义问题。直接用 Python 来查询。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L29] Assistant: 查询结果： - **处理中 ticket (huahua)**: 0 - **待领取 ticket**: 0 - **所有 107 个 AIWH ticket 均为"完成"状态** 当前没有待处理的 Jira 任务。现在提交 wing_recovery_alert.md 的日志更新。
+[main/sessions/main/491d3257-08a5-4377-8b92-46083761ec6e.jsonl#L35] Assistant: --- ## Jira 巡查结果 (2026-06-14 14:54 CST) | 检查项 | 结果 | |--------|------| | **处理中 ticket (huahua)** | ✅ 0 | | **待领取 ticket (Selected for Dev)** | ✅ 0 | | **AIWH 项目总 ticket** | 107（全部完成） | | **task_state_manager** | No active task | | **本地 git** | ✅ 干净（已提交推送） | **结论：当前
+[main/sessions/main/4a8b9906-65ce-4c33-ba2f-e6de572f259b.jsonl#L6] Assistant: 好的，开始执行 Jira 任务巡查。让我先检查环境和任务状态。
+[main/sessions/main/4a8b9906-65ce-4c33-ba2f-e6de572f259b.jsonl#L10] Assistant: 环境检查完毕： - ✅ task_state_manager: No active task - ✅ git 工作区干净 - 接下来查询 Jira API 确认 ticket 状态
+[main/sessions/main/4a8b9906-65ce-4c33-ba2f-e6de572f259b.jsonl#L13] Assistant: Jira API 查询结果： - ✅ 处理中 ticket（status="In Progress", assignee=huahua）: **0 个** - ✅ 待领取 ticket（status="Selected for Development", assignee=EMPTY）: **0 个** 现在更新巡查日志：
+[main/sessions/main/4a8b9906-65ce-4c33-ba2f-e6de572f259b.jsonl#L17] Assistant: --- ## Jira 任务巡查结果 | 检查项 | 结果 | |--------|------| | **Jira API** | ✅ 正常响应（Bearer 认证成功） | | **处理中 ticket** (In Progress, assignee=huahua) | **0 个** | | **待领取 ticket** (Selected for Development, assignee=EMPTY) | **0 个** | | **task_state_manager** | ✅ No active task 
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L6] Assistant: 首先，让我检查恢复提示和当前任务状态，同时查询 Jira 中的 ticket。
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L11] Assistant: Atlassian Cloud 仍然不可用（自 09:44 起持续）。切换到 Jira Data Center 查询。
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L15] Assistant: 结果清晰。无处理中 ticket、无待领取 ticket，工作区干净。更新巡查日志并报告。
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L17] Assistant: 日志已更新。让我确认本地 git 状态（刚更新了 wing_recovery_alert.md）：
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L19] Assistant: wing_recovery_alert.md 有修改，按规则立即 commit + push：
+[main/sessions/main/4a94ba06-6ed8-4be2-b94b-8a56c8089ca5.jsonl#L21] Assistant: ## ✅ Jira 任务巡查完成 - 2026-06-14 15:34 CST ### 状态检查 | 项目 | 状态 | |------|------| | Atlassian Cloud (3pigc.atlassian.net) | ⚠️ **Page unavailable**（自 09:44 起持续） | | Jira Data Center (116.205.141.57:50008) | ✅ API 正常，Bearer 认证成功 | | task_state_manager | ✅ No active task 
+[main/sessions/main/4bc27d47-864d-4a8a-9006-49c49d0eca6d.jsonl#L12] Assistant: **MINI2 + OpenClaw 自巡检完成** ✅ **时间**: 2026-06-14 04:00 (Asia/Shanghai) **触发**: cron job `73bbdaca-9c48-41d7-a333-1c3e2d112c95` --- ### 整体状态: 🟢 正常 | 检查项 | 状态 | 备注 | |--------|------|------| | macOS 主机 | 🟢 | 运行15天20h，负载 3.66/2.32/2.12 | | 内存 | 🟢 | 86% 空闲，轻微swap活动 |
+[main/sessions/main/4bc27d47-864d-4a8a-9006-49c49d0eca6d.jsonl#L12] Assistant: 数据分区空间紧张，建议后续清理。 --- 报告已写入：`/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/4ccf8689-585c-46ae-8610-ab6af6334ca8.jsonl#L10] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-14 15:00:09 (Asia/Shanghai) ### 整体状态：正常 | 检查项 | 状态 | |--------|------| | 主机负载 | ✅ 正常 (3.56, uptime 16天) | | 内存 | ✅ 充足 (81% free) | | 主磁盘 | ✅ 正常 (39% 使用率) | | Gateway 进程 | ✅ 运行中 | | Agent 活跃 | ✅ 正常 (0分钟前更新) | | 端口 18789 | 

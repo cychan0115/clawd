@@ -170,3 +170,24 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 状态: Jira Data Center (http://116.205.141.57:50008) 运行正常，Bearer Token 认证通过。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:4-4]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-blocker.md:7:10 -->
 - 检查步骤: ✅ 检查 "处理中" ticket —— 无处理中的 ticket（状态="处理中" 且 assignee=huahua）; ✅ 检查 "待领取" ticket —— 无待领取的 ticket（状态="Selected for Development" 且 assignee=EMPTY）; ✅ 检查所有未完成 ticket —— 无（所有 AIWH 项目 ticket 状态均为 "Done"）; ✅ 检查本地 git 状态 —— 无未提交代码（仅本文件修改） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-12-jira-blocker.md:7-10]
+
+## Promoted From Short-Term Memory (2026-06-18)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:1:4 -->
+- Jira任务巡查记录： 时间：2026-06-12 12:15 (Asia/Shanghai) 结果：Jira API 无法访问（HTTP 404，站点显示不可用） Atlassian状态页面：所有系统正常（可能该特定站点有临时问题） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:1-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:7:8 -->
+- 没有未提交代码更改; 最近提交：JIRA-CRON巡查记录 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:7-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:9:9 -->
+- 行动：BLOCKER - 无法连接Jira，等待服务恢复后重试 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:9-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:4:4 -->
+- 19:02 - 系统巡检心跳: cron:078443c8-c048-4e69-8dab-eb99c185567b 触发系统巡检脚本。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12.md:4-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:6:8 -->
+- 19:02 - 系统巡检心跳: K8S日志检查 ✅; 主机资源检查 ✅; HTTP端点检查 ✅ [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12.md:6-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:10:10 -->
+- 19:02 - 系统巡检心跳: 无异常，无需 agent 介入。 [score=0.814 recalls=0 avg=0.620 source=memory/2026-06-12.md:10-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:10:11 -->
+- 04:45 Jira 任务巡查 (cron): [2026-06-13 22:35:41] Jira巡查: Jira Cloud 服务不可用 (Page unavailable) - 状态页面显示无已知问题，但API返回503 [2026-06-13 23:14:20] Jira巡查: 无处理中/无待办任务，AIWH全部完成。Atlassian Cloud仍不可用(6h+)。已提交巡查记录。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:10-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:4:7 -->
+- 04:45 Jira 任务巡查 (cron): **状态**: BLOCKED - Jira 服务不可用; **详情**: Atlassian Cloud 实例 `3pigc.atlassian.net` 返回 "Page unavailable"; **状态页面**: https://status.atlassian.com 显示无已知故障（可能是区域性/临时问题）; **Request ID**: 0f3ba02a4152413b9d8af748a747d4b1 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:4-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:8:9 -->
+- 04:45 Jira 任务巡查 (cron): **本地状态**: 无活跃任务，git 工作目录干净; **下一步**: 等待 Jira 恢复后重新巡查 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:8-9]
