@@ -408,3 +408,16 @@
   - task_state_manager: No active task
   - 本地 git: main 分支有 wing_recovery_alert.md 修改（本次记录更新）
   - 结论：**无待处理 Jira 任务**
+
+## 自动检查记录
+- **19:58 CST** - 本次巡查（cron 触发，isolated agentTurn）
+  - Jira Cloud 直接返回 **"Jira has been deactivated"** 页面（suspendedInactivityPage），已持续约 **~1193 分钟**（自 2026-06-16 23:45 CST）
+  - **确认**：实例因不活跃被 Atlassian 暂停订阅，数据即将被永久删除
+  - Atlassian 全局状态：All Systems Operational（无已知事件）
+  - Data Center 代理 `116.205.141.57:50008` 正常，Bearer Token 认证成功
+  - AIWH 项目: 0 个 "处理中" ticket（assignee=huahua, status=3）
+  - AIWH 项目: 0 个 "Selected for Development" ticket（assignee EMPTY, status=10201）
+  - AIWH 项目: 100 tickets 全部"完成"（status=10001），无未完成任务
+  - task_state_manager: No active task
+  - 本地 git: main 分支 clean，无未提交修改
+  - 结论：**Jira Cloud 实例已停用，无法执行任何 Jira 操作。需要 CY 手动恢复订阅。**
