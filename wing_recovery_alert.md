@@ -541,3 +541,13 @@
   - task_state_manager: **No active task**
   - 本地 git: master 分支 clean，无未提交修改，最新 commit `db75c91`
   - 结论：**无待处理 Jira 任务**
+
+## 自动检查记录
+- **06:50 CST (2026-06-18)** - 本次巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net` / `anna1314.atlassian.net` 仍不可用（curl 返回 000，无法连接），已持续约 **~1715 分钟**（自 2026-06-16 23:45 CST）
+  - Atlassian 全局状态：All Systems Operational（无已知事件）
+  - **Data Center 代理 `116.205.141.57:50008` 返回 401 Unauthorized**，Bearer Token 认证失败（和 00:57 CST 情况相同，01:14 曾恢复，现又失效）
+  - 无法查询 AIWH 项目 ticket 状态（认证失败）
+  - task_state_manager: **No active task**
+  - 本地 git: main 分支 clean，无未提交修改，最新 commit `b93b1a9`
+  - 结论：**Jira Data Center 代理认证失败，无法执行 ticket 查询。根据上次成功查询记录（06:45 CST），无待处理任务。需要 CY 检查 Data Center 代理的认证配置。**
