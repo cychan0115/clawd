@@ -602,5 +602,5 @@
   - AIWH 项目: **0 个非完成状态 ticket**，全部"完成"（共107个）
   - task_state_manager: **No active task**
   - 本地 git: main 分支，memory/2026-06-19.md 有修改（自巡检记录），已 commit + push
-  - 最新 commit `$(cd ~/clawd && git rev-parse --short HEAD)`
+  - 最新 commit `f6b0eee`
   - 结论：**当前没有待处理的 Jira 任务**
