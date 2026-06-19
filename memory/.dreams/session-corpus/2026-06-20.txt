@@ -1,0 +1,44 @@
+[main/sessions/main/00b4fda0-e5d6-4fdb-a632-a5c4a2c381e8.jsonl#L11] Assistant: ## 主动检查完成 ✅ **当前状态：一切正常，无需打扰。** | 检查项 | 状态 | |--------|------| | Jira 未完成任务 | ✅ 无 | | Git 未提交更改 | ✅ 无 | | 系统资源 | ✅ 正常（负载 2.2~2.5，磁盘 41%） | | 主动待办项 | 4 项待处理（非紧急）| --- **待办追踪器中的待处理项**（供参考，不紧急）： 1. 修复微信通知配置（买菜/做菜提醒报错） 2. 优化 Jira 任务处理流程，减少超时 3. 增加代码质量自动检查（lint、format） 
+[main/sessions/main/05026d94-51fb-4849-a1f8-4a652505f231.jsonl#L6] Assistant: 开始执行 Jira 任务巡查流程。
+[main/sessions/main/05026d94-51fb-4849-a1f8-4a652505f231.jsonl#L10] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/05026d94-51fb-4849-a1f8-4a652505f231.jsonl#L13] Assistant: Atlassian Cloud 当前返回不可用页面。让我再试一次，确认是否临时问题：
+[main/sessions/main/05026d94-51fb-4849-a1f8-4a652505f231.jsonl#L15] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/05026d94-51fb-4849-a1f8-4a652505f231.jsonl#L18] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1346e32f-ccf8-428c-b88d-c3f74048c4ec.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1346e32f-ccf8-428c-b88d-c3f74048c4ec.jsonl#L11] Assistant: 脚本执行成功，发现 **警告项** — 需要进一步处理。让我先读取报告详情：
+[main/sessions/main/1346e32f-ccf8-428c-b88d-c3f74048c4ec.jsonl#L13] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1346e32f-ccf8-428c-b88d-c3f74048c4ec.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/28c815a4-840f-4aa8-8574-d834e0ae496e.jsonl#L11] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-20 01:34:36 (Asia/Shanghai) **主机**: mini2 (Mac mini) **状态**: **正常** — 无严重异常 --- ### 检查结果总览 | 检查项 | 状态 | |--------|------| | macOS 主机资源 | ✅ 正常 | | 磁盘空间 | ✅ 正常 | | OpenClaw 进程 | ✅ 正常 | | 端口监听 (18789/18800) | ✅ 正常 | | Gatewa
+[main/sessions/main/28c815a4-840f-4aa8-8574-d834e0ae496e.jsonl#L11] Assistant: failover（自动切换备用模型），**正常行为** | | `model-fallback/decision` | 模型降级决策日志，**正常行为** | | `message processed: channel=cron...` | Cron 消息处理日志，**正常行为** | > 脚本正则匹配较粗糙，将包含 "error" 关键词的诊断日志误判为异常。建议优化 `check_gateway_logs()` 中的正则，排除 `FailoverError` 和 `model-fallback` 等已知正常场景。 ---
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L11] Assistant: 好的，没有活跃任务。现在按流程执行Jira巡查。先检查"处理中"的ticket。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L13] Assistant: curl 出错，让我确认Jira实例URL和配置。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L15] Assistant: Jira Cloud 不可用，当前使用 Data Center 实例。让我确认当前配置。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L17] Assistant: 好的，确认了Data Center配置：`http://116.205.141.57:50008`，API v2。现在执行巡查流程。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L19] Assistant: 命令正在运行，让我等待结果。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L21] Assistant: 进程被终止了，让我测试网络连通性并尝试用更短的超时。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L25] Assistant: Jira Data Center 实例连接超时（HTTP 000, exit code 28）。让我确认完整网络状况。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L29] Assistant: Jira Data Center 服务器完全不可达（100% 丢包）。让我检查 wing_recovery_alert.md。
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L31] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/29b9d5bb-3a06-4149-8de5-6264a46c86b3.jsonl#L34] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/2d3157d1-f561-49fe-b370-260384bbd194.jsonl#L10] Assistant: ## ✅ OpenClaw 自巡检完成 **整体状态：正常**，无需紧急处理。 --- ### 检查结果摘要 | 项目 | 状态 | 说明 | |------|------|------| | **主机负载** | ⚠️ 偏高 | load avg 3.22/2.75/2.54，但系统运行正常 | | **内存** | ✅ 正常 | 91% 空闲，无 swap 压力 | | **主磁盘 (/)** | ✅ 正常 | 42% 使用率 | | **Data 卷** | ⚠️ 偏高 | 95% 使用率 (401Gi/460Gi)，
+[main/sessions/main/2d3157d1-f561-49fe-b370-260384bbd194.jsonl#L10] Assistant: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/3315bd77-7a8a-4822-8996-9ed71e16feec.jsonl#L11] Assistant: ## ✅ 自巡检完成 — 状态：有警告，无严重异常 **报告已写入**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ### 📊 总体状态 | 检查项 | 状态 | |--------|------| | macOS 负载/内存 | ✅ 正常 (负载 1.45/2.06/2.32, 内存空闲 91%) | | 主磁盘 (/) | ✅ 41% 使用率 | | /System/Volumes/Data | ⚠️ **95% 使用率** (4
+[main/sessions/main/3315bd77-7a8a-4822-8996-9ed71e16feec.jsonl#L11] Assistant: 模型调用失败后的自动 failover 回退**，不是系统崩溃 - 表明 6月19日某个任务触发了模型切换（可能原模型超时/失败， fallback 到备用模型） - 属于 OpenClaw 的正常容错机制，非系统故障 --- ### 📌 结论 系统整体健康，OpenClaw gateway/agent 运行正常。唯一需要注意： - **数据卷磁盘空间偏高**（95%），建议抽空清理 - **6/19 的 LLM failover** 为历史事件，当前系统已恢复 无需立即处理的操作项。
+[main/sessions/main/33766344-5357-4487-b70d-3a0a016531bf.jsonl#L21] Assistant: ## Jira 任务巡查结果 **巡查时间**: 2026-06-20 00:45 CST ### 状态摘要 | 检查项 | 结果 | |--------|------| | task_state_manager | No active task | | 本地 git 状态 | clean，无未提交代码改动 | | 最新 commit | `6641e8b` | ### Jira 连接状态 | 端点 | 状态 | |------|------| | Jira Cloud `3pigc.atlassian.net` | ❌ P
+[main/sessions/main/37f2fb93-7846-401a-8846-99ff03ce5b1e.jsonl#L20] Assistant: （静默完成，无紧急事项，不打扰用户） ✅ 主动发现检查完成 — 无紧急事项，已静默处理。 | 检查项 | 状态 | |--------|------| | proactive-tracker 待办 | 4 项未完成，均非紧急 | | Jira 活跃任务 | 无 | | Git 未提交更改 | 已处理：将 `memory/system_inspection_*.md` 加入 `.gitignore` | | 系统资源 | 正常 | **采取的行动：** 把系统自动生成的巡检报告加入 `.gitignore`，避免后续每次检查都
+[main/sessions/main/48841ce0-d3e6-4d2e-be63-b56d098f31b9.jsonl#L6] Assistant: 收到。系统每小时巡检任务已按时执行。 - K8S 日志检查 ✅ - 主机资源检查 ✅ - HTTP 端点检查 ✅ 如有异常，邮件已自动发送至 `13926262295@139.com`。无需人工介入。
+[main/sessions/main/4e0947c3-e034-4330-8573-cade59c71f1d.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/4e0947c3-e034-4330-8573-cade59c71f1d.jsonl#L12] Assistant: 开始执行 Jira 任务巡查流程。 ## Step 1: 认证并查询 Jira 状态
+[main/sessions/main/4e0947c3-e034-4330-8573-cade59c71f1d.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/4e0947c3-e034-4330-8573-cade59c71f1d.jsonl#L19] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5052b554-7887-4dbf-a2b9-36d31c54f616.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5052b554-7887-4dbf-a2b9-36d31c54f616.jsonl#L13] Assistant: 系统巡检完成 ✅ **巡检结果摘要：** | 检查项 | 状态 | |--------|------| | K8S | ℹ️ 不可用（正常，本地无集群） | | CPU | ✅ 26.1% | | 内存 | ⚠️ **99.9%** | | 磁盘 | ✅ 42% | | 系统负载 | ✅ 2.64 | | Docker | ⚠️ **未运行** | | HTTP :8080/health | ❌ 502 | | HTTP :3000 | ❌ 502 | **脚本已自动完成：** - ✅ 报告已保存至 `memory/syst
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L11] Assistant: 开始执行 Jira 任务巡查。
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L15] Assistant: 从 wing_recovery_alert.md 看到历史状态。让我检查 Jira 端点当前是否可用。
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L21] Assistant: Jira Cloud 站点仍然不可用，Data Center 代理也仍然不可达。让我检查本地 git 状态并更新记录。
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L28] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/52cac06e-ae76-4273-9437-d54f8bc49900.jsonl#L31] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/57d9df93-493e-4160-9f71-ea1fb08e6e45.jsonl#L10] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/57d9df93-493e-4160-9f71-ea1fb08e6e45.jsonl#L32] Assistant: ## Jira 任务巡查报告 - 02:04 CST **巡查结果：当前没有待处理的 Jira 任务。** ### Evidence 1. **task_state_manager 状态**: `No active task` 2. **Jira Cloud `3pigc.atlassian.net`**: - **HTTP 404** - "Site temporarily unavailable"（Atlassian Cloud 维护中） - 自 00:54 CST 起持续不可用，已约 1.5 小时 3. **Jira 

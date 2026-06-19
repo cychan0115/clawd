@@ -191,3 +191,10 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 本地代码状态: 分支: main; 状态: clean，nothing to commit; 与 origin/main 同步 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:9-11]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:1:1 -->
 - Jira 巡查报告 (2026-06-14 08:47:36) [score=0.802 recalls=0 avg=0.620 source=memory/2026-06-14-jira-inspection.md:1-1]
+
+## Promoted From Short-Term Memory (2026-06-20)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:4:7 -->
+- 系统巡检: **18:01** - 每小时系统巡检完成（cron: 078443c8-c048-4e69-8dab-eb99c185567b）; K8S日志检查 ✅; 主机资源检查 ✅; HTTP端点检查 ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-15.md:4-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:8:8 -->
+- 系统巡检: 状态：正常，无异常报警 [score=0.802 recalls=0 avg=0.620 source=memory/2026-06-15.md:8-8]
