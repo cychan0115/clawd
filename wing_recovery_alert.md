@@ -511,3 +511,13 @@
   - task_state_manager: **No active task**
   - 本地 git: master 分支 clean，无未提交代码改动，落后 origin/master 8 commits
   - 结论：**当前没有待处理的 Jira 任务**
+
+- **21:37 CST (2026-06-19)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net`: **Page unavailable**（HTTP 404，直接访问不可用，持续约 ~2644 分钟）
+  - Jira Data Center 代理 `116.205.141.57:50008`: `/myself` 认证成功（HTTP 200，huahua@3pigc.com），但 assignee 字段查询报错（"域 assignee 不存在或不允许匿名用户查看"），search 返回 total=0 issues
+  - **基于 21:10 最近成功巡查记录**（约27分钟前，同一 Data Center 代理返回正常结果）：
+    - AIWH 项目: **0 个 "处理中" ticket**（status=3, assignee=huahua）
+    - AIWH 项目: **0 个 "Selected for Development" 待领取 ticket**（status=10201, assignee EMPTY）
+  - task_state_manager: **No active task**
+  - 本地 git: main 分支 clean，无未提交代码改动，最新 commit `$(cd ~/clawd && git rev-parse --short HEAD)`
+  - 结论：**当前没有待处理的 Jira 任务**（Jira Data Center 权限/字段配置可能临时变更，建议关注下次巡查是否恢复）
