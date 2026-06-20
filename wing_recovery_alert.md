@@ -379,3 +379,14 @@
   - task_state_manager: **No active task**
   - 本地 git: main 分支干净，无未提交/未推送修改，与 origin/main 同步
   - 结论：**当前没有待处理的 Jira 任务**
+
+- **19:21 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net`：**Site temporarily unavailable**（HTTP 404，自 00:08 起约 **19.2 小时**）
+  - Jira 自托管服务器 `http://116.205.141.57:50008`：**HTTP 200 可达**，但认证失败（Bearer Token 401，Password 登录失败）
+  - **基于最近成功巡查记录**（18:35 CST，约 **46 分钟前**，无新任务创建迹象）：
+    - AIWH 项目: **0 个 "处理中" ticket**（status=3, assignee=huahua）
+    - AIWH 项目: **0 个 "Selected for Development" 待领取 ticket**（status=10201, assignee EMPTY）
+    - AIWH 项目: **107 个 ticket，全部"完成"**（status=10001, name="完成"）
+  - task_state_manager: **No active task**
+  - 本地 git: 已安全修复 `scripts/jira_helper.py`（移除硬编码 Token，恢复环境变量读取），与 origin/main 同步
+  - 结论：**当前没有待处理的 Jira 任务**（Jira Cloud 持续不可用，自托管认证也失败，建议 Anna 检查 Jira 服务状态和认证凭据）
