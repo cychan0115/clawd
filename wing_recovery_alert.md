@@ -1,9 +1,9 @@
 ---
 
-- **09:24 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
-  - Jira Cloud `anna3.atlassian.net`: **Site temporarily unavailable**（HTTP 404，Atlassian Cloud 维护中，自 00:08 起约 **9.27 小时**）
+- **09:44 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net`: **Site temporarily unavailable**（HTTP 404，Atlassian Cloud 维护中，自 00:08 起约 **9.6 小时**）
   - Atlassian 全局状态: **All Systems Operational**（status.atlassian.com）—— 特定租户问题，非全局 outage
-  - **基于最近成功巡查记录**（23:47 CST，约 **580 分钟前**，无新任务创建迹象）：
+  - **基于最近成功巡查记录**（23:47 CST，约 **587 分钟前**，无新任务创建迹象）：
     - AIWH 项目: **0 个 "处理中" ticket**（status=3, assignee=huahua）
     - AIWH 项目: **0 个 "Selected for Development" 待领取 ticket**（status=10201, assignee EMPTY）
     - AIWH 项目: **107 个 ticket，全部"完成"**
