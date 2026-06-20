@@ -323,3 +323,15 @@
   - task_state_manager: **No active task**
   - 本地 git: main 分支有 scripts/jira_helper.py 未提交修改（恢复正确的 Bearer Token，之前被 redacted）
   - 结论：**当前没有待处理的 Jira 任务**
+
+- **17:44 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira 自托管服务器 `http://116.205.141.57:50008`：**连接正常**（HTTP 200，Jira 9.4.0 Server），Bearer Token 认证成功
+  - Jira Cloud `3pigc.atlassian.net`：**Site temporarily unavailable**（HTTP 404，自 00:08 起约 **17.6 小时**）
+  - AIWH 项目（自托管）：
+    - **0 个 "处理中" ticket**（assignee=huahua）
+    - **0 个 "Selected for Development" 待领取 ticket**（assignee EMPTY）
+    - **107 个 ticket，全部"完成"**
+  - task_state_manager: **No active task**
+  - 本地 git: main 分支干净，无未提交/未推送修改，与 origin/main 同步（last commit: 711b50b）
+  - 🔒 **安全修复**: 修正 `scripts/jira_helper.py` 硬编码 Token 问题，改为从环境变量 `JIRA_TOKEN` 读取（GitHub Push Protection 拦截已解决）
+  - 结论：**当前没有待处理的 Jira 任务**
