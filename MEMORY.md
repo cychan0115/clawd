@@ -148,27 +148,6 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-18)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:1:4 -->
-- Jira任务巡查记录： 时间：2026-06-12 12:15 (Asia/Shanghai) 结果：Jira API 无法访问（HTTP 404，站点显示不可用） Atlassian状态页面：所有系统正常（可能该特定站点有临时问题） [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:1-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:7:8 -->
-- 没有未提交代码更改; 最近提交：JIRA-CRON巡查记录 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:7-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12-jira-inspection.md:9:9 -->
-- 行动：BLOCKER - 无法连接Jira，等待服务恢复后重试 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12-jira-inspection.md:9-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:4:4 -->
-- 19:02 - 系统巡检心跳: cron:078443c8-c048-4e69-8dab-eb99c185567b 触发系统巡检脚本。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12.md:4-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:6:8 -->
-- 19:02 - 系统巡检心跳: K8S日志检查 ✅; 主机资源检查 ✅; HTTP端点检查 ✅ [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-12.md:6-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:10:10 -->
-- 19:02 - 系统巡检心跳: 无异常，无需 agent 介入。 [score=0.814 recalls=0 avg=0.620 source=memory/2026-06-12.md:10-10]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:10:11 -->
-- 04:45 Jira 任务巡查 (cron): [2026-06-13 22:35:41] Jira巡查: Jira Cloud 服务不可用 (Page unavailable) - 状态页面显示无已知问题，但API返回503 [2026-06-13 23:14:20] Jira巡查: 无处理中/无待办任务，AIWH全部完成。Atlassian Cloud仍不可用(6h+)。已提交巡查记录。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:10-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:4:7 -->
-- 04:45 Jira 任务巡查 (cron): **状态**: BLOCKED - Jira 服务不可用; **详情**: Atlassian Cloud 实例 `3pigc.atlassian.net` 返回 "Page unavailable"; **状态页面**: https://status.atlassian.com 显示无已知故障（可能是区域性/临时问题）; **Request ID**: 0f3ba02a4152413b9d8af748a747d4b1 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:8:9 -->
-- 04:45 Jira 任务巡查 (cron): **本地状态**: 无活跃任务，git 工作目录干净; **下一步**: 等待 Jira 恢复后重新巡查 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-13.md:8-9]
-
 ## Promoted From Short-Term Memory (2026-06-19)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:3:6 -->
@@ -198,3 +177,18 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 系统巡检: **18:01** - 每小时系统巡检完成（cron: 078443c8-c048-4e69-8dab-eb99c185567b）; K8S日志检查 ✅; 主机资源检查 ✅; HTTP端点检查 ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-15.md:4-7]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:8:8 -->
 - 系统巡检: 状态：正常，无异常报警 [score=0.802 recalls=0 avg=0.620 source=memory/2026-06-15.md:8-8]
+
+## Promoted From Short-Term Memory (2026-06-21)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:12:13 -->
+- "待领取" ticket 检查: 状态 = Selected for Development + assignee = EMPTY: **0 tickets**; 状态 = Backlog: **0 tickets** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:12-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:17:19 -->
+- 项目整体状态: AIWH 项目总计: **107 tickets**; 所有 ticket 状态: **完成**; 无未完成的 ticket [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:17-19]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:22:22 -->
+- 本地任务状态: task_state_manager: No active task ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:22-22]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:26:26 -->
+- 结论: 当前没有待处理的 Jira 任务。所有 ticket 均已完成。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:26-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:5:5 -->
+- 巡查结果: **状态: 无待处理任务** ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:8:9 -->
+- "处理中" ticket 检查（优先级最高）: assignee = huahua + 状态 = 处理中: **0 tickets**; 无需检查本地代码状态或执行 commit/push [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:8-9]
