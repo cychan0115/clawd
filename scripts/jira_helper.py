@@ -3,7 +3,7 @@
 import requests, json, sys, os
 
 HOST = "http://116.205.141.57:50008"
-TOKEN = "<JIRA_BEARER_TOKEN_REDACTED>"
+TOKEN = os.environ.get("JIRA_TOKEN", "")
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
     "Content-Type": "application/json"
