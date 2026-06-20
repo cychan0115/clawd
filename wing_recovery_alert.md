@@ -37,3 +37,15 @@
   - task_state_manager: **No active task**
   - 本地 git: **clean**（无未提交修改）
   - 结论：**当前没有待处理的 Jira 任务**
+
+- **04:26 CST (2026-06-21)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira 自托管服务器 `http://116.205.141.57:50008`：**连接正常**（HTTP 200，Jira 9.4.0 Server），Bearer Token 认证成功
+  - Jira Cloud `3pigc.atlassian.net`：**Site temporarily unavailable**（HTTP 404，自 00:08 起约 **28.3 小时**）
+  - AIWH 项目（自托管）：
+    - **0 个 "处理中" ticket**（assignee=huahua，status=3）
+    - **0 个 "Selected for Development" 待领取 ticket**（assignee EMPTY，status=10201）
+    - **0 个非完成状态 ticket**（status != 10001）
+    - **107 个 ticket，全部"完成"**（status=10001）
+  - task_state_manager: **No active task**
+  - 本地 git: **clean**（无未提交修改，最新 commit d1b1cab）
+  - 结论：**当前没有待处理的 Jira 任务**
