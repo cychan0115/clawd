@@ -268,3 +268,25 @@
   - task_state_manager: **No active task**
   - 本地 git: main 分支干净，无未提交/未推送修改，与 origin/main 同步（last commit: 5f48988）
   - 结论：**当前没有待处理的 Jira 任务**
+
+- **15:04 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira 自托管服务器 `http://116.205.141.57:50008`：**连接正常**（HTTP 200，Jira 9.4.0 Server）
+  - Jira Cloud `3pigc.atlassian.net`：**Site temporarily unavailable**（HTTP 404，自 00:08 起约 **14.93 小时**）
+  - AIWH 项目（自托管）：
+    - **0 个 "处理中" ticket**（assignee=huahua）
+    - **0 个 "Selected for Development" 待领取 ticket**（assignee EMPTY）
+    - **107 个 ticket，全部"完成"**（status="完成"）
+  - task_state_manager: **No active task**
+  - 本地 git: main 分支干净，无未提交/未推送修改，与 origin/main 同步（last commit: 991f28d）
+  - 结论：**当前没有待处理的 Jira 任务**
+
+- **16:35 CST (2026-06-20)** - Jira任务巡查（cron 触发，优化版流程）
+  - Jira Cloud `3pigc.atlassian.net`：**Site temporarily unavailable**（HTTP 404，自 00:08 起约 **16.45 小时**）
+  - Jira 自托管服务器 `http://116.205.141.57:50008`：**HTTP 200 可达**，但提供的 Bearer Token 返回 **401 Unauthorized**（Token 不匹配自托管实例）
+  - **基于最近成功巡查记录**（15:04 CST，约 **91 分钟前**，无新任务创建迹象）：
+    - AIWH 项目: **0 个 "处理中" ticket**（assignee=huahua）
+    - AIWH 项目: **0 个 "Selected for Development" 待领取 ticket**（assignee EMPTY）
+    - AIWH 项目: **107 个 ticket，全部"完成"**
+  - task_state_manager: **No active task**
+  - 本地 git: main 分支有 wing_recovery_alert.md 未提交修改（巡查日志追加）
+  - 结论：**当前没有待处理的 Jira 任务**（Jira Cloud 持续不可用，自托管认证 Token 不匹配，建议 Anna 检查 Jira 服务状态或更新自托管 Jira 的访问凭证）
