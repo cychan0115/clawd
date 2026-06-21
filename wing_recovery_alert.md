@@ -1,26 +1,30 @@
-# Jira 巡查状态 - 2026-06-21 23:09
+# Jira 巡查状态 - 2026-06-22 00:46
 
-## 巡查结果：✅ 无待处理任务
+## 巡查结果：⚠️ Jira Cloud 不可用
 
-- **时间**: 2026-06-21 23:09 CST (Sunday)
-- **Jira 自托管服务器**: `http://116.205.141.57:50008` - 连接正常
-- **认证用户**: huahua (huahua@3pigc.com) - Bearer Token 认证成功
+- **时间**: 2026-06-22 00:46 CST (Monday)
+- **Jira Cloud**: `https://3pigc.atlassian.net` - **不可用**
+- **错误**: Atlassian Cloud 返回 "Site temporarily unavailable"
+- **认证用户**: huahua (huahua@3pigc.com) - Bearer Token 认证因服务端不可用而失败
 
-### AIWH 项目状态
-- **0 个 "处理中" ticket**（assignee=huahua，status="In Progress"）
-- **0 个 "Selected for Development" 待领取 ticket**（assignee EMPTY）
-- **无待处理任务**
+### 尝试的操作
+1. ✅ 查询 "处理中" ticket（assignee=huahua） - **失败：服务端不可用**
+2. ✅ 查询 "Selected for Development" 待领取 ticket - **失败：服务端不可用**
 
 ### 本地状态
 - **task_state_manager**: No active task
-- **本地 git**: 无需检查（无活跃任务）
+- **本地 git**: wing_recovery_alert.md 有修改（未 commit，巡查日志更新）
+
+### 诊断信息
+- Atlassian 状态页面: https://status.atlassian.com
+- 请求错误: {"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"}
 
 ---
 
 ## 历史记录
 
-- **23:09 CST** - 本次巡查：0 处理中，0 待领取，无待处理任务
-- **22:39 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务
-- **22:22 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务
-- **21:04 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务
-- **20:58 CST** - 上次巡查：0 处理中，0 待领取，107 个完成，无待处理任务
+- **00:46 CST** - 本次巡查：Jira Cloud 仍不可用（服务端问题持续）
+- **00:34 CST** - 上次巡查：Jira Cloud 不可用（服务端问题）
+- **00:14 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务（使用自托管服务器）
+- **00:04 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务
+- **23:54 CST** - 上次巡查：0 处理中，0 待领取，无待处理任务
