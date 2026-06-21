@@ -38,3 +38,4 @@
 [2026-06-11 22:17:22] WARNING: done called for CRON-INSPECTION-2026-06-11-2214 but current state is None
 [2026-06-14 15:44:30] JIRA_INSPECTION: Atlassian Cloud 不可用 (404 Page Unavailable) - 无法执行 Jira 巡查
 [2026-06-14 15:44:30] JIRA_INSPECTION: 状态页面显示无事件，但实际服务返回维护页面
+[2026-06-22 00:50:40] WARNING: done called for JIRA-UNAVAILABLE but current state is None
