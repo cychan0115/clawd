@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 11:54
+# Jira 巡查状态 - 2026-06-22 12:34
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 11:54 CST (Monday)
+- **时间**: 2026-06-22 12:34 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -19,7 +19,6 @@
 |------|------|----------|
 | 处理中 + assignee=huahua | 0 | `project=AIWH AND status=3 AND assignee=huahua` |
 | Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
-| Backlog + assignee EMPTY | 0 | `project=AIWH AND status=10200 AND assignee is EMPTY` |
 
 ### 本地状态验证
 
@@ -37,4 +36,4 @@
 - 本地代码仓库：干净，无需提交
 
 ---
-*巡查 Agent: huahua (cron) | 执行时间: 11:54 CST*
+*巡查 Agent: huahua (cron) | 执行时间: 12:34 CST*
