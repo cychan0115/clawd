@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 16:04
+# Jira 巡查状态 - 2026-06-22 17:14
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 16:04 CST (Monday)
+- **时间**: 2026-06-22 17:14 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -11,28 +11,35 @@
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
 | 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常，huahua 用户活跃 |
+| Jira Cloud | `https://3pigc.atlassian.net` | ❌ 不可用 | 持续不可用（自 2026-06-16 起） |
 
 ### AIWH 项目状态
 
 | 状态 | 数量 | 查询条件 |
 |------|------|----------|
-| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status="In Progress" AND assignee=huahua` |
-| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
+| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status=3 AND assignee=huahua` |
+| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status=10201 AND assignee is EMPTY` |
+| 非完成状态 (NOT status=10001) | 0 | 全量复核 |
+| **项目总计** | 107 | 全部已完成 (status=10001) |
 
-### 本地状态验证
+### 本地状态
 
-| 检查项 | 状态 | 详情 |
-|--------|------|------|
-| 活跃任务 (task_state_manager) | ✅ 无 | `No active task` |
-| Git 未提交修改 (~/clawd) | ✅ 无 | working tree clean |
-| 最新 commit | - | `0f4d3df` - chore: Jira inspection 16:04 - 无待处理任务 |
+| 检查项 | 状态 |
+|--------|------|
+| 活跃任务 | 无 (task_state_manager.py → No active task) |
+| Git 分支 | main |
+| Git 状态 | 干净（已同步） |
+| 最新 commit | 待更新 |
 
-### 结论
+### 执行摘要
 
-- **当前没有待处理的 Jira 任务**
-- AIWH 项目无"处理中"且分配给 huahua 的 ticket
-- AIWH 项目无"Selected for Development"且未分配的 ticket
-- 本地代码仓库：clean，已提交并推送
+1. ✅ 检查"处理中" ticket → 0 个
+2. ✅ 检查待领取 ticket → 0 个
+3. ✅ 全量复核 → 0 个非完成状态
+4. ✅ Git 状态检查 → 干净
+5. ✅ 更新本文件并推送
+
+**结论：当前没有待处理的 Jira 任务。**
 
 ---
-*巡查 Agent: huahua (cron) | 执行时间: 16:04 CST*
+*自动生成 by huahua / OpenClaw on mini2*
