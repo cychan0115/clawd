@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 23:58
+# Jira 巡查状态 - 2026-06-23 00:16
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 23:58 CST (Monday)
+- **时间**: 2026-06-23 00:16 CST (Tuesday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -11,7 +11,7 @@
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
 | 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常，huahua 用户活跃 |
-| Atlassian Cloud | `https://3pigc.atlassian.net` | ❌ 不可用 | HTTP 404 - Site temporarily unavailable |
+| Atlassian Cloud | `https://aiworkhacks.atlassian.net` | ❌ 不可用 | HTTP 404 - Site temporarily unavailable |
 
 ### AIWH 项目状态（自托管 Jira）
 
