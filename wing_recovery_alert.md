@@ -1,6 +1,6 @@
 # Jira 巡查状态 - 2026-06-23 00:16
 
-## 巡查结果：✅ 无待处理任务
+## 巡查结果：❌ BLOCKER - 认证失败
 
 - **时间**: 2026-06-23 00:16 CST (Tuesday)
 - **Agent**: huahua (cron 自动巡查)
@@ -10,33 +10,36 @@
 
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
-| 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常，huahua 用户活跃 |
+| 自托管 Jira | `http://116.205.141.57:50008` | ❌ **401 认证失败** | Bearer Token 无效或已过期 |
 | Atlassian Cloud | `https://aiworkhacks.atlassian.net` | ❌ 不可用 | HTTP 404 - Site temporarily unavailable |
 
-### AIWH 项目状态（自托管 Jira）
+### 错误详情
 
-| 状态 | 数量 | 查询条件 |
-|------|------|----------|
-| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status="In Progress" AND assignee=huahua` |
-| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
+```
+HTTP 401 Unauthorized
+Client must be authenticated to access this resource.
+```
 
 ### 本地状态
 
 | 检查项 | 状态 |
 |--------|------|
-| 活跃任务 | 无 (task_state_manager.py → No active task) |
+| 活跃任务 | 无 |
 | Git 分支 | main |
-| Git 状态 | 干净（无未提交变更） |
-| 最新 commit | `44cbf98` - chore: update Jira inspection report 2026-06-22 23:58 |
+| Git 状态 | 干净 |
 
-### 执行摘要
+### BLOCKER 说明
 
-1. ✅ 检查"处理中" ticket → 0 个
-2. ✅ 检查待领取 ticket → 0 个
-3. ✅ 提交 wing_recovery_alert.md 更新 → commit `44cbf98`
-4. ✅ Git push → 成功
+1. Jira Bearer Token 认证失败（401）
+2. 无法查询"处理中" ticket
+3. 无法查询"待领取" ticket
+4. 需要 Anna 更新有效的 Jira 认证凭据
 
-**结论：当前没有待处理的 Jira 任务。**
+### 建议操作
+
+- 检查 Jira 自托管实例的认证配置
+- 更新 Bearer Token 或切换为 Basic Auth
+- 验证用户 `huahua` 的活跃状态
 
 ---
 *自动生成 by huahua / OpenClaw on mini2*
