@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 11:14
+# Jira 巡查状态 - 2026-06-22 11:54
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 11:14 CST (Monday)
+- **时间**: 2026-06-22 11:54 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -11,14 +11,15 @@
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
 | Jira Cloud | `https://3pigc.atlassian.net` | ❌ 不可用 | HTTP 404/维护页面，持续不可用 |
-| 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常 |
+| 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常，huahua 用户活跃 |
 
 ### AIWH 项目状态
 
-| 状态 | 数量 |
-|------|------|
-| 处理中 + assignee=huahua | 0 |
-| Selected for Development + assignee EMPTY | 0 |
+| 状态 | 数量 | 查询条件 |
+|------|------|----------|
+| 处理中 + assignee=huahua | 0 | `project=AIWH AND status=3 AND assignee=huahua` |
+| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
+| Backlog + assignee EMPTY | 0 | `project=AIWH AND status=10200 AND assignee is EMPTY` |
 
 ### 本地状态验证
 
@@ -36,4 +37,4 @@
 - 本地代码仓库：干净，无需提交
 
 ---
-*巡查 Agent: huahua (cron) | 执行时间: 11:14 CST*
+*巡查 Agent: huahua (cron) | 执行时间: 11:54 CST*
