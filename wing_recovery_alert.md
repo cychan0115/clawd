@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 18:41
+# Jira 巡查状态 - 2026-06-22 19:24
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 18:41 CST (Monday)
+- **时间**: 2026-06-22 19:24 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -16,9 +16,9 @@
 
 | 状态 | 数量 | 查询条件 |
 |------|------|----------|
-| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status=3 AND assignee=huahua` |
-| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status=10201 AND assignee is EMPTY` |
-| 非完成状态总计 | 0 | `project=AIWH AND status != 10001` |
+| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status="In Progress" AND assignee=currentUser()` |
+| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
+| 非完成状态总计 | 0 | `project=AIWH AND status != Done` |
 | **项目总计** | 107 | 全部已完成 |
 
 ### 本地状态
@@ -27,16 +27,16 @@
 |--------|------|
 | 活跃任务 | 无 (task_state_manager.py → No active task) |
 | Git 分支 | main |
-| Git 状态 | ✅ 已提交 |
-| 最新 commit | 待更新 |
+| Git 状态 | ✅ 干净 (无未提交修改) |
+| 最新 commit | `9221a2a` - chore: update Jira inspection report 2026-06-22 19:16 |
 
 ### 执行摘要
 
 1. ✅ 检查"处理中" ticket → 0 个
 2. ✅ 检查待领取 ticket → 0 个
 3. ✅ 检查所有非完成状态 ticket → 0 个（全项目 107 个均为完成状态）
-4. ✅ Git 状态检查 → wing_recovery_alert.md 已更新并提交
-5. ✅ 更新本文件
+4. ✅ Git 状态检查 → 干净无修改
+5. ✅ 无需 commit/push
 
 **结论：当前没有待处理的 Jira 任务。**
 
