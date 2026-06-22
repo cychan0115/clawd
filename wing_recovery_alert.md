@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 14:25
+# Jira 巡查状态 - 2026-06-22 14:45
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 14:25 CST (Monday)
+- **时间**: 2026-06-22 14:45 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -10,7 +10,6 @@
 
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
-| Jira Cloud | `https://aiwh.atlassian.net` | ❌ 不可用 | HTTP 404，维护页面 |
 | 自托管 Jira | `http://116.205.141.57:50008` | ✅ 可用 | Bearer Token 认证正常，huahua 用户活跃 |
 
 ### AIWH 项目状态
@@ -26,6 +25,7 @@
 |--------|------|------|
 | 活跃任务 (task_state_manager) | ✅ 无 | `No active task` |
 | Git 未提交修改 (~/clawd) | ✅ 无 | working tree clean |
+| 最新 commit | - | `59d713a` - chore: update Jira inspection log - 2026-06-22 14:36 |
 
 ### 结论
 
@@ -35,4 +35,5 @@
 - 本地代码仓库：clean，无需提交
 
 ---
-*巡查 Agent: huahua (cron) | 执行时间: 14:25 CST*
+*巡查 Agent: huahua (cron) | 执行时间: 14:45 CST*
+
