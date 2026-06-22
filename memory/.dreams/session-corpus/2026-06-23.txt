@@ -1,0 +1,52 @@
+[main/sessions/main/004b6249-7aee-478d-b830-4374e84f8c7f.jsonl#L10] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-23 01:32:13 (Asia/Shanghai) ### 总体状态: 🟢 正常运行 | 检查项 | 状态 | |--------|------| | macOS 主机资源 | ✅ 正常 (内存 86% free) | | 磁盘空间 | ✅ 正常 (主磁盘 45%) | | Gateway 进程 | ✅ 运行中 | | Agent 进程 | ✅ 活跃 (1分钟前更新) | | Browser/CDP | ✅ 运行中 (18800就绪
+[main/sessions/main/004b6249-7aee-478d-b830-4374e84f8c7f.jsonl#L10] Assistant: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L27] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L30] Assistant: 收到，正在执行 Jira 任务巡查。
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L35] Assistant: 有错误信息，需要检查项目名和权限。让我尝试获取项目列表：
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L41] Assistant: 认证失败（401）。让我检查是否有其他认证配置可用：
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L43] Assistant: Jira 认证失败（401），Token 可能已过期或无效。
+[main/sessions/main/0174633b-a7a3-4a46-a9ec-40731c601321.jsonl#L47] Assistant: ## Jira 巡查结果：❌ BLOCKER - 认证失败 **自托管 Jira** (`http://116.205.141.57:50008`) 返回 **401 Unauthorized**，Bearer Token 无效或已过期。 ### 关键信息 | 检查项 | 状态 | |--------|------| | Jira 自托管连接 | ❌ 401 认证失败 | | Atlassian Cloud | ❌ 404 不可用 | | 本地 Git 状态 | ✅ 干净（无未提交变更） | | 活跃任务 | 无 | ###
+[main/sessions/main/01ae7cf7-7a75-439f-9b47-afc9a1d1a660.jsonl#L6] Assistant: 我来执行Jira任务巡查。先并行检查任务状态和Jira中的ticket。
+[main/sessions/main/01ae7cf7-7a75-439f-9b47-afc9a1d1a660.jsonl#L13] Assistant: --- ## Jira 任务巡查结果 **时间**: 2026-06-23 01:27 CST | 检查项 | 状态 | |--------|------| | 活跃任务 | ✅ 无 | | 本地Git状态 | ✅ 干净（无未提交修改） | | Jira Cloud (`3pigc.atlassian.net`) | ❌ **不可用 (404)** | | 处理中 ticket | 无法查询（Jira不可用） | | 待领取 ticket | 无法查询（Jira不可用） | **结论**: Jira Cloud 实例持续不可
+[main/sessions/main/0acd0dc7-1529-4da1-a1c4-0b2834f0dbea.jsonl#L33] Assistant: ## MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-23 02:30 (Asia/Shanghai) **触发**: cron `73bbdaca-9c48-41d7-a333-1c3e2d112c95` **报告**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ### ✅ 正常项 | 检查项 | 状态 | |--------|------| | **macOS 主机** | 负载 2.80/3.35/3
+[main/sessions/main/0acd0dc7-1529-4da1-a1c4-0b2834f0dbea.jsonl#L33] Assistant: `kimi/kimi-k2.6` → timeout - `gpt-5.4-ccapi/gpt-5.4` → `getaddrinfo ENOTFOUND api.ccapi.vip` (DNS 解析失败) - `ccapi/gpt-4o` → `ECONNREFUSED` **影响**: - `Jira任务巡查` cron job 连续失败，已触发 **error backoff 1 小时** - `MINI2+OpenClaw自巡检` 上一轮也失败 (`consecutiveErrors: 3`) - 多个 auth p
+[main/sessions/main/1b6c0c36-7a0d-4cd4-bd4b-bc01acc7a4ad.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1b6c0c36-7a0d-4cd4-bd4b-bc01acc7a4ad.jsonl#L17] Assistant: **MINI2+OpenClaw 自巡检完成** — 报告已写入 `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ## 整体状态：⚠️ 有异常需关注 ### ✅ 正常项 - **主机资源**：负载 3.0（中等），内存 86% 空闲，主磁盘 `/` 使用率 45% - **OpenClaw 进程**：gateway / agent / browser 全部运行中 - **端口**：18789 (gateway) 和 18800 (browse
+[main/sessions/main/1b6c0c36-7a0d-4cd4-bd4b-bc01acc7a4ad.jsonl#L17] Assistant: **全部失败** **错误类型：** - kimi：`UND_ERR_SOCKET` / `ECONNRESET`（连接被重置，~15秒超时） - gpt-5.4-ccapi：`ENOTFOUND api.ccapi.vip`（DNS 解析失败） - ccapi：`ECONNREFUSED`（连接被拒绝） **当前状态：** 本次自巡检脚本运行正常（使用 kimi-k2.6），说明网络在 **00:28 之后已恢复**。 --- ## 结论与建议 1. **网络故障已恢复**：00:28 前存在一次网络中断（可能是 DNS/
+[main/sessions/main/23af68b4-5a46-4128-aaa7-d196bbb809a1.jsonl#L8] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3a9d658e-7c24-445a-955a-416423f6ed9b.jsonl#L12] Assistant: ## ✅ MINI2 + OpenClaw 自巡检完成 **时间**: 2026-06-23 00:00:13 (Asia/Shanghai) **主机**: mini2 (Mac mini) **报告**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` --- ### 检查结果摘要 | 检查项 | 状态 | |--------|------| | **macOS 主机资源** | ✅ 正常 — 负载 4.25，内存空闲 86%，无 swap | 
+[main/sessions/main/3a9d658e-7c24-445a-955a-416423f6ed9b.jsonl#L12] Assistant: 核心服务运行。无需立即处理。 --- ### 结论 **OpenClaw 系统运行正常**，无需要紧急干预的异常。历史日志中的 provider 错误属于正常的网络/服务波动。
+[main/sessions/main/466a0796-c18a-4c82-ace8-7481339feaf4.jsonl#L25] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/466a0796-c18a-4c82-ace8-7481339feaf4.jsonl#L28] Assistant: 查询"处理中"的 ticket 结果为空（0 issues）。现在查询待领取的 ticket。
+[main/sessions/main/466a0796-c18a-4c82-ace8-7481339feaf4.jsonl#L30] Assistant: Jira 返回错误： 1. 项目 "AIWH" 不存在 2. assignee 域可能有问题 让我先查询项目列表。
+[main/sessions/main/466a0796-c18a-4c82-ace8-7481339feaf4.jsonl#L32] Assistant: 项目列表为空。让我尝试搜索所有 issues，不管项目。
+[main/sessions/main/466a0796-c18a-4c82-ace8-7481339feaf4.jsonl#L34] Assistant: 自托管 Jira 上没有任何项目和 issue。当前没有待处理的 Jira 任务。 **巡查结果汇总：** | 检查项 | 结果 | |--------|------| | 本地任务状态 | No active task | | Git 状态 | clean（main 分支，已 up-to-date）| | 处理中 ticket (assignee=huahua) | **0 issues** | | 待领取 ticket (Selected for Development + empty assignee) | **0 i
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L6] Assistant: # 🚀 Jira 任务巡查开始 我先并行执行几个检查：当前任务状态、处理中的ticket、待领取的ticket。
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L11] Assistant: 从 `wing_recovery_alert.md` 得知：**Atlassian Cloud Jira 不可用，但自托管 Jira 可用**。让我查询自托管 Jira 的当前状态。
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L14] Assistant: 查询结果： - **处理中 (In Progress)** + assignee=huahua → **0 个** - **Selected for Development** + assignee EMPTY → **0 个** 让我再确认一下本地代码状态，然后更新报告。
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L16] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L19] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/4e04c007-af1f-41e4-8e38-639498ad9262.jsonl#L22] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L9] Assistant: 开始执行 Jira 任务巡查流程。让我先检查当前状态和恢复告警，然后查询 Jira 任务。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L13] Assistant: Jira Cloud 实例仍然不可访问。让我做更详细的诊断，确认连接问题。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L17] Assistant: 两个 Cloud 实例都返回 404，说明实例可能已停用或迁移。让我检查自托管 Jira 和其他可能的配置。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L21] Assistant: 自托管 Jira 实例 (116.205.141.57:50008) 返回 200，服务是运行的！让我检查它是否需要认证，以及查看脚本配置。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L23] Assistant: 自托管 Jira 实例可访问！版本 9.4.0。让我尝试用 Bearer Token 认证访问项目。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L25] Assistant: 找到了 AIWH 项目！自托管 Jira 可用。现在查询任务状态。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L28] Assistant: 没有处理中的任务，也没有待领取的任务。让我再检查其他状态的任务，确保没有遗漏。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L35] Assistant: 所有可见任务状态都是"完成"。让我确认 Jira 状态列表，确保没有遗漏其他状态。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L37] Assistant: 状态名是中文"处理中"而非英文"In Progress"。让我重新查询。
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L40] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/51269dda-7c90-4661-8e76-f254c87c4862.jsonl#L43] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L17] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L20] Assistant: 继续执行Jira巡查。自托管Jira实例可用，认证成功。现在查询AIWH项目中的ticket。
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L23] Assistant: JQL查询有错误，需要确认正确的状态名称和字段名。让我查询状态和获取一些issue样本。
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L26] Assistant: 状态列表为空，项目ID查询也失败。让我尝试其他方式查询issue。
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L29] Assistant: JQL查询有古怪，让我尝试不同的方式获取issue列表。
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L32] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5582b635-2aea-4486-8a54-5a9ae3c7ca3b.jsonl#L35] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5ad73d98-f67b-40e4-ab45-444851818ec6.jsonl#L6] Assistant: 我来执行Jira任务巡查流程。首先查看当前任务状态，然后按优先级检查 ticket。
+[main/sessions/main/5ad73d98-f67b-40e4-ab45-444851818ec6.jsonl#L9] Assistant: 当前状态显示无活跃任务，但我需要重新执行一次完整巡查以确保获取最新状态。让我直接查询 Jira API：
+[main/sessions/main/5ad73d98-f67b-40e4-ab45-444851818ec6.jsonl#L12] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5ad73d98-f67b-40e4-ab45-444851818ec6.jsonl#L15] Assistant: ✅ **Jira 任务巡查完成** --- ## 巡查结果 | 检查项 | 状态 | |--------|------| | **处理中** (In Progress) + assignee=huahua | 0 个 | | **待领取** (Selected for Development) + assignee EMPTY | 0 个 | | 本地 Git 状态 | 干净 (无未提交变更) | --- ## 结论 **当前没有待处理的 Jira 任务。** - 无"处理中"的 ticket 需要收尾 - 无待领取的 ti

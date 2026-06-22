@@ -148,29 +148,6 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-19)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:3:6 -->
-- 当前任务状态: 无 active task; 处理中 + huahua 的 ticket: 0; Selected for Development + 未分配的 ticket: 0; AIWH 总 ticket 数: 107 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14-jira-inspection.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:7:7 -->
-- 所有 ticket 状态: 全部完成 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14-jira-inspection.md:7-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:9:9 -->
-- 结论: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14-jira-inspection.md:9-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:14:17 -->
-- Jira API 状态: **BLOCKER: Jira Cloud 不可用**; API 返回: "Page unavailable"; Atlassian Status 页面显示今日无 incident，但实际访问被拒绝; 多次重试均失败（api/2 和 api/3 都返回相同错误） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:14-17]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:18:18 -->
-- Jira API 状态: Request IDs: 852d6db8071d4e50884ff2d66189afd8, f0a374bc597b4022a615f6c79c470b40, 54ff34baac374711bb52f84c5f2326cc [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:18-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:21:23 -->
-- 无法执行的操作: 无法查询"处理中"的 ticket（assignee=huahua）; 无法查询待领取的 ticket（Selected for Development + assignee=EMPTY）; 无法 claim/transition/comment 任何 ticket [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:21-23]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:31:33 -->
-- 修正：使用正确的 Jira DC 地址: 之前错误地使用了 `https://3pigc.atlassian.net` (Jira Cloud); 实际应为 `http://116.205.141.57:50008` (Jira Data Center 9.4.0); wing_recovery_alert.md 历史记录明确指向 DC 地址 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:31-33]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:6:6 -->
-- 当前任务状态: `task_state_manager.py status`: No active task [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:6-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:9:11 -->
-- 本地代码状态: 分支: main; 状态: clean，nothing to commit; 与 origin/main 同步 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-14.md:9-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14-jira-inspection.md:1:1 -->
-- Jira 巡查报告 (2026-06-14 08:47:36) [score=0.802 recalls=0 avg=0.620 source=memory/2026-06-14-jira-inspection.md:1-1]
-
 ## Promoted From Short-Term Memory (2026-06-20)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:4:7 -->
@@ -192,3 +169,12 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 巡查结果: **状态: 无待处理任务** ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:5-5]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:8:9 -->
 - "处理中" ticket 检查（优先级最高）: assignee = huahua + 状态 = 处理中: **0 tickets**; 无需检查本地代码状态或执行 commit/push [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:8-9]
+
+## Promoted From Short-Term Memory (2026-06-23)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:10:13 -->
+- 08:00 早安检查: **天气**: 上海 24°C 多云，体感 26°C，湿度 100%，最高 30°C，UV 9; **菜单**: weekly-meal-plan.md 未填写，无今日菜单; **日历**: 无配置，未检查; **Jira**: 无配置，未检查紧急任务 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:10-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:14:16 -->
+- 08:00 早安检查: **系统健康**: ⚠️ 磁盘使用率 95% (/System/Volumes/Data 仅剩 24G)，负载 2.84; **待办**: 建议清理磁盘空间（Caches 7.5G+）; **Action**: 早安消息已发送 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:14-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:4:7 -->
+- 06:33 Heartbeat: **Task state**: No active task; **Jira watchdog**: No alerts; **Git status**: Clean; **Action**: Quick check complete, nothing pending. huahua idle. [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:4-7]
