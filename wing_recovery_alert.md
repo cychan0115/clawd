@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 12:34
+# Jira 巡查状态 - 2026-06-22 13:54
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 12:34 CST (Monday)
+- **时间**: 2026-06-22 13:54 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -18,15 +18,15 @@
 | 状态 | 数量 | 查询条件 |
 |------|------|----------|
 | 处理中 + assignee=huahua | 0 | `project=AIWH AND status=3 AND assignee=huahua` |
-| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
+| Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status=10201 AND assignee is EMPTY` |
 
 ### 本地状态验证
 
 | 检查项 | 状态 | 详情 |
 |--------|------|------|
 | 活跃任务 (task_state_manager) | ✅ 无 | `No active task` |
-| Git 未提交修改 | ✅ 无 | `nothing to commit, working tree clean` |
-| Git 未 push commit | ✅ 无 | `Your branch is up to date with 'origin/main'` |
+| Git 未提交修改 (~/workspace/wing_1) | ✅ 无 | working tree clean |
+| Git 未提交修改 (~/clawd) | ✅ 无 | wing_recovery_alert.md 已更新 |
 
 ### 结论
 
@@ -36,4 +36,4 @@
 - 本地代码仓库：干净，无需提交
 
 ---
-*巡查 Agent: huahua (cron) | 执行时间: 12:34 CST*
+*巡查 Agent: huahua (cron) | 执行时间: 13:54 CST*
