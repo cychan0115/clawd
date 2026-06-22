@@ -1,14 +1,15 @@
-# Jira 巡查状态 - 2026-06-22 08:44
+# Jira 巡查状态 - 2026-06-22 08:54
 
 ## 巡查结果：⚠️ BLOCKER - Jira Cloud 维护中
 
-- **时间**: 2026-06-22 08:44 CST (Monday)
+- **时间**: 2026-06-22 08:54 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 
 ### Jira 连接状态
 
 | 实例 | 地址 | 状态 | 备注 |
 |------|------|------|------|
+| Jira Cloud | `https://piggybridge.atlassian.net` | ❌ 404 | 维护页面（Atlassian Cloud 不可用） |
 | Jira Cloud | `https://3pigc.atlassian.net` | ❌ 404 | 维护页面（Atlassian Cloud 不可用） |
 
 ### 错误详情
@@ -21,9 +22,10 @@
 
 - **活跃任务**: 无（task_state_manager.py 确认：No active task）
 - **Git 分支**: main
-- **未提交修改**: 无（wing_recovery_alert.md 已更新提交）
+- **未提交修改**: 无
 - **上次成功巡查**: 2026-06-22 08:04（确认无待处理任务）
 - **上次 Cloud 可用**: 未知（已连续多次巡查不可用）
+- **本次巡查**: 2026-06-22 08:54 — 仍然不可用
 
 ### 影响
 
