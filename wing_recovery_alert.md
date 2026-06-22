@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-22 19:24
+# Jira 巡查状态 - 2026-06-22 19:56
 
 ## 巡查结果：✅ 无待处理任务
 
-- **时间**: 2026-06-22 19:24 CST (Monday)
+- **时间**: 2026-06-22 19:56 CST (Monday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -16,7 +16,7 @@
 
 | 状态 | 数量 | 查询条件 |
 |------|------|----------|
-| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status="In Progress" AND assignee=currentUser()` |
+| 处理中 (In Progress) + assignee=huahua | 0 | `project=AIWH AND status="In Progress" AND assignee=huahua` |
 | Selected for Development + assignee EMPTY | 0 | `project=AIWH AND status="Selected for Development" AND assignee is EMPTY` |
 | 非完成状态总计 | 0 | `project=AIWH AND status != Done` |
 | **项目总计** | 107 | 全部已完成 |
@@ -28,7 +28,7 @@
 | 活跃任务 | 无 (task_state_manager.py → No active task) |
 | Git 分支 | main |
 | Git 状态 | ✅ 干净 (无未提交修改) |
-| 最新 commit | `9221a2a` - chore: update Jira inspection report 2026-06-22 19:16 |
+| 最新 commit | `67dab63` - chore: update Jira inspection report 2026-06-22 19:24 |
 
 ### 执行摘要
 
