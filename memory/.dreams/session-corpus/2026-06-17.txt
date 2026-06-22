@@ -381,3 +381,6 @@
 [main/sessions/main/628539b1-94d5-446a-aebd-d5a3e6eb1540.jsonl#L29] Assistant: 数据中心代理说找不到项目 "AIWH"。让我查看之前的 Jira 报告，看看之前的 cron 是如何成功查询的。
 [main/sessions/main/628539b1-94d5-446a-aebd-d5a3e6eb1540.jsonl#L32] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/628539b1-94d5-446a-aebd-d5a3e6eb1540.jsonl#L35] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/37a41233-24a6-4205-919a-1f9ae3a167ae.jsonl#L6] Assistant: 收到。👍 系统巡检脚本已按时执行，一切正常： - ✅ K8S 日志检查完成 - ✅ 主机资源检查完成 - ✅ HTTP 端点检查完成 如有异常，邮件报告已自动发送至 13926262295@139.com。无需进一步处理。 --- *凌晨 02:02，系统自动巡检 — 无异常，继续休息。*
+[main/sessions/main/37e1c7e7-ad30-4d9d-a33b-89dca7b0442d.jsonl#L10] Assistant: ## 🔍 MINI2 + OpenClaw 自巡检结果 **时间**: 2026-06-17 01:00 (Asia/Shanghai) **整体状态**: ✅ 系统正常，2项警告需关注 --- ### ✅ 正常项目 | 检查项 | 状态 | |--------|------| | 主机负载 | 1.51 / 2.02 / 2.45 ✅ | | 内存压力 | 60% 空闲 ✅ | | 主磁盘 (/) | 43% 使用率 ✅ | | Gateway 进程 | 运行中 ✅ | | Agent 状态 | 活跃 (0分钟前更新) 
+[main/sessions/main/37e1c7e7-ad30-4d9d-a33b-89dca7b0442d.jsonl#L10] Assistant: 无需立即处理，继续监控即可。详细报告已保存至： `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
