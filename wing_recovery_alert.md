@@ -1,8 +1,8 @@
-# Jira 巡查状态 - 2026-06-24 01:14
+# Jira 巡查状态 - 2026-06-24 02:04
 
 ## 巡查结果：🟢 无待处理任务
 
-- **时间**: 2026-06-24 01:14 CST (Wednesday)
+- **时间**: 2026-06-24 02:04 CST (Wednesday)
 - **Agent**: huahua (cron 自动巡查)
 - **Timeout**: 1800秒（30分钟）
 
@@ -13,7 +13,7 @@
 - ✅ Jira Server: `http://116.205.141.57:50008` (version 9.4.0)
 - ✅ Bearer Token 认证: huahua 用户有效
 - ✅ /search API 正常响应
-- ✅ 状态 ID 验证通过: 3="处理中", 10201="Selected for Development", 10001="完成"
+- ✅ 状态 ID 验证通过: 10200="Backlog", 10201="Selected for Development", 3="处理中", 10001="完成"
 
 ---
 
@@ -25,7 +25,7 @@
 | 处理中 (status=3) + assignee=huahua | ✅ 0 issues — 无待处理 |
 | Selected for Development (status=10201) + assignee=EMPTY | ✅ 0 issues — 无待领取 |
 | 任务状态 | ✅ No active task |
-| 本地未提交代码 | ⚠️ 1 file (memory/2026-06-24.md, 非 Jira 任务) |
+| 本地未提交代码 | ⚠️ 1 file (scripts/test_jira_query.py, 非 Jira 任务相关) |
 
 ---
 
@@ -33,7 +33,7 @@
 
 - **当前无"处理中"的 ticket（assignee=huahua）**
 - **当前无"Selected for Development"且未分配的 ticket**
-- 本地存在未跟踪文件 `memory/2026-06-24.md`（巡查日志），非 Jira 任务相关，暂不提交
+- 本地存在未跟踪文件 `scripts/test_jira_query.py`（测试文件），非 Jira 任务相关
 
 ---
 *下次巡查: 预计 30 分钟后*
