@@ -19,10 +19,18 @@ import os
 import sys
 import imaplib
 import email
+import ssl
 from email.header import decode_header
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from typing import List, Dict, Optional
+
+# Create a custom SSL context that supports older TLS versions
+ssl_context = ssl.create_default_context()
+ssl_context.minimum_version = ssl.TLSVersion.TLSv1_2
+ssl_context.check_hostname = False
+ssl_context.verify_mode = ssl.CERT_NONE
+ssl_context.set_ciphers('DEFAULT:@SECLEVEL=0')
 
 # Load environment variables from .env file if present
 load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
@@ -40,9 +48,9 @@ class EmailSummary:
         self.recipient = os.getenv('SUMMARY_RECIPIENT')
         
     def connect(self) -> imaplib.IMAP4_SSL:
-        """Connect to IMAP server"""
+        """Connect to IMAP server with custom SSL context"""
         print(f"📧 Connecting to {self.host}:{self.port}...")
-        mail = imaplib.IMAP4_SSL(self.host, self.port)
+        mail = imaplib.IMAP4_SSL(self.host, self.port, ssl_context=ssl_context)
         mail.login(self.user, self.password)
         print(f"✅ Logged in as {self.user}")
         return mail
