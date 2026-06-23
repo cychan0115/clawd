@@ -29,7 +29,7 @@
 - **HTTP 状态**: ✅ 200（服务本身在运行）
 - **认证状态**: ❌ **全部失败** — 所有请求返回 `X-AUSERNAME: anonymous`
 - **测试方式**:
-  - Bearer Token: `Authorization: Bearer NzcyNz…XQK6` → anonymous
+  - Bearer Token: `Authorization: Bearer [JIRA_TOKEN_TRUNCATED]` → anonymous
   - Basic Auth (email:token): `huahua@3pigc.com:token` → 空响应
   - Basic Auth (user:token): `huahua:token` → 空响应
 

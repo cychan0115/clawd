@@ -227,7 +227,7 @@
 [main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L14] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L17] Assistant: 让我详细检查 curl 的 HTTP 响应状态：
 [main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L19] Assistant: API 返回 404，可能是 Jira 实例域名或认证方式有问题。让我查看 task_state_manager.py 的源码，了解它是如何正确调用 Jira API 的：
-[main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L21] Assistant: 我发现问题了！我之前的 curl 命令用了省略号 `NzcyNz…XQK6`，这会导致 token 不完整。让我用完整的 Bearer Token 重新测试：
+[main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L21] Assistant: 我发现问题了！我之前的 curl 命令用了省略号 `[JIRA_TOKEN_TRUNCATED]`，这会导致 token 不完整。让我用完整的 Bearer Token 重新测试：
 [main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L23] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/3e6bc364-6156-43c4-b521-142f4cb345be.jsonl#L26] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/40855989-2055-431d-809d-26f58f082f58.jsonl#L6] Assistant: [assistant turn failed before producing content]
@@ -384,3 +384,17 @@
 [main/sessions/main/37a41233-24a6-4205-919a-1f9ae3a167ae.jsonl#L6] Assistant: 收到。👍 系统巡检脚本已按时执行，一切正常： - ✅ K8S 日志检查完成 - ✅ 主机资源检查完成 - ✅ HTTP 端点检查完成 如有异常，邮件报告已自动发送至 13926262295@139.com。无需进一步处理。 --- *凌晨 02:02，系统自动巡检 — 无异常，继续休息。*
 [main/sessions/main/37e1c7e7-ad30-4d9d-a33b-89dca7b0442d.jsonl#L10] Assistant: ## 🔍 MINI2 + OpenClaw 自巡检结果 **时间**: 2026-06-17 01:00 (Asia/Shanghai) **整体状态**: ✅ 系统正常，2项警告需关注 --- ### ✅ 正常项目 | 检查项 | 状态 | |--------|------| | 主机负载 | 1.51 / 2.02 / 2.45 ✅ | | 内存压力 | 60% 空闲 ✅ | | 主磁盘 (/) | 43% 使用率 ✅ | | Gateway 进程 | 运行中 ✅ | | Agent 状态 | 活跃 (0分钟前更新) 
 [main/sessions/main/37e1c7e7-ad30-4d9d-a33b-89dca7b0442d.jsonl#L10] Assistant: 无需立即处理，继续监控即可。详细报告已保存至： `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md`
+[main/sessions/main/63e305a8-5714-40ba-82bf-87c6a156c732.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/63e305a8-5714-40ba-82bf-87c6a156c732.jsonl#L11] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/63e305a8-5714-40ba-82bf-87c6a156c732.jsonl#L14] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6660e3ac-abfc-455f-99f4-25cf49ea65e2.jsonl#L22] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6660e3ac-abfc-455f-99f4-25cf49ea65e2.jsonl#L25] Assistant: I will continue with the Jira workflow using the correct Data Center instance (as previously established, `3pigc.atlassian.net` is down). Let me check the recovery alert and query the active Jira instance.
+[main/sessions/main/6660e3ac-abfc-455f-99f4-25cf49ea65e2.jsonl#L27] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6660e3ac-abfc-455f-99f4-25cf49ea65e2.jsonl#L30] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67834c15-aa79-42d5-b010-9044e772b127.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67834c15-aa79-42d5-b010-9044e772b127.jsonl#L23] Assistant: 早安！☀️ 今天是 **6月17日，星期三**。 --- **🌤️ 天气** 上海：晴，23°C，湿度89%，东北风4km/h，无降雨。 --- **🍽️ 今日菜单** `weekly-meal-plan.md` 目前是空白模板，还没填写具体内容。如果需要提醒，可以告诉我今天想做什么。 --- **📋 待办检查** - **Jira**：API 连接失败（`JIRA_API_UNREACHABLE`），无法检查是否有新任务。如果这持续发生，可能需要检查 Jira 服务或认证配置。 - **日历**：没有配置日历集成，如
+[main/sessions/main/67c18751-3558-4fee-a811-a8ae7b4f876b.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67c18751-3558-4fee-a811-a8ae7b4f876b.jsonl#L19] Assistant: 基于详细日志分析，系统整体状态正常，异常均为历史问题。以下是详细分析： --- ## 🔍 MINI2 + OpenClaw 自巡检结果 **时间**: 2026-06-17 23:10 (Asia/Shanghai) ### ✅ 正常项 | 检查项 | 状态 | |--------|------| | 主机负载 | 2.73-2.92 ✅ | | 内存 | 88% 空闲，无 Swap 压力 ✅ | | 主磁盘 | 44% 使用率 ✅ | | Gateway 进程 | 运行中 (pid 930) ✅ | | Agent 会话
+[main/sessions/main/67c18751-3558-4fee-a811-a8ae7b4f876b.jsonl#L19] Assistant: 涉及文件：`wing_recovery_alert.md` - **当前状态**：6/17 日志中未复现，视为偶发 **3. 长运行会话（6/16 17:20）** - Jira 任务巡查会话运行 147s - 属于正常范围内的延迟 --- ### 📋 结论 | 项目 | 判断 | |------|------| | 是否需要立即处理 | **否** — 系统当前运行正常 | | 是否需要进一步调查 | **观察** — 如网络中断频繁发生，需检查 mini2 网络稳定性 | | 本次巡检结果 | **PASS** | *
+[main/sessions/main/68b57fdd-d855-4683-b957-0dbda4158230.jsonl#L28] Assistant: ## 📋 Jira 任务巡查报告 - 11:56 CST ### 1. 连接状态检查 | 项目 | 状态 | |---|---| | Jira Cloud `3pigc.atlassian.net` | ❌ 不可用（HTTP 404），已持续 **731 分钟** | | Atlassian 全局状态 | ✅ All Systems Operational | | Data Center 代理 `116.205.141.57:50008` | ✅ 正常 | ### 2. "处理中" ticket 检查（优先级最高） - *
+[main/sessions/main/68b57fdd-d855-4683-b957-0dbda4158230.jsonl#L28] Assistant: 执行会自动重试 Jira Cloud 连接

@@ -148,13 +148,6 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-20)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:4:7 -->
-- 系统巡检: **18:01** - 每小时系统巡检完成（cron: 078443c8-c048-4e69-8dab-eb99c185567b）; K8S日志检查 ✅; 主机资源检查 ✅; HTTP端点检查 ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-15.md:4-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:8:8 -->
-- 系统巡检: 状态：正常，无异常报警 [score=0.802 recalls=0 avg=0.620 source=memory/2026-06-15.md:8-8]
-
 ## Promoted From Short-Term Memory (2026-06-21)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:12:13 -->
@@ -178,3 +171,26 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 08:00 早安检查: **系统健康**: ⚠️ 磁盘使用率 95% (/System/Volumes/Data 仅剩 24G)，负载 2.84; **待办**: 建议清理磁盘空间（Caches 7.5G+）; **Action**: 早安消息已发送 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:14-16]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:4:7 -->
 - 06:33 Heartbeat: **Task state**: No active task; **Jira watchdog**: No alerts; **Git status**: Clean; **Action**: Quick check complete, nothing pending. huahua idle. [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:4-7]
+
+## Promoted From Short-Term Memory (2026-06-24)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:11:11 -->
+- 错误详情: Atlassian 状态页面: 无全局故障报告 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:11-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:14:16 -->
+- 影响: 无法查询"处理中"的 ticket; 无法查询待领取的 ticket; 无法 claim/transition/comment 任何 ticket [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:14-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:19:21 -->
+- 后续行动: 等待 Jira Cloud 恢复后重试; 建议 Anna 检查 Jira 实例状态或联系 Atlassian 支持; 本次 cron 巡查跳过，下次心跳/cron 自动重试 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:19-21]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:25:26 -->
+- Evidence: Request ID: 12d10b5f86584c5bbd4f781539bde87a Error: {"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"} [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:25-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:4:4 -->
+- 状态: Jira Cloud 实例 **不可用**，无法执行 ticket 巡查。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:4-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:7:10 -->
+- 错误详情: 端点: `https://aiwriterhub.atlassian.net/rest/api/2/search`; 返回: `{"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"}` (HTTP 404); 尝试的域名: aiwriterhub.atlassian.net, 3pigc.atlassian.net; 尝试的 API 版本: api/2, api/3 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:7-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:12:13 -->
+- 23:30 - OpenClaw 自巡检: 系统 fallback 机制正常工作; 当前巡检任务本身运行正常，说明服务已恢复 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:12-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:3:5 -->
+- 23:30 - OpenClaw 自巡检: **巡检任务**: cron `73bbdaca-9c48-41d7-a333-1c3e2d112c95`; **执行结果**: ✅ 系统整体健康; **报告路径**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:3-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:7:7 -->
+- 23:30 - OpenClaw 自巡检: **异常记录**（无需处理，偶发网络波动）： [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:7-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:8:11 -->
+- 23:30 - OpenClaw 自巡检: 6月18-19日凌晨 kimi API 不稳定，多个 cron 任务触发 LLM timeout; 涉及 cron: `73bbdaca-9c48-41d7-a333-1c3e2d112c95` 和 `8d0227c6-23ec-434c-802a-97bdb590dc1f`; 错误类型: `fetch failed` / `network connection error` / `LLM request timed out`; 模型降级链: kimi-for-coding → kimi-k2.6 → gpt-5.4 → gpt-4o（最终成功） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:8-11]
