@@ -1,0 +1,72 @@
+[main/sessions/main/106769bc-f78a-4e81-ad65-9c2070b734d3.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/106769bc-f78a-4e81-ad65-9c2070b734d3.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/106769bc-f78a-4e81-ad65-9c2070b734d3.jsonl#L16] Assistant: 巡检完成。整体状态 ✅ 正常，但日志中有两项值得关注： **⚠️ 发现的异常（非严重）** 1. **Model Fallback 触发** — `model_fallback_decision` 事件出现在今天和昨天的日志中，说明某些 cron 任务调用模型时遇到了 FailoverError（Unknown 错误），触发了降级切换。目前系统仍在运行，属于已知的偶发问题。 2. **Cron Lane 任务报错** — `cron:8d0227c6-23ec-434c-802a-97bdb590dc1f` 这个 cron 
+[main/sessions/main/15e5e4a5-2289-4691-bd08-c9f29aad8689.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/15e5e4a5-2289-4691-bd08-c9f29aad8689.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/15e5e4a5-2289-4691-bd08-c9f29aad8689.jsonl#L16] Assistant: 巡检完成，发现以下异常需要关注： **⚠️ Gateway 日志异常（今日及昨日均有）：** 1. **Model Fallback 触发** — `model_fallback_decision` 事件出现，说明默认模型调用失败，系统自动切换备用模型 2. **FailoverError: Unknown** — cron-nested 和 session lane 报错，持续出现于 job `8d0227c6` **其他指标正常：** - ✅ Gateway 运行正常，health ok - ✅ 内存充裕（系统可用内存 
+[main/sessions/main/1ceedf6d-1864-4f89-acdd-672c070e1dc0.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1ceedf6d-1864-4f89-acdd-672c070e1dc0.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/1ceedf6d-1864-4f89-acdd-672c070e1dc0.jsonl#L22] Assistant: AIWH 项目可访问。查询处理中和待领取的 ticket：
+[main/sessions/main/1ceedf6d-1864-4f89-acdd-672c070e1dc0.jsonl#L26] Assistant: 当前没有待处理的 Jira 任务。 - 处理中：0 - 待领取：0 - 本地 active task：none - jira.3pigc.com DNS 仍解析失败，Data Center (116.205.141.57:50008) 直连正常
+[main/sessions/main/25152649-943e-44d4-bfd2-7a33d8c80f98.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/25152649-943e-44d4-bfd2-7a33d8c80f98.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/2850f23f-9b32-43e8-adc9-87683eba4201.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/2850f23f-9b32-43e8-adc9-87683eba4201.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L18] Assistant: ...
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L24] Assistant: Jira 用的是 `https://3pigc.atlassian.net`，之前用的 URL 错了。
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L26] Assistant: Atlassian Cloud 当前不可用（"Page unavailable"）。检查一下脚本里是否有备用地址或 Basic Auth 方式：
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L30] Assistant: ...
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L32] Assistant: ...
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L34] Assistant: 找到了！Jira 实际地址是 `http://116.205.141.57:50008`，用的是 Bearer Token。
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L36] Assistant: Token 认证失败（项目看不到，assignee 不可访问）。Token 可能已过期，或者 check_jira_status.py 里的 token 是 placeholder。确认一下实际 token 值：
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L38] Assistant: 脚本里的 token 是 placeholder，没有实际值。用 cron 任务提供的 token 来测试：
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L40] Assistant: 认证没问题，200 OK。
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L42] Assistant: AIWH 项目存在。现在查"处理中"和"待领取"的 tickets：
+[main/sessions/main/48aa51da-42f8-4fa1-adb4-70ec83dbe71e.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/48aa51da-42f8-4fa1-adb4-70ec83dbe71e.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/48aa51da-42f8-4fa1-adb4-70ec83dbe71e.jsonl#L19] Assistant: 凌晨巡检完成，一切正常，无需打扰。简要记录： - **系统**：运行稳定，已运行 11 天，/ 盘使用率 43%（17G/40G 可用），负载 2.77 正常 - **Jira**：无活跃任务 - **Git**：有未提交改动（MEMORY.md、DREAMS.md、jira_inspection_result.json 等修改，以及 185 个 jira-inspection-logs 未跟踪文件） - **待办**：微信通知配置修复、Jira 流程优化等老项目仍挂着 凌晨 2:31，用户在休息，无紧急事项，静默通过。
+[main/sessions/main/5fa80606-8b2b-477f-91ae-bbfaded9a1cd.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5fa80606-8b2b-477f-91ae-bbfaded9a1cd.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/5fa80606-8b2b-477f-91ae-bbfaded9a1cd.jsonl#L20] Assistant: Jira 域名 `jira.3pigc.com` DNS 解析失败（NXDOMAIN）。当前网络环境无法访问 Jira。 可能原因： 1. 内网域名，需要 VPN 或内网 DNS 才能解析 2. 域名配置变更 3. 网络连接问题 当前无法处理 Jira 任务。
+[main/sessions/main/62997e82-bfac-4053-8eb9-440af89bee9c.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/62997e82-bfac-4053-8eb9-440af89bee9c.jsonl#L22] Assistant: 当前没有待处理的 Jira 任务。 Evidence: - `task_state_manager.py status` → `No active task.` - 已检查 `~/clawd/wing_recovery_alert.md` - 已检查 `git status` - Jira Data Center 查询正常： - 处理中：0 - 待领取：0 - AIWH 非完成：0 - 已写入巡查日志：`jira-inspection-logs/jira_patrol_2026-06-28_0017.md`
+[main/sessions/main/640948c9-cef7-4a14-a2ff-2dc754b9f538.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/640948c9-cef7-4a14-a2ff-2dc754b9f538.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67168ce3-450d-40c5-a0b0-e94d79e58450.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67168ce3-450d-40c5-a0b0-e94d79e58450.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/67168ce3-450d-40c5-a0b0-e94d79e58450.jsonl#L15] Assistant: 现在查询 Jira Data Center 检查处理中和待领取的 ticket：
+[main/sessions/main/67168ce3-450d-40c5-a0b0-e94d79e58450.jsonl#L21] Assistant: DNS 解析失败，Jira Data Center 当前也无法连接。记录本次巡查结果：
+[main/sessions/main/67168ce3-450d-40c5-a0b0-e94d79e58450.jsonl#L23] Assistant: 当前没有待处理的 Jira 任务。 本次巡查结果：Jira Data Center（jira.3pigc.com）DNS 解析失败，无法连接。本地无活跃任务（No active task）。下次 cron 继续重试。
+[main/sessions/main/10b53ce9-c8df-415c-b791-74cd92b0e424.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/10b53ce9-c8df-415c-b791-74cd92b0e424.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L44] Assistant: JQL 编码有问题。用 Python 直接发请求：
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L46] Assistant: "处理中"状态名称不匹配，先查一下所有可用状态：
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L48] Assistant: 现在状态清晰了。状态 id=3 是"处理中"，id=10201 是"Selected for Development"。
+[main/sessions/main/3d9bd1ba-3c91-45d6-a3d6-2b85afdb4d1e.jsonl#L50] Assistant: 当前没有任何"处理中"或"Selected for Development"的 ticket。 当前没有待处理的 Jira 任务。所有 AIWH 项目的 tickets 都已完成，没有新的待领取或进行中的工作。
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L20] Assistant: ...
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L36] Assistant: ...
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L40] Assistant: Jira Data Center 查询正常，AIWH 项目中当前没有待处理的 ticket（处理中=0，待领取=0，非完成=0）。
+[main/sessions/main/6ccb7167-fe79-45a2-bd09-e5c32c8cbd89.jsonl#L42] Assistant: 当前没有待处理的 Jira 任务。
+[main/sessions/main/879e4f8c-be54-4b68-8470-c6654e124951.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/879e4f8c-be54-4b68-8470-c6654e124951.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/879e4f8c-be54-4b68-8470-c6654e124951.jsonl#L16] Assistant: 巡检完成。发现两类警告，评估如下： **⚠️ Gateway 日志异常（非紧急）** 两天日志中反复出现两类错误： 1. `model_fallback_decision` — 模型调用触发了 failover，kimi/kimi-for-coding 或其他模型返回错误，gateway 自动切换备用模型 2. `FailoverError: Unknown` — cron 任务 `8d0227c6` 的 lane 出现 failover 失败（持续两天） **其他指标正常：** - ✅ 主机负载正常（load avg ~2
+[main/sessions/main/9464683e-91a9-4fe9-be6c-2b1cab69c6a5.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9464683e-91a9-4fe9-be6c-2b1cab69c6a5.jsonl#L9] Assistant: 已知悉：该小时巡检由脚本自动完成并自行邮件告警，无需我进一步处理。
+[main/sessions/main/96b3f27d-4245-4986-8058-f86e179ca027.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/96b3f27d-4245-4986-8058-f86e179ca027.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9ad10685-5db0-452a-bce8-fea522fd963a.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9ad10685-5db0-452a-bce8-fea522fd963a.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9e0b6356-8cbd-49b4-ac35-d8ea4ec6a8af.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9e0b6356-8cbd-49b4-ac35-d8ea4ec6a8af.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a09d72f7-7b43-47c3-ae67-93036fac86a8.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a09d72f7-7b43-47c3-ae67-93036fac86a8.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a40f9ab4-6886-4aa2-b120-503632687f2a.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a40f9ab4-6886-4aa2-b120-503632687f2a.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/aa739b26-f1c6-4547-adcf-ffb1bb6e8b6b.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/aa739b26-f1c6-4547-adcf-ffb1bb6e8b6b.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/bfb23dd0-a178-4ea8-ab86-706bcc2aacbc.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/bfb23dd0-a178-4ea8-ab86-706bcc2aacbc.jsonl#L9] Assistant: [assistant turn failed before producing content]

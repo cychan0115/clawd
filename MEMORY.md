@@ -148,49 +148,40 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-21)
+## Promoted From Short-Term Memory (2026-06-27)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:12:13 -->
-- "待领取" ticket 检查: 状态 = Selected for Development + assignee = EMPTY: **0 tickets**; 状态 = Backlog: **0 tickets** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:12-13]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:17:19 -->
-- 项目整体状态: AIWH 项目总计: **107 tickets**; 所有 ticket 状态: **完成**; 无未完成的 ticket [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:17-19]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:22:22 -->
-- 本地任务状态: task_state_manager: No active task ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:22-22]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:26:26 -->
-- 结论: 当前没有待处理的 Jira 任务。所有 ticket 均已完成。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:26-26]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:5:5 -->
-- 巡查结果: **状态: 无待处理任务** ✅ [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:5-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-16-jira-inspection.md:8:9 -->
-- "处理中" ticket 检查（优先级最高）: assignee = huahua + 状态 = 处理中: **0 tickets**; 无需检查本地代码状态或执行 commit/push [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-16-jira-inspection.md:8-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:10:11 -->
+- 状态总览: **端口**: 18789/18800 正常监听; **Gateway health**: live [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:10-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:14:16 -->
+- ⚠️ 需要关注: **Data卷使用率 95%** (`/dev/disk3s5`); 460Gi总容量，404Gi已使用，仅剩22Gi可用; 建议：清理大文件或扩容 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:14-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:18:21 -->
+- ⚠️ 需要关注: **Gateway日志异常** (6/22和6/21); Kimi provider fetch 错误; Model fallback 触发; 均为暂时性错误，服务已恢复 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:18-21]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:24:24 -->
+- 结论: 整体健康，Data卷空间紧张需关注。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:24-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:28:30 -->
+- Jira 任务巡查 (23:24): **处理中 ticket (huahua)**: 0 个; **待领取 ticket (Selected for Development)**: 0 个; **结论**: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:28-30]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:6:9 -->
+- 状态总览: **主机**: mini2 运行正常，已运行6天; **负载**: 3.57（正常范围）; **内存**: 86% 空闲，无压力; **OpenClaw**: gateway/agent/browser 全部运行正常 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:6-9]
 
-## Promoted From Short-Term Memory (2026-06-23)
+## Promoted From Short-Term Memory (2026-06-28)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:10:13 -->
-- 08:00 早安检查: **天气**: 上海 24°C 多云，体感 26°C，湿度 100%，最高 30°C，UV 9; **菜单**: weekly-meal-plan.md 未填写，无今日菜单; **日历**: 无配置，未检查; **Jira**: 无配置，未检查紧急任务 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:10-13]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:14:16 -->
-- 08:00 早安检查: **系统健康**: ⚠️ 磁盘使用率 95% (/System/Volumes/Data 仅剩 24G)，负载 2.84; **待办**: 建议清理磁盘空间（Caches 7.5G+）; **Action**: 早安消息已发送 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:14-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-18.md:4:7 -->
-- 06:33 Heartbeat: **Task state**: No active task; **Jira watchdog**: No alerts; **Git status**: Clean; **Action**: Quick check complete, nothing pending. huahua idle. [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-18.md:4-7]
-
-## Promoted From Short-Term Memory (2026-06-24)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:11:11 -->
-- 错误详情: Atlassian 状态页面: 无全局故障报告 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:11-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:14:16 -->
-- 影响: 无法查询"处理中"的 ticket; 无法查询待领取的 ticket; 无法 claim/transition/comment 任何 ticket [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:14-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:19:21 -->
-- 后续行动: 等待 Jira Cloud 恢复后重试; 建议 Anna 检查 Jira 实例状态或联系 Atlassian 支持; 本次 cron 巡查跳过，下次心跳/cron 自动重试 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:19-21]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:25:26 -->
-- Evidence: Request ID: 12d10b5f86584c5bbd4f781539bde87a Error: {"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"} [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:25-26]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:4:4 -->
-- 状态: Jira Cloud 实例 **不可用**，无法执行 ticket 巡查。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:4-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19-jira-blocker.md:7:10 -->
-- 错误详情: 端点: `https://aiwriterhub.atlassian.net/rest/api/2/search`; 返回: `{"errorMessage": "Site temporarily unavailable", "errorCode": "OTHER"}` (HTTP 404); 尝试的域名: aiwriterhub.atlassian.net, 3pigc.atlassian.net; 尝试的 API 版本: api/2, api/3 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19-jira-blocker.md:7-10]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:12:13 -->
-- 23:30 - OpenClaw 自巡检: 系统 fallback 机制正常工作; 当前巡检任务本身运行正常，说明服务已恢复 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:12-13]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:3:5 -->
-- 23:30 - OpenClaw 自巡检: **巡检任务**: cron `73bbdaca-9c48-41d7-a333-1c3e2d112c95`; **执行结果**: ✅ 系统整体健康; **报告路径**: `/Users/3pigcn/clawd/logs/openclaw_self_inspection/latest.md` [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:3-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:7:7 -->
-- 23:30 - OpenClaw 自巡检: **异常记录**（无需处理，偶发网络波动）： [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:7-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:8:11 -->
-- 23:30 - OpenClaw 自巡检: 6月18-19日凌晨 kimi API 不稳定，多个 cron 任务触发 LLM timeout; 涉及 cron: `73bbdaca-9c48-41d7-a333-1c3e2d112c95` 和 `8d0227c6-23ec-434c-802a-97bdb590dc1f`; 错误类型: `fetch failed` / `network connection error` / `LLM request timed out`; 模型降级链: kimi-for-coding → kimi-k2.6 → gpt-5.4 → gpt-4o（最终成功） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-19.md:8-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:3:3 -->
+- 11:52 AM - Jira 任务巡查 (cron): **状态**: Jira 服务暂时不可用 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-23.md:3-3]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:4:7 -->
+- 11:52 AM - Jira 任务巡查 (cron): Atlassian Cloud 返回: 404 "Site temporarily unavailable"; Atlassian 状态页面未报告事件，但我们的实例确实无法访问; 无法查询处理中/待领取的 ticket; 下次 cron 再试 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-23.md:4-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-jira-inspection.md:13:14 -->
+- 详情: **Atlassian 官方状态**: 今天无报告事故; **Trace ID**: ecf7d82b-1afc-41af-b17c-b5f9ee86333e [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24-jira-inspection.md:13-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-jira-inspection.md:18:20 -->
+- 尝试的操作: ✅ task_state_manager.py status → 无活跃任务; ❌ 查询"处理中"ticket → Atlassian Cloud 不可用; ❌ 查询"Selected for Development"ticket → 未执行（API 不可用） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24-jira-inspection.md:18-20]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-jira-inspection.md:24:26 -->
+- 后续建议: 等待 5-10 分钟后重试; 或检查 Atlassian 状态页面: https://status.atlassian.com; 当前无待处理任务（task_state_manager 确认） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24-jira-inspection.md:24-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-jira-inspection.md:5:5 -->
+- 巡查结果: **状态**: ❌ Jira 服务暂时不可用 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24-jira-inspection.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24-jira-inspection.md:9:12 -->
+- 详情: **时间**: 2026-06-24 02:25:01 CST (Asia/Shanghai); **问题**: Atlassian Cloud 站点返回 404 / Page Unavailable; **HTTP 状态码**: 404; **CloudFront 错误**: Error from cloudfront [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24-jira-inspection.md:9-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:15:17 -->
+- 诊断: curl https://r3pigcn.atlassian.net/rest/api/3/myself → HTTP 404, Page unavailable → Atlassian: "Your Atlassian Cloud site is currently unavailable." [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24.md:15-17]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:24:24 -->
+- 可能原因: 站点 URL 已变更（例如 r3pigcn → 其他名称） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24.md:24-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:29:32 -->
+- 建议: 确认 Jira 站点 URL 是否正确; 检查 Atlassian 订阅/付费状态; 如需切换新站点，请更新 Jira 配置和 Bearer Token; 检查 wing_recovery_alert.md 未创建（Gateway 正常） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24.md:29-32]
