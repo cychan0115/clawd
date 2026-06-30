@@ -148,21 +148,6 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
   - 不要预设 assignee + 期望唤醒，这两个通道互斥
 - **JIRA 地址**：http://116.205.141.57:50008，项目 AIWH
 
-## Promoted From Short-Term Memory (2026-06-27)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:10:11 -->
-- 状态总览: **端口**: 18789/18800 正常监听; **Gateway health**: live [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:10-11]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:14:16 -->
-- ⚠️ 需要关注: **Data卷使用率 95%** (`/dev/disk3s5`); 460Gi总容量，404Gi已使用，仅剩22Gi可用; 建议：清理大文件或扩容 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:14-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:18:21 -->
-- ⚠️ 需要关注: **Gateway日志异常** (6/22和6/21); Kimi provider fetch 错误; Model fallback 触发; 均为暂时性错误，服务已恢复 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:18-21]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:24:24 -->
-- 结论: 整体健康，Data卷空间紧张需关注。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:24-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:28:30 -->
-- Jira 任务巡查 (23:24): **处理中 ticket (huahua)**: 0 个; **待领取 ticket (Selected for Development)**: 0 个; **结论**: 当前没有待处理的 Jira 任务。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:28-30]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-22.md:6:9 -->
-- 状态总览: **主机**: mini2 运行正常，已运行6天; **负载**: 3.57（正常范围）; **内存**: 86% 空闲，无压力; **OpenClaw**: gateway/agent/browser 全部运行正常 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-22.md:6-9]
-
 ## Promoted From Short-Term Memory (2026-06-28)
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:3:3 -->
@@ -185,3 +170,27 @@ Core: Anna (Planner/Reviewer) + huahua (Executor) + Jira (Source of Truth) + n8n
 - 可能原因: 站点 URL 已变更（例如 r3pigcn → 其他名称） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24.md:24-24]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:29:32 -->
 - 建议: 确认 Jira 站点 URL 是否正确; 检查 Atlassian 订阅/付费状态; 如需切换新站点，请更新 Jira 配置和 Bearer Token; 检查 wing_recovery_alert.md 未创建（Gateway 正常） [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-24.md:29-32]
+
+## Promoted From Short-Term Memory (2026-06-29)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:3:4 -->
+- Jira 任务巡查 - 2026-06-24: **时间**: 00:44 CST (cron 触发) **状态**: BLOCKED [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-24.md:3-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:8:10 -->
+- 检查结果: task_state_manager.py 状态: `No active task`; 检查站点: `r3pigcn.atlassian.net` 返回 HTTP 404; Atlassian 官方状态: 今日无已知事故 [score=0.834 recalls=0 avg=0.620 source=memory/2026-06-24.md:8-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:22:22 -->
+- 可能原因: 站点已停用/删除 [score=0.824 recalls=0 avg=0.620 source=memory/2026-06-24.md:22-22]
+
+## Promoted From Short-Term Memory (2026-06-30)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:16:19 -->
+- Conversation Summary: `openclaw status --deep` 显示：; `openclaw-weixin`：**ON / OK / configured**; Health 里 `openclaw-weixin`：**OK**; 10:26:40 微信通道成功启动： [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:16-19]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:20:23 -->
+- Conversation Summary: `starting weixin provider (https://ilinkai.weixin.qq.com)`; `weixin monitor started`; `resuming from previous sync buf`; 10:26:40 收到了微信入站消息： [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:20-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:24:26 -->
+- Conversation Summary: `inbound message ... types=1`; 10:27:07 也成功发出过微信回复：; `outbound: text sent OK` [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:24-26]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:28:28 -->
+- Conversation Summary: 所以不是微信 webhook/iLink 完全断了。 [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:28-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:3:5 -->
+- Session: 2026-06-25 11:04:58 GMT+8: **Session Key**: agent:main:main; **Session ID**: 6988a731-39d8-4d2a-81b8-23aaea5d44cf; **Source**: webchat [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:3-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25-1104.md:9:12 -->
+- Conversation Summary: user: 现在微信又连接不上了,为什么 assistant: [assistant turn failed before producing content] user: 现在微信又连接不上了,为什么 assistant: 查了状态和日志，结论是：**微信通道本身没有掉线，真正卡住的是后端模型调用 / 网络解析。** [score=0.812 recalls=0 avg=0.620 source=memory/2026-06-25-1104.md:9-12]
