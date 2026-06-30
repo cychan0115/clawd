@@ -556,3 +556,9 @@
 | 2026-06-30 19:15 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
 | 2026-06-30 20:05 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
 | 2026-06-30 20:14 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
+| 2026-06-30 20:41 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
+| 2026-06-30 20:45 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
+| 2026-06-30 20:54 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
+| 2026-06-30 21:14 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
+| 2026-06-30 22:34 | ✅ Data Center 查询正常（Bearer Token）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用；本地 active task=none；git status=wing_recovery_alert.md 修改（非 Jira 任务代码）；当前没有待处理 Jira 任务 |
+
