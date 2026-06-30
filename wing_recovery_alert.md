@@ -562,3 +562,10 @@
 | 2026-06-30 21:14 | ✅ Data Center 查询正常（IP直连）：处理中=0（In Progress），待领取=0（Selected/EMPTY），jira.3pigc.com DNS 解析失败；本地 active task=none；当前没有待处理 Jira 任务 |
 | 2026-06-30 22:34 | ✅ Data Center 查询正常（Bearer Token）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用；本地 active task=none；git status=wing_recovery_alert.md 修改（非 Jira 任务代码）；当前没有待处理 Jira 任务 |
 
+| 2026-06-30 22:54 | ✅ Data Center 查询正常（Bearer Token）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用；本地 active task=none；git status=memory/2026-06-30.md + wing_recovery_alert.md 修改（非 Jira 任务代码）；当前没有待处理 Jira 任务 |
+| 2026-06-30 23:14 | ✅ Data Center 查询正常（Bearer Token）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用（404 Page unavailable）；本地 active task=none；git status=memory/2026-06-30.md + wing_recovery_alert.md 修改（非 Jira 任务代码）；当前没有待处理 Jira 任务 |
+| 2026-06-30 23:24 | ✅ Data Center 查询正常（Bearer Token）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用（404）；本地 active task=none；git status=memory/2026-06-30.md + wing_recovery_alert.md（非 Jira 代码）；当前没有待处理 Jira 任务 |
+
+| 2026-06-30 23:34 | ✅ Data Center 查询正常（Bearer Token + IP直连）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；jira.3pigc.com DNS 解析失败；3pigc.atlassian.net Cloud 仍不可用；本地 active task=none；git status=memory/2026-06-30.md + wing_recovery_alert.md（非 Jira 代码）；当前没有待处理 Jira 任务 |
+
+| 2026-07-01 00:24 | ✅ Data Center 查询正常（Bearer Token + IP直连）：处理中=0（In Progress/status=3），待领取=0（Selected/status=10201），AIWH 非完成=0；本地 active task=none；git status=memory/2026-06-30.md + wing_recovery_alert.md（非 Jira 代码）；当前没有待处理 Jira 任务 |
