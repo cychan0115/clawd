@@ -4,7 +4,7 @@
 
 ## 检查时间
 
-- **最后更新**: 2026-07-01 12:24 CST (本次 cron 巡查)
+- **最后更新**: 2026-07-01 12:35 CST (本次 cron 巡查)
 - **Agent**: huahua (mini2)
 
 ## 当前任务状态
@@ -13,19 +13,20 @@
 - `task_state_manager.py status`: `No active task.`
 - `.current_jira_task.json`: 不存在
 
-## 本次巡查结果 (12:24 CST)
+## 本次巡查结果 (12:44 CST)
 
-**Jira Data Center 正常，当前无待处理任务**
-- 时间: 2026-07-01 12:24 CST
-- Jira 实例: `http://116.205.141.57:50008` (Data Center)
-- 查询结果:
-  - 处理中 (statusCategory=4) 且 assignee=huahua: **0 issues**
-  - Selected for Development / To Do (statusCategory=2) 且未分配: **0 issues**
-  - 完成 (statusCategory=3): **107 issues** (全部)
-- 结论: AIWH 项目全部 107 个 ticket 均处于"完成"状态，无需处理
+**Jira Cloud 不可用，Jira Data Center 正常，当前无待处理任务**
+- 时间: 2026-07-01 12:44 CST
+- Jira Cloud: `https://5jie.cn` — **不可用** (Connection refused)
+- Jira DC 实例: `http://116.205.141.57:50008` — 正常
+- 查询结果 (Jira DC):
+  - 处理中 (status=3) 且 assignee=huahua: **0 issues**
+  - Selected for Development (status=10201) 且未分配: **0 issues**
+- 结论: 无待处理任务
 
 ## 历史记录
 
+- 2026-07-01 12:35 CST: Jira Cloud 不可用，Jira DC 正常，无任务
 - 2026-07-01 12:24 CST: Jira DC 正常，无任务
 - 2026-07-01 12:04 CST: Jira DC 正常，无任务
 - 2026-07-01 11:54 CST: Jira Cloud 不可用（问题持续，已转用 DC 实例）
