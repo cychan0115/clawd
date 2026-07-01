@@ -4,7 +4,7 @@
 
 ## 检查时间
 
-- **最后更新**: 2026-07-01 12:35 CST (本次 cron 巡查)
+- **最后更新**: 2026-07-01 12:54 CST (本次 cron 巡查)
 - **Agent**: huahua (mini2)
 
 ## 当前任务状态
@@ -13,10 +13,10 @@
 - `task_state_manager.py status`: `No active task.`
 - `.current_jira_task.json`: 不存在
 
-## 本次巡查结果 (12:44 CST)
+## 本次巡查结果 (12:54 CST)
 
-**Jira Cloud 不可用，Jira Data Center 正常，当前无待处理任务**
-- 时间: 2026-07-01 12:44 CST
+**Jira Cloud 不可用，Jira DC 正常，当前无待处理任务**
+- 时间: 2026-07-01 12:54 CST
 - Jira Cloud: `https://5jie.cn` — **不可用** (Connection refused)
 - Jira DC 实例: `http://116.205.141.57:50008` — 正常
 - 查询结果 (Jira DC):
@@ -26,15 +26,10 @@
 
 ## 历史记录
 
+- 2026-07-01 12:54 CST: Jira Cloud 不可用，Jira DC 正常，无任务（当前）
+- 2026-07-01 12:44 CST: Jira Cloud 不可用，Jira DC 正常，无任务
 - 2026-07-01 12:35 CST: Jira Cloud 不可用，Jira DC 正常，无任务
 - 2026-07-01 12:24 CST: Jira DC 正常，无任务
-- 2026-07-01 12:04 CST: Jira DC 正常，无任务
-- 2026-07-01 11:54 CST: Jira Cloud 不可用（问题持续，已转用 DC 实例）
-- 2026-07-01 11:44 CST: Jira Cloud 不可用
-- 2026-07-01 11:04 CST: Jira Cloud 不可用
-- 2026-07-01 10:54 CST: Jira Cloud 不可用
-- 2026-07-01 10:46 CST: Jira Cloud 不可用
-- 2026-07-01 10:34 CST: 首次发现 Jira Cloud 不可用
 
 ## 恢复检查清单
 
