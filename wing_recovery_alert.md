@@ -4,7 +4,7 @@
 
 ## 检查时间
 
-- **最后更新**: 2026-07-01 14:15 CST (本次 cron 巡查)
+- **最后更新**: 2026-07-01 14:35 CST (本次 cron 巡查)
 - **Agent**: huahua (mini2)
 
 ## 当前任务状态
@@ -13,21 +13,23 @@
 - `task_state_manager.py status`: `No active task.`
 - `.current_jira_task.json`: 不存在
 
-## 本次巡查结果 (14:15 CST)
+## 本次巡查结果 (14:35 CST)
 
-**Jira DC 正常，当前无待处理任务**
-- 时间: 2026-07-01 14:15 CST
-- Jira DC 实例: `http://116.205.141.57:50008` — 正常
-- 查询结果 (Jira DC):
+**当前没有待处理的 Jira 任务。**
+- 时间: 2026-07-01 14:35 CST
+- Jira Cloud (`https://aitalkwork.atlassian.net`): **不可用** — Atlassian Cloud 返回 "Page unavailable" (HTTP 404)
+- Jira DC (`http://116.205.141.57:50008`): **正常**
+- Jira DC 查询结果:
   - 处理中 (status=3) 且 assignee=huahua: **0 issues**
   - Selected for Development (status=10201) 且未分配: **0 issues**
-  - 所有非完成状态 (status!=10001) 且未分配: **0 issues**
-  - 所有非完成状态 (status!=10001) 且 assignee=huahua: **0 issues**
 - 结论: 无待处理任务
 
 ## 历史记录
 
-- 2026-07-01 14:05 CST: Jira DC 正常，无任务（当前）
+- 2026-07-01 14:35 CST: Jira Cloud 不可用，Jira DC 正常，无任务（当前）
+- 2026-07-01 14:25 CST: Jira Cloud 不可用，Jira DC 正常，无任务
+- 2026-07-01 14:15 CST: Jira DC 正常，当前无待处理任务
+- 2026-07-01 14:05 CST: Jira DC 正常，无任务
 - 2026-07-01 13:44 CST: Jira Cloud 不可用，Jira DC 正常，无任务
 
 ## 恢复检查清单
